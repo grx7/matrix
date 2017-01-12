@@ -9,6 +9,9 @@
 import UIKit
 
 class AuthViewController: UIViewController {
+    
+    @IBOutlet var advancedView: UIView?
+    @IBOutlet var advancedButton: UIButton?
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -16,6 +19,10 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let button = self.advancedButton {
+            self.toggleAdvancedOptions(sender: button)
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -23,6 +30,18 @@ class AuthViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func toggleAdvancedOptions(sender: UIButton) {
+        if let view = self.advancedView, let button = self.advancedButton {
+            view.isHidden = !view.isHidden
+            
+            if view.isHidden {
+                button.setTitle("Show Advanced", for: .normal)
+            } else {
+                button.setTitle("Hide Advanced", for: .normal)
+            }
+        }
     }
     
 
