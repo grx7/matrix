@@ -9,22 +9,37 @@
 import UIKit
 import CoreData
 
+import MatrixSDK
+
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let splitViewController = self.window!.rootViewController as! UISplitViewController
-        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-        splitViewController.delegate = self
-
-        let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
-        let controller = masterNavigationController.topViewController as! MasterViewController
-        controller.managedObjectContext = self.persistentContainer.viewContext
+        
+        let credentials = MXCredentials.init(homeServer: "https://matrix.org",
+                                             userId: "@oliverlumby:matrix.org",
+                                             accessToken: "MDAxOGxvY2F0aW9uIG1hdHJpeC5vcmcKMDAxM2lkZW50aWZpZXIga2V5CjAwMTBjaWQgZ2VuID0gMQowMDJhY2lkIHVzZXJfaWQgPSBAb2xpdmVybHVtYnk6bWF0cml4Lm9yZwowMDE2Y2lkIHR5cGUgPSBhY2Nlc3MKMDAyMWNpZCBub25jZSA9IF91dzNPQktRZ2F1M0l0c2EKMDAyZnNpZ25hdHVyZSCy37yLvhdWXqD-04aFqmwn1_Ty2CxbEXqiu3qyRD6lhgo")
+        
+        let client = MXRestClient.init(credentials: credentials) { (data) -> Bool in
+            return false
+        }
+        
+        let mxSession = MXSession.init(matrixRestClient: client);
+        
+        mxSession?.start({
+            
+            print("\n\n\n")
+            print("\(mxSession?.roomsByTags())")
+            print("\n\n\n")
+            
+        }, failure: { (error) in
+            print("\(error)")
+        })
+        
+        
         return true
     }
 
@@ -52,17 +67,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         self.saveContext()
     }
 
-    // MARK: - Split view
-
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
-        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
-            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-            return true
-        }
-        return false
-    }
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {
