@@ -39,8 +39,6 @@ class AuthViewController: UIViewController {
         if let button = self.advancedButton {
             self.toggleAdvancedOptions(sender: button)
         }
-        
-        MatrixAccount(credentials: MXCredentials())
     }
     
     @IBAction func toggleAdvancedOptions(sender: UIButton) {
@@ -57,8 +55,20 @@ class AuthViewController: UIViewController {
     
     @IBAction func performLogin(sender: UIButton) {
         
-        print("Username: \(self.usernameField.text), Password: \(self.passwordField.text)")
+        print("Login")
+        if self.validateParameters() {
+            print("Login Validated")
+            MatrixAccount(loginAndStoreUser: self.usernameField.text!, password: self.passwordField.text!, homeServer: "https://matrix.org", identityServer: "https://matrix.org")
+        }
         
+    }
+    
+    func validateParameters() -> Bool {
+        if let username = self.usernameField.text, !username.isEmpty, let password = self.passwordField.text, !password.isEmpty {
+            return true
+        }
+        
+        return false
     }
     
     func keyboardDidShow(notification: NSNotification) {

@@ -9,31 +9,52 @@
 import UIKit
 
 import MatrixSDK
+import KeychainAccess
 
 class MatrixAccount: NSObject {
 
     var credentials: MXCredentials = MXCredentials()
     var session: MXSession = MXSession()
-    var restClinet: MXRestClient = MXRestClient()
-    
+    var restClient: MXRestClient = MXRestClient()
     
     
     init(credentials: MXCredentials) {
         
+//        let keychain = Keychain(service: "com.buckle.matrix-token")
+//        
+//        do {
+//            try keychain.set(NSKeyedArchiver.archivedData(withRootObject: parameters), key: "testthisplz")
+//        }
+//        catch let error {
+//            print(error)
+//        }
+//        
+//        print("Here goes login")
+//        
+//        if let data = try? keychain.getData("testthisplz") {
+//            print(NSKeyedUnarchiver.unarchiveObject(with: data!))
+//        }
+    
+        
+        //restClinet.login(parameters:
+    }
+    
+    init(loginAndStoreUser username: String, password: String, homeServer: String, identityServer: String) {
+        
         let parameters: [AnyHashable: Any] = [
-            "userId": "@oliverlumby:matrix.org",
-            "password": "1234"
+            "type": kMXLoginFlowTypePassword,
+            "user": username,
+            "password": password
         ]
         
-        print("Here goes login")
+        self.restClient = MXRestClient(homeServer: homeServer, andOnUnrecognizedCertificateBlock: nil)
         
-        restClinet.login(parameters, success: { (response) in
+        self.restClient.login(parameters, success: { (response) in
             print("\(response)")
         }) { (error) in
             print("\(error)");
         }
         
-        //restClinet.login(parameters:
     }
     
 }

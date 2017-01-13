@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>KeychainAccess.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MatrixSDK.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +42,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>8905DB6521F8FDC34752B69DEE3FDEB7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A8462C5FA53083F1CA2B1187FF5C4B0F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B82A73DF647F5308738FFC3681FCA00A</key>
+		<key>C01633118317D0FED1ABE7076113F6E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C01633118317D0FED1ABE7076113F6E8</key>
+		<key>C8AD57F9890C7003EAAF117A2C87B6D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

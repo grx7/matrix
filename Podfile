@@ -9,6 +9,8 @@ target 'MatrixApp' do
 
   pod 'MatrixSDK'
 
+  pod 'KeychainAccess'
+
   target 'MatrixAppTests' do
     inherit! :search_paths
     # Pods for testing
