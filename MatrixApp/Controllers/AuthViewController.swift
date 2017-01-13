@@ -37,38 +37,36 @@ class AuthViewController: UIViewController {
         if let button = self.advancedButton {
             self.toggleAdvancedOptions(sender: button)
         }
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func toggleAdvancedOptions(sender: UIButton) {
-        if let view = self.advancedView, let button = self.advancedButton {
-            view.isHidden = !view.isHidden
-            
-            if view.isHidden {
-                self.advancedHeight.constant = 0
-                button.setTitle("Show Advanced", for: .normal)
-            } else {
-                self.advancedHeight.constant = self.defaultAdvancedHeight
-                button.setTitle("Hide Advanced", for: .normal)
-            }
+        self.advancedView.isHidden = !view.isHidden
+        
+        if self.advancedView.isHidden {
+            self.advancedHeight.constant = 0
+            self.advancedButton.setTitle("Show Advanced", for: .normal)
+        } else {
+            self.advancedHeight.constant = self.defaultAdvancedHeight
+            self.advancedButton.setTitle("Hide Advanced", for: .normal)
         }
+    }
+    
+    @IBAction func performLogin(sender: UIButton) {
+        
+        print("Username: \(self.usernameField.text), Password: \(self.passwordField.text)")
+        
     }
     
     func keyboardDidShow(notification: NSNotification) {
         if let activeField = self.activeField, let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            
-            print("got here")
             let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
+            
             self.scrollView.contentInset = contentInsets
             self.scrollView.scrollIndicatorInsets = contentInsets
+            
             var aRect = self.view.frame
             aRect.size.height -= keyboardSize.size.height
+            
             if (!aRect.contains(activeField.frame.origin)) {
                 self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
             }
@@ -77,6 +75,7 @@ class AuthViewController: UIViewController {
     
     func keyboardWillBeHidden(notification: NSNotification) {
         let contentInsets = UIEdgeInsets.zero
+        
         self.scrollView.contentInset = contentInsets
         self.scrollView.scrollIndicatorInsets = contentInsets
     }

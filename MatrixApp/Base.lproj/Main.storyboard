@@ -141,6 +141,9 @@
                                                 </constraints>
                                                 <color key="tintColor" red="0.96993444579999999" green="1" blue="0.99140138190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Login"/>
+                                                <connections>
+                                                    <action selector="performLoginWithSender:" destination="JDN-gR-vm0" eventType="touchUpInside" id="1qr-jU-4td"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-yN-ow5">
                                                 <rect key="frame" x="20" y="410" width="280" height="38"/>
@@ -230,24 +233,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyT-MS-dQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1526.25" y="247.18309859154931"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="x4n-kd-bAJ">
-            <objects>
-                <viewController id="mpy-gp-EBF" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7UL-Zl-x1k"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zau-3F-KEP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bY6-ZE-BWB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jyB-vg-5eE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-847.5" y="380.28169014084506"/>
         </scene>
     </scenes>
 </document>
