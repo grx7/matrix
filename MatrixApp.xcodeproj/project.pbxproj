@@ -20,6 +20,7 @@
 		894C77931E27FB84008D5C86 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77921E27FB84008D5C86 /* GradientView.swift */; };
 		894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77951E28021C008D5C86 /* AuthViewController.swift */; };
 		89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */; };
+		89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */; };
 		9AFC8536C1EBF26EEE5F359C /* Pods_MatrixAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A9064B793D83E1EF81963B /* Pods_MatrixAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Classes/GradientView.swift; sourceTree = "<group>"; };
 		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
 		89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomBorderTextField.swift; path = Classes/BottomBorderTextField.swift; sourceTree = "<group>"; };
+		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAccount.swift; path = Classes/Matrix/Account/MatrixAccount.swift; sourceTree = "<group>"; };
 		92D1576AC24087E90E59E9A3 /* Pods-MatrixAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E73B5C11847D716AD6A3F788 /* Pods-MatrixAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppTests/Pods-MatrixAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,8 +191,25 @@
 			children = (
 				894C77921E27FB84008D5C86 /* GradientView.swift */,
 				89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */,
+				89EDB1BB1E2910AE00AB7516 /* Matrix */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		89EDB1BA1E2910A900AB7516 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		89EDB1BB1E2910AE00AB7516 /* Matrix */ = {
+			isa = PBXGroup;
+			children = (
+				89EDB1BA1E2910A900AB7516 /* Account */,
+			);
+			name = Matrix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +500,7 @@
 				894C77901E27EF44008D5C86 /* InitialViewController.swift in Sources */,
 				894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */,
 				894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */,
+				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,
 				894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */,
 			);
