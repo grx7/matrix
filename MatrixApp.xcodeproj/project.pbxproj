@@ -65,7 +65,7 @@
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Classes/GradientView.swift; sourceTree = "<group>"; };
 		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
 		89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomBorderTextField.swift; path = Classes/BottomBorderTextField.swift; sourceTree = "<group>"; };
-		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAccount.swift; path = Classes/Matrix/Account/MatrixAccount.swift; sourceTree = "<group>"; };
+		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAccount.swift; path = Models/Account/MatrixAccount.swift; sourceTree = "<group>"; };
 		92D1576AC24087E90E59E9A3 /* Pods-MatrixAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E73B5C11847D716AD6A3F788 /* Pods-MatrixAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppTests/Pods-MatrixAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +154,7 @@
 				894C776D1E27EE9D008D5C86 /* Info.plist */,
 				894C775E1E27EE9C008D5C86 /* MatrixApp.xcdatamodeld */,
 				894C77911E27EF48008D5C86 /* Controllers */,
+				89EDB1BC1E2922E400AB7516 /* Models */,
 				894C77941E27FB8A008D5C86 /* Classes */,
 			);
 			path = MatrixApp;
@@ -207,9 +208,16 @@
 		89EDB1BB1E2910AE00AB7516 /* Matrix */ = {
 			isa = PBXGroup;
 			children = (
-				89EDB1BA1E2910A900AB7516 /* Account */,
 			);
 			name = Matrix;
+			sourceTree = "<group>";
+		};
+		89EDB1BC1E2922E400AB7516 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				89EDB1BA1E2910A900AB7516 /* Account */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

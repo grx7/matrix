@@ -8,6 +8,8 @@
 
 import UIKit
 
+import MatrixSDK
+
 class AuthViewController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -37,6 +39,8 @@ class AuthViewController: UIViewController {
         if let button = self.advancedButton {
             self.toggleAdvancedOptions(sender: button)
         }
+        
+        MatrixAccount(credentials: MXCredentials())
     }
     
     @IBAction func toggleAdvancedOptions(sender: UIButton) {

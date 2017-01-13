@@ -20,7 +20,20 @@ class MatrixAccount: NSObject {
     
     init(credentials: MXCredentials) {
         
+        let parameters: [AnyHashable: Any] = [
+            "userId": "@oliverlumby:matrix.org",
+            "password": "1234"
+        ]
         
+        print("Here goes login")
+        
+        restClinet.login(parameters, success: { (response) in
+            print("\(response)")
+        }) { (error) in
+            print("\(error)");
+        }
+        
+        //restClinet.login(parameters:
     }
     
 }

@@ -19,25 +19,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        let credentials = MXCredentials.init(homeServer: "https://matrix.org",
-                                             userId: "@oliverlumby:matrix.org",
-                                             accessToken: "MDAxOGxvY2F0aW9uIG1hdHJpeC5vcmcKMDAxM2lkZW50aWZpZXIga2V5CjAwMTBjaWQgZ2VuID0gMQowMDJhY2lkIHVzZXJfaWQgPSBAb2xpdmVybHVtYnk6bWF0cml4Lm9yZwowMDE2Y2lkIHR5cGUgPSBhY2Nlc3MKMDAyMWNpZCBub25jZSA9IF91dzNPQktRZ2F1M0l0c2EKMDAyZnNpZ25hdHVyZSCy37yLvhdWXqD-04aFqmwn1_Ty2CxbEXqiu3qyRD6lhgo")
-        
-        let client = MXRestClient.init(credentials: credentials) { (data) -> Bool in
-            return false
-        }
-        
-        let mxSession = MXSession.init(matrixRestClient: client);
-        
-        mxSession?.start({
-            
-            print("\n\n\n")
-            print("\(mxSession?.roomsByTags())")
-            print("\n\n\n")
-            
-        }, failure: { (error) in
-            print("\(error)")
-        })
+//        let credentials = MXCredentials.init(homeServer: "https://matrix.org",
+//                                             userId: "@oliverlumby:matrix.org",
+//                                             accessToken: "MDAxOGxvY2F0aW9uIG1hdHJpeC5vcmcKMDAxM2lkZW50aWZpZXIga2V5CjAwMTBjaWQgZ2VuID0gMQowMDJhY2lkIHVzZXJfaWQgPSBAb2xpdmVybHVtYnk6bWF0cml4Lm9yZwowMDE2Y2lkIHR5cGUgPSBhY2Nlc3MKMDAyMWNpZCBub25jZSA9IF91dzNPQktRZ2F1M0l0c2EKMDAyZnNpZ25hdHVyZSCy37yLvhdWXqD-04aFqmwn1_Ty2CxbEXqiu3qyRD6lhgo")
+//        
+//        let client = MXRestClient.init(credentials: credentials) { (data) -> Bool in
+//            return false
+//        }
+//        
+//        let mxSession = MXSession.init(matrixRestClient: client);
+//        
+//        mxSession?.start({
+//            
+//            print("\n\n\n")
+//            print("\(mxSession?.roomsByTags())")
+//            print("\n\n\n")
+//            
+//        }, failure: { (error) in
+//            print("\(error)")
+//        })
         
         
         return true
