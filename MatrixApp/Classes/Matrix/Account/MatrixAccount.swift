@@ -8,6 +8,19 @@
 
 import UIKit
 
+import MatrixSDK
+
 class MatrixAccount: NSObject {
 
+    var credentials: MXCredentials = MXCredentials()
+    var session: MXSession = MXSession()
+    var restClinet: MXRestClient = MXRestClient()
+    
+    
+    
+    init(credentials: MXCredentials) {
+        
+        
+    }
+    
 }
