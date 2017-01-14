@@ -10,3 +10,7 @@ struct ConfigKey {
     static let defaultHomeServer = "defaultHomeServer"
     static let defaultIdentityServer = "defaultIdentityServer"
 }
+
+struct Constants {
+    static let service = "me.lumby.matrix.server-token"
+}

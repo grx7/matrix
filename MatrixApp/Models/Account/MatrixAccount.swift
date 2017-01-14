@@ -11,15 +11,13 @@ import UIKit
 import MatrixSDK
 import KeychainAccess
 
-class MatrixAccount: NSObject {
+class MatrixAccount {
 
     var credentials: MXCredentials = MXCredentials()
     var session: MXSession = MXSession()
     var restClient: MXRestClient = MXRestClient()
     
-    init(loginAndStoreUser username: String, password: String, homeServer: String, identityServer: String) {
-        super.init()
-        
+    init(loginAndStoreUser username: String, password: String, homeServer: String, identityServer: String) {        
         let parameters: [AnyHashable: Any] = [
             "type": kMXLoginFlowTypePassword,
             "user": username,
@@ -41,6 +39,24 @@ class MatrixAccount: NSObject {
     }
     
     func storeUser(username: String, accessToken: String, matrixId: String, deviceId: String, homeServer: String, identityServer: String) {
+        let keychain = Keychain(service: Constants.service)
+        let defaults = UserDefaults.standard
+        
+        do {
+            try keychain.set(accessToken, key: matrixId)
+            
+            defaults.set([
+                "username": username,
+                "matrixId": matrixId,
+                "deviceId": deviceId,
+                "homeServer": homeServer,
+                "identityServer": identityServer
+            ], forKey: matrixId)
+        }
+        catch let error {
+            print(error)
+        }
+        
         print("Username: \(username)\nMatrixID: \(matrixId)\nServer: \(homeServer)\nToken: \(accessToken)")
     }
     
