@@ -19,6 +19,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var identityServerField: BottomBorderTextField!
     @IBOutlet weak var advancedView: UIView!
     @IBOutlet weak var advancedButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var advancedHeight: NSLayoutConstraint!
     
     let defaultAdvancedHeight: CGFloat = 176.0
@@ -56,6 +57,8 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func performLogin(sender: UIButton) {
+        self.resignFirstResponder()
+        
         if self.validateParameters() {
             _ = MatrixAccount(
                 loginAndStoreUser: self.usernameField.text!,
@@ -110,6 +113,28 @@ extension AuthViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeField = nil
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.returnKeyType == .go {
+            self.performLogin(sender: self.loginButton)
+        } else {
+            switch textField {
+            case self.usernameField:
+                self.passwordField.becomeFirstResponder()
+            case self.passwordField:
+                self.homeServerField.becomeFirstResponder()
+            case self.homeServerField:
+                if !self.advancedView.isHidden {
+                    self.identityServerField.becomeFirstResponder()
+                } else {
+                    self.performLogin(sender: self.loginButton)
+                }
+            default:
+                self.resignFirstResponder()
+            }
+        }
+        return true
     }
     
 }

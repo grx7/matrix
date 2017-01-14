@@ -225,6 +225,7 @@
                         <outlet property="advancedView" destination="Yx7-hc-G9p" id="6c3-uo-PGr"/>
                         <outlet property="homeServerField" destination="esK-fP-AH1" id="Bju-d1-ng2"/>
                         <outlet property="identityServerField" destination="oHo-GH-z0r" id="eIX-7Z-XxU"/>
+                        <outlet property="loginButton" destination="A4j-81-zJE" id="EqJ-L3-6SC"/>
                         <outlet property="passwordField" destination="vRe-gU-nAJ" id="OCv-XA-50A"/>
                         <outlet property="scrollView" destination="GQe-ag-T2I" id="bz8-C0-fwi"/>
                         <outlet property="usernameField" destination="zT8-mO-jfY" id="cr7-9R-VLz"/>
