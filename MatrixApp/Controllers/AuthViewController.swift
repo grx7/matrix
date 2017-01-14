@@ -46,9 +46,11 @@ class AuthViewController: UIViewController {
         
         if self.advancedView.isHidden {
             self.advancedHeight.constant = 0
+            self.passwordField.returnKeyType = .go
             self.advancedButton.setTitle("Show Advanced", for: .normal)
         } else {
             self.advancedHeight.constant = self.defaultAdvancedHeight
+            self.passwordField.returnKeyType = .next
             self.advancedButton.setTitle("Hide Advanced", for: .normal)
         }
     }
