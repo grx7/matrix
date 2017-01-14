@@ -55,7 +55,12 @@ class AuthViewController: UIViewController {
     
     @IBAction func performLogin(sender: UIButton) {
         if self.validateParameters() {
-            _ = MatrixAccount(loginAndStoreUser: self.usernameField.text!, password: self.passwordField.text!, homeServer: "https://matrix.org", identityServer: "https://matrix.org")
+            _ = MatrixAccount(
+                loginAndStoreUser: self.usernameField.text!,
+                password: self.passwordField.text!,
+                homeServer: AppConfig.sharedInstance.getDefault(string: self.homeServerField.text, key: ConfigKey.defaultHomeServer),
+                identityServer: AppConfig.sharedInstance.getDefault(string: self.identityServerField.text, key: ConfigKey.defaultIdentityServer)
+            )
         }
         
     }

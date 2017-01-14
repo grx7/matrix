@@ -6,8 +6,7 @@
 //  Copyright © 2017 Oliver Lumby. All rights reserved.
 //
 
-import UIKit
-
-class AppConstants: NSObject {
-
+struct ConfigKey {
+    static let defaultHomeServer = "defaultHomeServer"
+    static let defaultIdentityServer = "defaultIdentityServer"
 }

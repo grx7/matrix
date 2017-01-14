@@ -36,7 +36,6 @@ class MatrixAccount: NSObject {
                 self.storeUser(username: username, accessToken: accessToken, matrixId: matrixId, deviceId: deviceId, homeServer: homeServer, identityServer: identityServer)
             }
         }) { (error) in
-            
         }
         
     }
