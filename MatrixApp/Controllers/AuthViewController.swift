@@ -42,7 +42,7 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func toggleAdvancedOptions(sender: UIButton) {
-        self.advancedView.isHidden = !view.isHidden
+        self.advancedView.isHidden = !self.advancedView.isHidden
         
         if self.advancedView.isHidden {
             self.advancedHeight.constant = 0
@@ -54,11 +54,8 @@ class AuthViewController: UIViewController {
     }
     
     @IBAction func performLogin(sender: UIButton) {
-        
-        print("Login")
         if self.validateParameters() {
-            print("Login Validated")
-            MatrixAccount(loginAndStoreUser: self.usernameField.text!, password: self.passwordField.text!, homeServer: "https://matrix.org", identityServer: "https://matrix.org")
+            _ = MatrixAccount(loginAndStoreUser: self.usernameField.text!, password: self.passwordField.text!, homeServer: "https://matrix.org", identityServer: "https://matrix.org")
         }
         
     }

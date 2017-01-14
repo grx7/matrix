@@ -17,29 +17,8 @@ class MatrixAccount: NSObject {
     var session: MXSession = MXSession()
     var restClient: MXRestClient = MXRestClient()
     
-    
-    init(credentials: MXCredentials) {
-        
-//        let keychain = Keychain(service: "com.buckle.matrix-token")
-//        
-//        do {
-//            try keychain.set(NSKeyedArchiver.archivedData(withRootObject: parameters), key: "testthisplz")
-//        }
-//        catch let error {
-//            print(error)
-//        }
-//        
-//        print("Here goes login")
-//        
-//        if let data = try? keychain.getData("testthisplz") {
-//            print(NSKeyedUnarchiver.unarchiveObject(with: data!))
-//        }
-    
-        
-        //restClinet.login(parameters:
-    }
-    
     init(loginAndStoreUser username: String, password: String, homeServer: String, identityServer: String) {
+        super.init()
         
         let parameters: [AnyHashable: Any] = [
             "type": kMXLoginFlowTypePassword,
@@ -50,11 +29,20 @@ class MatrixAccount: NSObject {
         self.restClient = MXRestClient(homeServer: homeServer, andOnUnrecognizedCertificateBlock: nil)
         
         self.restClient.login(parameters, success: { (response) in
-            print("\(response)")
+            if let accessToken = response?["access_token"] as? String,
+                let matrixId = response?["user_id"] as? String,
+                let deviceId = response?["device_id"] as? String,
+                let homeServer = response?["home_server"] as? String {
+                self.storeUser(username: username, accessToken: accessToken, matrixId: matrixId, deviceId: deviceId, homeServer: homeServer, identityServer: identityServer)
+            }
         }) { (error) in
-            print("\(error)");
+            
         }
         
+    }
+    
+    func storeUser(username: String, accessToken: String, matrixId: String, deviceId: String, homeServer: String, identityServer: String) {
+        print("Username: \(username)\nMatrixID: \(matrixId)\nServer: \(homeServer)\nToken: \(accessToken)")
     }
     
 }
