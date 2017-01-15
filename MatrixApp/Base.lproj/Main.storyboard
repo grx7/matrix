@@ -46,6 +46,7 @@
                     <connections>
                         <segue destination="JDN-gR-vm0" kind="show" identifier="authPageLogin" id="hGu-2w-na8"/>
                         <segue destination="LIZ-dY-Wyi" kind="show" identifier="authPageTour" id="jrw-x5-m1O"/>
+                        <segue destination="2vp-gE-btC" kind="show" identifier="authPageTourTwo" id="2d3-tV-I00"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seo-tX-ekQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -60,7 +61,7 @@
                         <viewControllerLayoutGuide type="top" id="Xxw-Xl-WJj"/>
                         <viewControllerLayoutGuide type="bottom" id="ws5-JP-SRy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="svX-tb-Dpk" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="svX-tb-Dpk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -68,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34r-nD-kcu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="522"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zT8-mO-jfY" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="130" width="280" height="38"/>
@@ -123,12 +124,13 @@
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCZ-ua-U8o">
                                                         <rect key="frame" x="0.0" y="92" width="280" height="84"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="84" id="FkK-TT-m8k"/>
                                                         </constraints>
                                                         <string key="text">Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs and phone numbers and other forms of identification.</string>
                                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                        <color key="textColor" red="0.76246345309999997" green="0.85005511950000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                         <string key="userLabel">Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs and phone numbers and other forms of identification.</string>
                                                     </label>
@@ -148,8 +150,8 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE">
-                                                <rect key="frame" x="20" y="456" width="280" height="38"/>
-                                                <color key="backgroundColor" red="0.078414358198642731" green="0.55610662698745728" blue="0.8740571141242981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="20" y="460" width="280" height="38"/>
+                                                <color key="backgroundColor" red="0.81999999999999995" green="0.32193796264017194" blue="0.30588656745685894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="aBD-q5-dxf"/>
                                                 </constraints>
@@ -160,7 +162,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-yN-ow5">
-                                                <rect key="frame" x="20" y="410" width="280" height="38"/>
+                                                <rect key="frame" x="20" y="414" width="280" height="38"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.096060739436619719" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="2uG-a5-9jZ"/>
@@ -171,29 +173,29 @@
                                                     <action selector="toggleAdvancedOptionsWithSender:" destination="JDN-gR-vm0" eventType="touchUpInside" id="9cR-O8-HZr"/>
                                                 </connections>
                                             </button>
-                                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-mk-1Zi">
-                                                <rect key="frame" x="40" y="60" width="240" height="31"/>
-                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-mk-1Zi">
+                                                <rect key="frame" x="20" y="60" width="280" height="31"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Jsj-Dk-LRa"/>
                                                 </constraints>
                                                 <segments>
-                                                    <segment title="Login" enabled="NO"/>
+                                                    <segment title="Login"/>
                                                     <segment title="Register"/>
                                                 </segments>
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.75" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="A4j-81-zJE" secondAttribute="trailing" constant="20" id="2yN-aF-7aj"/>
                                             <constraint firstItem="A4j-81-zJE" firstAttribute="top" secondItem="iZq-yN-ow5" secondAttribute="bottom" constant="8" id="3ma-Qy-V93"/>
-                                            <constraint firstAttribute="trailing" secondItem="KBu-mk-1Zi" secondAttribute="trailing" constant="40" id="4OV-cv-Vdn"/>
+                                            <constraint firstAttribute="trailing" secondItem="KBu-mk-1Zi" secondAttribute="trailing" constant="20" id="4OV-cv-Vdn"/>
                                             <constraint firstItem="zT8-mO-jfY" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="Ak5-aI-b5v"/>
                                             <constraint firstItem="vRe-gU-nAJ" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="D4K-zs-CGl"/>
-                                            <constraint firstItem="KBu-mk-1Zi" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="40" id="EHP-mD-m7W"/>
+                                            <constraint firstItem="KBu-mk-1Zi" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="EHP-mD-m7W"/>
                                             <constraint firstAttribute="trailing" secondItem="zT8-mO-jfY" secondAttribute="trailing" constant="20" id="NLf-pO-S0o"/>
-                                            <constraint firstItem="iZq-yN-ow5" firstAttribute="top" secondItem="Yx7-hc-G9p" secondAttribute="bottom" constant="12" id="PPL-zI-rln"/>
+                                            <constraint firstItem="iZq-yN-ow5" firstAttribute="top" secondItem="Yx7-hc-G9p" secondAttribute="bottom" constant="16" id="PPL-zI-rln"/>
                                             <constraint firstItem="Yx7-hc-G9p" firstAttribute="top" secondItem="vRe-gU-nAJ" secondAttribute="bottom" constant="8" id="QGh-1b-GtE"/>
                                             <constraint firstAttribute="trailing" secondItem="iZq-yN-ow5" secondAttribute="trailing" constant="20" id="T7T-H1-Cac"/>
                                             <constraint firstItem="zT8-mO-jfY" firstAttribute="top" secondItem="KBu-mk-1Zi" secondAttribute="bottom" constant="40" id="YwE-zW-TXR"/>
@@ -216,7 +218,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1842715144" green="0.21562337879999999" blue="0.2508970499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.88235294119999996" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GQe-ag-T2I" secondAttribute="trailing" id="MP9-ws-uYo"/>
                             <constraint firstItem="34r-nD-kcu" firstAttribute="width" secondItem="svX-tb-Dpk" secondAttribute="width" id="Nm6-w1-yjV"/>
@@ -224,14 +226,6 @@
                             <constraint firstItem="GQe-ag-T2I" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leading" id="Pvp-E5-Fbd"/>
                             <constraint firstItem="GQe-ag-T2I" firstAttribute="top" secondItem="Xxw-Xl-WJj" secondAttribute="bottom" id="jrU-dg-taq"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" red="0.21964535117149353" green="0.24304547905921936" blue="0.29793137311935425" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" red="0.12161386758089066" green="0.13718107342720032" blue="0.18031409382820129" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="advancedButton" destination="iZq-yN-ow5" id="zIq-fz-Non"/>
@@ -247,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyT-MS-dQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1978" y="1251"/>
+            <point key="canvasLocation" x="-1714" y="1251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hPA-7B-fxO">
@@ -272,7 +266,7 @@ Open Standard.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ App Name }} is completely open source and built upon an open specification." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhK-c8-BJJ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ App Name }} is completely open source and hosted on GitHub." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhK-c8-BJJ">
                                 <rect key="frame" x="36" y="170" width="248" height="74"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="74" id="CPe-VV-T8A"/>
@@ -281,42 +275,85 @@ Open Standard.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[matrix] is a federeated specification, meaning you can host your own chat server and own your data." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hy-2m-9AQ">
-                                <rect key="frame" x="36" y="256" width="248" height="84"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="84" id="Tmo-Kb-TOr"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qa8-Gx-dTh">
-                                <rect key="frame" x="56" y="352" width="208" height="37"/>
+                                <rect key="frame" x="56" y="471" width="208" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="37" id="6ud-fC-oz8"/>
+                                    <constraint firstAttribute="height" constant="37" id="M4j-oO-caJ"/>
                                 </constraints>
                             </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196078431371" green="0.66666666666666663" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="E9I-nU-OQ9" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="8" id="3hy-kk-Iu0"/>
-                            <constraint firstItem="0hy-2m-9AQ" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="20" id="3ux-02-oGc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qa8-Gx-dTh" secondAttribute="trailing" constant="40" id="3lN-SV-yCR"/>
                             <constraint firstItem="E9I-nU-OQ9" firstAttribute="top" secondItem="45m-tR-UAR" secondAttribute="bottom" constant="80" id="C9K-ux-CSH"/>
-                            <constraint firstItem="Qa8-Gx-dTh" firstAttribute="top" secondItem="0hy-2m-9AQ" secondAttribute="bottom" constant="12" id="Dta-Cj-f9e"/>
-                            <constraint firstItem="0hy-2m-9AQ" firstAttribute="top" secondItem="WhK-c8-BJJ" secondAttribute="bottom" constant="12" id="HZL-bs-HFc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E9I-nU-OQ9" secondAttribute="trailing" constant="8" id="Ihx-er-xNG"/>
                             <constraint firstItem="WhK-c8-BJJ" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="20" id="cUw-Ph-ZTg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qa8-Gx-dTh" secondAttribute="trailing" constant="40" id="d7C-2D-81Z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WhK-c8-BJJ" secondAttribute="trailing" constant="20" id="edg-o4-BST"/>
+                            <constraint firstItem="Qa8-Gx-dTh" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="40" id="jzQ-iF-Fx4"/>
                             <constraint firstItem="WhK-c8-BJJ" firstAttribute="top" secondItem="E9I-nU-OQ9" secondAttribute="bottom" constant="12" id="t5U-0e-2Uh"/>
-                            <constraint firstItem="Qa8-Gx-dTh" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="40" id="xc9-FJ-ZJo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="0hy-2m-9AQ" secondAttribute="trailing" constant="20" id="ze5-m4-egi"/>
+                            <constraint firstItem="Qfl-sr-Rws" firstAttribute="top" secondItem="Qa8-Gx-dTh" secondAttribute="bottom" constant="60" id="yiL-Q3-XiF"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="up2-Po-OGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3043.125" y="1250.7042253521126"/>
+            <point key="canvasLocation" x="-3377" y="1251"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="izy-IR-212">
+            <objects>
+                <viewController storyboardIdentifier="authPageTourTwo" id="2vp-gE-btC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="229-iI-auZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="C2v-rx-up0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XG5-nK-4GZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Built on an open federated specification, meaning you can host your own chat server and own your data." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCx-lz-Cwr">
+                                <rect key="frame" x="36" y="197" width="248" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="sFa-lz-Wh2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-tv-QLH">
+                                <rect key="frame" x="56" y="471" width="208" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="rD4-RF-p8M"/>
+                                </constraints>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="matrixLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-gi-vog">
+                                <rect key="frame" x="61" y="100" width="199" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="yPA-BS-4Ea"/>
+                                    <constraint firstAttribute="width" constant="199" id="zbM-ZP-zCr"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38617384433746332" green="0.84693372249603271" blue="0.52412900602212165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="C2v-rx-up0" firstAttribute="top" secondItem="3dv-tv-QLH" secondAttribute="bottom" constant="60" id="3WI-BN-Bzv"/>
+                            <constraint firstItem="PCx-lz-Cwr" firstAttribute="top" secondItem="e0W-gi-vog" secondAttribute="bottom" constant="12" id="4Oy-sk-HjV"/>
+                            <constraint firstItem="PCx-lz-Cwr" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="20" id="A8C-KB-qHU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PCx-lz-Cwr" secondAttribute="trailing" constant="20" id="DAC-tW-d7F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3dv-tv-QLH" secondAttribute="trailing" constant="40" id="He7-hK-50L"/>
+                            <constraint firstItem="e0W-gi-vog" firstAttribute="centerX" secondItem="XG5-nK-4GZ" secondAttribute="centerX" id="LPm-gH-TCA"/>
+                            <constraint firstItem="3dv-tv-QLH" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="40" id="WQg-Sw-FDy"/>
+                            <constraint firstItem="e0W-gi-vog" firstAttribute="top" secondItem="229-iI-auZ" secondAttribute="bottom" constant="80" id="wrL-jd-Moe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYl-KT-Rv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2516" y="1251"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="matrixLogo" width="632" height="270"/>
+    </resources>
 </document>

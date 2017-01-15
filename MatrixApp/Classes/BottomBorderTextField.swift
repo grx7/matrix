@@ -14,7 +14,7 @@ class BottomBorderTextField: UITextField {
         super.init(coder: aDecoder)
         
         let border = CALayer()
-        let width = CGFloat(1.0)
+        let width = CGFloat(2.0)
         border.borderColor = UIColor.init(white: 1, alpha: 0.85).cgColor
         border.frame = CGRect(x: 0, y: self.frame.size.height - width, width:  self.frame.size.width, height: self.frame.size.height)
         
@@ -32,13 +32,5 @@ class BottomBorderTextField: UITextField {
     override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return self.textRect(forBounds: bounds);
     }
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
 
 }
