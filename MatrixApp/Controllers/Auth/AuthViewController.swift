@@ -25,11 +25,6 @@ class AuthViewController: UIViewController {
     let defaultAdvancedHeight: CGFloat = 176.0
     weak var activeField: UITextField?
     
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

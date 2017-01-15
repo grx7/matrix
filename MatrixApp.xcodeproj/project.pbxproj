@@ -19,6 +19,7 @@
 		894C77901E27EF44008D5C86 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C778F1E27EF44008D5C86 /* InitialViewController.swift */; };
 		894C77931E27FB84008D5C86 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77921E27FB84008D5C86 /* GradientView.swift */; };
 		894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77951E28021C008D5C86 /* AuthViewController.swift */; };
+		895DD9721E2BD23C00BCF6A2 /* AuthPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 895DD9711E2BD23C00BCF6A2 /* AuthPageViewController.swift */; };
 		89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */; };
 		89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */; };
 		89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */; };
@@ -67,7 +68,8 @@
 		894C77831E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894C778F1E27EF44008D5C86 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = Controllers/InitialViewController.swift; sourceTree = "<group>"; };
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Classes/GradientView.swift; sourceTree = "<group>"; };
-		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Controllers/AuthViewController.swift; sourceTree = "<group>"; };
+		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = MatrixApp/Controllers/Auth/AuthViewController.swift; sourceTree = SOURCE_ROOT; };
+		895DD9711E2BD23C00BCF6A2 /* AuthPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPageViewController.swift; sourceTree = "<group>"; };
 		89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomBorderTextField.swift; path = Classes/BottomBorderTextField.swift; sourceTree = "<group>"; };
 		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAccount.swift; path = Models/Account/MatrixAccount.swift; sourceTree = "<group>"; };
 		89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppConfig.swift; path = Classes/App/AppConfig.swift; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				894C778F1E27EF44008D5C86 /* InitialViewController.swift */,
-				894C77951E28021C008D5C86 /* AuthViewController.swift */,
+				895DD9731E2BD24100BCF6A2 /* Auth */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +207,16 @@
 				89EDB1C31E2A50FD00AB7516 /* App */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		895DD9731E2BD24100BCF6A2 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				894C77951E28021C008D5C86 /* AuthViewController.swift */,
+				895DD9711E2BD23C00BCF6A2 /* AuthPageViewController.swift */,
+			);
+			name = Auth;
+			path = Controllers/Auth;
 			sourceTree = "<group>";
 		};
 		89EDB1BA1E2910A900AB7516 /* Account */ = {
@@ -325,7 +337,7 @@
 				TargetAttributes = {
 					894C77581E27EE9C008D5C86 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P783QGVTJP;
+						DevelopmentTeam = 852Z5XQF7Y;
 						ProvisioningStyle = Automatic;
 					};
 					894C77711E27EE9D008D5C86 = {
@@ -535,6 +547,7 @@
 			files = (
 				89EDB1CA1E2A645F00AB7516 /* MatrixAccountManager.swift in Sources */,
 				89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */,
+				895DD9721E2BD23C00BCF6A2 /* AuthPageViewController.swift in Sources */,
 				89EDB1C51E2A510D00AB7516 /* AppConstants.swift in Sources */,
 				89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */,
 				894C77901E27EF44008D5C86 /* InitialViewController.swift in Sources */,
@@ -694,11 +707,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P783QGVTJP;
+				DEVELOPMENT_TEAM = 852Z5XQF7Y;
 				INFOPLIST_FILE = MatrixApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.MatrixApp;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.buckle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -708,11 +722,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P783QGVTJP;
+				DEVELOPMENT_TEAM = 852Z5XQF7Y;
 				INFOPLIST_FILE = MatrixApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.MatrixApp;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.buckle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

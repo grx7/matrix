@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,17 +32,30 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <segue destination="JDN-gR-vm0" kind="presentation" identifier="showAuth" animates="NO" id="A1m-v6-Z2g"/>
+                        <segue destination="t41-wk-qDD" kind="presentation" identifier="showAuth" animates="NO" id="pH0-hr-Hg3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjp-Cw-Q5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1526" y="-597"/>
         </scene>
+        <!--Auth Page View Controller-->
+        <scene sceneID="J8z-57-rIA">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="t41-wk-qDD" customClass="AuthPageViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="JDN-gR-vm0" kind="show" identifier="authPageLogin" id="hGu-2w-na8"/>
+                        <segue destination="LIZ-dY-Wyi" kind="show" identifier="authPageTour" id="jrw-x5-m1O"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="seo-tX-ekQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2516" y="379"/>
+        </scene>
         <!--Auth View Controller-->
         <scene sceneID="9kZ-zo-ZPS">
             <objects>
-                <viewController id="JDN-gR-vm0" customClass="AuthViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authPageLogin" id="JDN-gR-vm0" customClass="AuthViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xxw-Xl-WJj"/>
                         <viewControllerLayoutGuide type="bottom" id="ws5-JP-SRy"/>
@@ -233,7 +247,76 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyT-MS-dQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1526.25" y="247.18309859154931"/>
+            <point key="canvasLocation" x="-1978" y="1251"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hPA-7B-fxO">
+            <objects>
+                <viewController storyboardIdentifier="authPageTour" id="LIZ-dY-Wyi" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="45m-tR-UAR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qfl-sr-Rws"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WgL-sX-GMB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-nU-OQ9">
+                                <rect key="frame" x="24" y="100" width="272" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="0B9-G5-nGL"/>
+                                </constraints>
+                                <string key="text">Open Source.
+Open Standard.</string>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{{ App Name }} is completely open source and built upon an open specification." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhK-c8-BJJ">
+                                <rect key="frame" x="36" y="170" width="248" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="CPe-VV-T8A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[matrix] is a federeated specification, meaning you can host your own chat server and own your data." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hy-2m-9AQ">
+                                <rect key="frame" x="36" y="256" width="248" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="Tmo-Kb-TOr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Qa8-Gx-dTh">
+                                <rect key="frame" x="56" y="352" width="208" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="6ud-fC-oz8"/>
+                                </constraints>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25490196078431371" green="0.66666666666666663" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E9I-nU-OQ9" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="8" id="3hy-kk-Iu0"/>
+                            <constraint firstItem="0hy-2m-9AQ" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="20" id="3ux-02-oGc"/>
+                            <constraint firstItem="E9I-nU-OQ9" firstAttribute="top" secondItem="45m-tR-UAR" secondAttribute="bottom" constant="80" id="C9K-ux-CSH"/>
+                            <constraint firstItem="Qa8-Gx-dTh" firstAttribute="top" secondItem="0hy-2m-9AQ" secondAttribute="bottom" constant="12" id="Dta-Cj-f9e"/>
+                            <constraint firstItem="0hy-2m-9AQ" firstAttribute="top" secondItem="WhK-c8-BJJ" secondAttribute="bottom" constant="12" id="HZL-bs-HFc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E9I-nU-OQ9" secondAttribute="trailing" constant="8" id="Ihx-er-xNG"/>
+                            <constraint firstItem="WhK-c8-BJJ" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="20" id="cUw-Ph-ZTg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qa8-Gx-dTh" secondAttribute="trailing" constant="40" id="d7C-2D-81Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WhK-c8-BJJ" secondAttribute="trailing" constant="20" id="edg-o4-BST"/>
+                            <constraint firstItem="WhK-c8-BJJ" firstAttribute="top" secondItem="E9I-nU-OQ9" secondAttribute="bottom" constant="12" id="t5U-0e-2Uh"/>
+                            <constraint firstItem="Qa8-Gx-dTh" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="40" id="xc9-FJ-ZJo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0hy-2m-9AQ" secondAttribute="trailing" constant="20" id="ze5-m4-egi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="up2-Po-OGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3043.125" y="1250.7042253521126"/>
         </scene>
     </scenes>
 </document>
