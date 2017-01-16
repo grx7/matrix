@@ -62,7 +62,7 @@
                         <viewControllerLayoutGuide type="top" id="Xxw-Xl-WJj"/>
                         <viewControllerLayoutGuide type="bottom" id="ws5-JP-SRy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="svX-tb-Dpk">
+                    <view key="view" contentMode="scaleToFill" id="svX-tb-Dpk" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -164,7 +164,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE">
                                                 <rect key="frame" x="20" y="342" width="280" height="38"/>
-                                                <color key="backgroundColor" red="0.81999999999999995" green="0.32193796264017194" blue="0.30588656745685894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.1842715144" green="0.21562337879999999" blue="0.2508970499" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="aBD-q5-dxf"/>
                                                 </constraints>
@@ -227,6 +227,14 @@
                             <constraint firstAttribute="trailing" secondItem="frq-bV-uYq" secondAttribute="trailing" constant="20" id="Ysl-0g-V1R"/>
                             <constraint firstItem="GQe-ag-T2I" firstAttribute="top" secondItem="frq-bV-uYq" secondAttribute="bottom" constant="24" id="dLT-7v-kcU"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.95809262990951538" green="0.36167335510253906" blue="0.26334288716316223" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.92294830083847046" green="0.20135295391082764" blue="0.28658503293991089" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
                         <outlet property="advancedButton" destination="iZq-yN-ow5" id="zIq-fz-Non"/>
@@ -252,7 +260,7 @@
                         <viewControllerLayoutGuide type="top" id="45m-tR-UAR"/>
                         <viewControllerLayoutGuide type="bottom" id="Qfl-sr-Rws"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WgL-sX-GMB">
+                    <view key="view" contentMode="scaleToFill" id="WgL-sX-GMB" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -279,7 +287,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="{{ App Name }} is completely open source and hosted on GitHub." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzJ-T3-VrJ">
-                                <rect key="frame" x="36" y="260" width="248" height="219"/>
+                                <rect key="frame" x="36" y="266" width="248" height="213"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -290,7 +298,7 @@
                         <constraints>
                             <constraint firstItem="8x3-5x-uxG" firstAttribute="top" secondItem="E9I-nU-OQ9" secondAttribute="bottom" constant="20" id="1xR-AM-Ix2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qa8-Gx-dTh" secondAttribute="trailing" constant="40" id="3lN-SV-yCR"/>
-                            <constraint firstItem="IzJ-T3-VrJ" firstAttribute="top" secondItem="8x3-5x-uxG" secondAttribute="bottom" constant="20" id="8ON-Ja-acA"/>
+                            <constraint firstItem="IzJ-T3-VrJ" firstAttribute="top" secondItem="8x3-5x-uxG" secondAttribute="bottom" constant="26" id="8ON-Ja-acA"/>
                             <constraint firstItem="Qa8-Gx-dTh" firstAttribute="top" secondItem="IzJ-T3-VrJ" secondAttribute="bottom" constant="12" id="9v4-Jy-tYv"/>
                             <constraint firstItem="8x3-5x-uxG" firstAttribute="centerX" secondItem="WgL-sX-GMB" secondAttribute="centerX" id="GEz-Zx-91W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E9I-nU-OQ9" secondAttribute="trailing" constant="8" id="KuO-i0-5Xh"/>
@@ -301,6 +309,14 @@
                             <constraint firstItem="E9I-nU-OQ9" firstAttribute="top" secondItem="45m-tR-UAR" secondAttribute="bottom" constant="80" id="ug6-nX-ChD"/>
                             <constraint firstItem="Qfl-sr-Rws" firstAttribute="top" secondItem="Qa8-Gx-dTh" secondAttribute="bottom" constant="40" id="yiL-Q3-XiF"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.15086424350738525" green="0.62691205739974976" blue="0.8545113205909729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.19194525480270386" green="0.27831310033798218" blue="0.333210289478302" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="up2-Po-OGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -315,7 +331,7 @@
                         <viewControllerLayoutGuide type="top" id="7zu-Cy-Dk2"/>
                         <viewControllerLayoutGuide type="bottom" id="1VA-ox-ZGP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yvA-U7-c3y">
+                    <view key="view" contentMode="scaleToFill" id="yvA-U7-c3y" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -336,7 +352,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Built on an open federated specification, meaning you can host your own chat server and own your data." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncg-uf-Dlc">
-                                <rect key="frame" x="36" y="260" width="248" height="219"/>
+                                <rect key="frame" x="36" y="266" width="248" height="213"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -353,7 +369,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="332-ri-Fhl" secondAttribute="trailing" constant="8" id="6kS-t2-ZZR"/>
                             <constraint firstItem="3o7-BU-5tf" firstAttribute="centerX" secondItem="yvA-U7-c3y" secondAttribute="centerX" id="FNf-zp-Pgt"/>
-                            <constraint firstItem="Ncg-uf-Dlc" firstAttribute="top" secondItem="3o7-BU-5tf" secondAttribute="bottom" constant="20" id="Glo-OK-l8Y"/>
+                            <constraint firstItem="Ncg-uf-Dlc" firstAttribute="top" secondItem="3o7-BU-5tf" secondAttribute="bottom" constant="26" id="Glo-OK-l8Y"/>
                             <constraint firstItem="YtP-aT-ZmH" firstAttribute="top" secondItem="Ncg-uf-Dlc" secondAttribute="bottom" constant="12" id="IaU-Qa-gkv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ncg-uf-Dlc" secondAttribute="trailing" constant="20" id="RWz-pJ-fvm"/>
                             <constraint firstItem="332-ri-Fhl" firstAttribute="leading" secondItem="yvA-U7-c3y" secondAttribute="leadingMargin" constant="8" id="aZk-aW-QYV"/>
@@ -364,6 +380,14 @@
                             <constraint firstItem="YtP-aT-ZmH" firstAttribute="leading" secondItem="yvA-U7-c3y" secondAttribute="leadingMargin" constant="40" id="x3l-ka-MyB"/>
                             <constraint firstItem="Ncg-uf-Dlc" firstAttribute="leading" secondItem="yvA-U7-c3y" secondAttribute="leadingMargin" constant="20" id="y5C-TG-VWE"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.45160335302352905" green="0.29400798678398132" blue="0.42729246616363525" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.25949609279632568" green="0.15253248810768127" blue="0.35273730754852295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezG-qB-Rac" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -378,7 +402,7 @@
                         <viewControllerLayoutGuide type="top" id="229-iI-auZ"/>
                         <viewControllerLayoutGuide type="bottom" id="C2v-rx-up0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XG5-nK-4GZ">
+                    <view key="view" contentMode="scaleToFill" id="XG5-nK-4GZ" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -406,7 +430,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="The specification is open which means any client can be used" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7P-Sj-fub">
-                                <rect key="frame" x="36" y="260" width="248" height="219"/>
+                                <rect key="frame" x="36" y="266" width="248" height="213"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -418,7 +442,7 @@
                             <constraint firstItem="C2v-rx-up0" firstAttribute="top" secondItem="3dv-tv-QLH" secondAttribute="bottom" constant="40" id="3WI-BN-Bzv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dv-tv-QLH" secondAttribute="trailing" constant="40" id="He7-hK-50L"/>
                             <constraint firstItem="e0W-gi-vog" firstAttribute="top" secondItem="0cQ-2Z-1kX" secondAttribute="bottom" constant="20" id="Hpx-in-YgQ"/>
-                            <constraint firstItem="y7P-Sj-fub" firstAttribute="top" secondItem="e0W-gi-vog" secondAttribute="bottom" constant="20" id="JLh-yx-WGV"/>
+                            <constraint firstItem="y7P-Sj-fub" firstAttribute="top" secondItem="e0W-gi-vog" secondAttribute="bottom" constant="26" id="JLh-yx-WGV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y7P-Sj-fub" secondAttribute="trailing" constant="20" id="Mx2-EM-tGH"/>
                             <constraint firstItem="y7P-Sj-fub" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="20" id="Sbk-cc-iVb"/>
                             <constraint firstItem="3dv-tv-QLH" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="40" id="WQg-Sw-FDy"/>
@@ -428,6 +452,14 @@
                             <constraint firstItem="0cQ-2Z-1kX" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="8" id="x0A-Uy-4ey"/>
                             <constraint firstItem="e0W-gi-vog" firstAttribute="centerX" secondItem="XG5-nK-4GZ" secondAttribute="centerX" id="zMY-3j-cPh"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.65687543153762817" green="0.87881851196289062" blue="0.38918998837471008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.33788663148880005" green="0.67087966203689575" blue="0.1856524646282196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYl-KT-Rv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
