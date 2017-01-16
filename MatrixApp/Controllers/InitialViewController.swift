@@ -17,7 +17,9 @@ class InitialViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        self.showAuthScreen()
+        if !MatrixAccountManager.sharedInstance.hasAccounts() {
+            self.showAuthScreen()
+        }
     }
     
     override func viewDidLoad() {
