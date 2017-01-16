@@ -13,4 +13,5 @@ struct ConfigKey {
 
 struct Constants {
     static let service = "me.lumby.matrix.server-token"
+    static let userAccounts = "userAccounts"
 }

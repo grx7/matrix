@@ -88,12 +88,16 @@ class AuthViewController: UIViewController {
         self.resignFirstResponder()
         
         if self.validateParameters() {
-            _ = MatrixAccount(
-                loginAndStoreUser: self.loginUsernameField.text!,
+            MatrixAccountManager.sharedInstance.addAccount(
+                username: self.loginUsernameField.text!,
                 password: self.loginPasswordField.text!,
                 homeServer: AppConfig.sharedInstance.getDefault(string: self.loginHomeServerField.text, key: ConfigKey.defaultHomeServer),
-                identityServer: AppConfig.sharedInstance.getDefault(string: self.loginIdentityServerField.text, key: ConfigKey.defaultIdentityServer)
-            )
+                identityServer: AppConfig.sharedInstance.getDefault(string: self.loginIdentityServerField.text, key: ConfigKey.defaultIdentityServer),
+                success: { (account) in
+                    self.parent?.dismiss(animated: true, completion: nil)
+            }, failure: { (error) in
+                print(error)
+            })
         }
         
     }

@@ -7,57 +7,41 @@
 //
 
 import UIKit
-
 import MatrixSDK
-import KeychainAccess
 
 class MatrixAccount {
 
     var credentials: MXCredentials = MXCredentials()
-    var session: MXSession = MXSession()
     var restClient: MXRestClient = MXRestClient()
+    var session: MXSession = MXSession()
     
-    init(loginAndStoreUser username: String, password: String, homeServer: String, identityServer: String) {        
+    init(credentials: MXCredentials) {
+        self.credentials = credentials
+        self.restClient = MXRestClient(credentials: self.credentials, andOnUnrecognizedCertificateBlock: nil)
+        self.session = MXSession(matrixRestClient: restClient)
+    }
+    
+    static func authenticateUser(username: String, password: String, homeServer: String, success: @escaping ((MXCredentials) -> ()), failure: @escaping ((Error) -> ())) {
         let parameters: [AnyHashable: Any] = [
             "type": kMXLoginFlowTypePassword,
             "user": username,
             "password": password
         ]
         
-        self.restClient = MXRestClient(homeServer: homeServer, andOnUnrecognizedCertificateBlock: nil)
+        let restClient = MXRestClient(homeServer: homeServer, andOnUnrecognizedCertificateBlock: nil)!
         
-        self.restClient.login(parameters, success: { (response) in
-            if let accessToken = response?["access_token"] as? String,
-                let matrixId = response?["user_id"] as? String,
-                let deviceId = response?["device_id"] as? String,
-                let homeServer = response?["home_server"] as? String {
-                self.storeUser(username: username, accessToken: accessToken, matrixId: matrixId, deviceId: deviceId, homeServer: homeServer, identityServer: identityServer)
+        restClient.login(parameters, success: { (response) in
+            if let accessToken = response?["access_token"] as? String, let matrixId = response?["user_id"] as? String, let deviceId = response?["device_id"] as? String, let homeServer = response?["home_server"] as? String {
+                if let credentials = MXCredentials(homeServer: homeServer, userId: matrixId, accessToken: accessToken) {
+                    credentials.deviceId = deviceId
+                    success(credentials)
+                }
             }
         }) { (error) in
+            if error != nil {
+                failure(error!)
+            }
         }
-        
-    }
-    
-    func storeUser(username: String, accessToken: String, matrixId: String, deviceId: String, homeServer: String, identityServer: String) {
-        let keychain = Keychain(service: Constants.service)
-        let defaults = UserDefaults.standard
-        
-        do {
-            try keychain.set(accessToken, key: matrixId)
-            
-            defaults.set([
-                "username": username,
-                "matrixId": matrixId,
-                "deviceId": deviceId,
-                "homeServer": homeServer,
-                "identityServer": identityServer
-            ], forKey: matrixId)
-        }
-        catch let error {
-            print(error)
-        }
-        
-        print("Username: \(username)\nMatrixID: \(matrixId)\nServer: \(homeServer)\nToken: \(accessToken)")
     }
     
 }

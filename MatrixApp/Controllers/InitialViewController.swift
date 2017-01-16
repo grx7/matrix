@@ -16,9 +16,13 @@ class InitialViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        //UserDefaults.standard.removeObject(forKey: Constants.userAccounts)
 
         if !MatrixAccountManager.sharedInstance.hasAccounts() {
             self.showAuthScreen()
+        } else {
+            print("I have at least 1 account")
         }
     }
     
