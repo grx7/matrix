@@ -216,7 +216,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" red="0.88235294119999996" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.95868045091629028" green="0.36097976565361023" blue="0.26166301965713501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GQe-ag-T2I" secondAttribute="trailing" id="MP9-ws-uYo"/>
                             <constraint firstItem="frq-bV-uYq" firstAttribute="top" secondItem="Xxw-Xl-WJj" secondAttribute="bottom" constant="50" id="NAP-OO-sQh"/>
@@ -287,19 +287,31 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="{{ App Name }} is completely open source and hosted on GitHub." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzJ-T3-VrJ">
-                                <rect key="frame" x="36" y="266" width="248" height="213"/>
+                                <rect key="frame" x="36" y="266" width="248" height="171"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-xA-bS1" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                <rect key="frame" x="105" y="449" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="WKL-3n-HLm"/>
+                                    <constraint firstAttribute="height" constant="30" id="zAp-TF-lj7"/>
+                                </constraints>
+                                <state key="normal" title="Learn More">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.25490196078431371" green="0.66666666666666663" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.15095481276512146" green="0.62752515077590942" blue="0.85643982887268066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8x3-5x-uxG" firstAttribute="top" secondItem="E9I-nU-OQ9" secondAttribute="bottom" constant="20" id="1xR-AM-Ix2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qa8-Gx-dTh" secondAttribute="trailing" constant="40" id="3lN-SV-yCR"/>
+                            <constraint firstItem="j0x-xA-bS1" firstAttribute="centerX" secondItem="WgL-sX-GMB" secondAttribute="centerX" id="6oy-wh-cW5"/>
                             <constraint firstItem="IzJ-T3-VrJ" firstAttribute="top" secondItem="8x3-5x-uxG" secondAttribute="bottom" constant="26" id="8ON-Ja-acA"/>
-                            <constraint firstItem="Qa8-Gx-dTh" firstAttribute="top" secondItem="IzJ-T3-VrJ" secondAttribute="bottom" constant="12" id="9v4-Jy-tYv"/>
+                            <constraint firstItem="j0x-xA-bS1" firstAttribute="top" secondItem="IzJ-T3-VrJ" secondAttribute="bottom" constant="12" id="CMn-Vf-8bY"/>
+                            <constraint firstItem="Qa8-Gx-dTh" firstAttribute="top" secondItem="j0x-xA-bS1" secondAttribute="bottom" constant="12" id="FbT-QZ-IbK"/>
                             <constraint firstItem="8x3-5x-uxG" firstAttribute="centerX" secondItem="WgL-sX-GMB" secondAttribute="centerX" id="GEz-Zx-91W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="E9I-nU-OQ9" secondAttribute="trailing" constant="8" id="KuO-i0-5Xh"/>
                             <constraint firstItem="IzJ-T3-VrJ" firstAttribute="leading" secondItem="WgL-sX-GMB" secondAttribute="leadingMargin" constant="20" id="N4J-Sc-266"/>
@@ -352,7 +364,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Built on an open federated specification, meaning you can host your own chat server and own your data." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ncg-uf-Dlc">
-                                <rect key="frame" x="36" y="266" width="248" height="213"/>
+                                <rect key="frame" x="36" y="266" width="248" height="171"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -364,19 +376,31 @@
                                     <constraint firstAttribute="height" constant="37" id="a7t-2z-xf2"/>
                                 </constraints>
                             </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnt-zE-rXY" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                <rect key="frame" x="105" y="449" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="iOI-Vr-bi2"/>
+                                    <constraint firstAttribute="height" constant="30" id="uDU-Ui-FPl"/>
+                                </constraints>
+                                <state key="normal" title="Learn More">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.43358920834226827" green="0.38476711511611933" blue="0.848766028881073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.44987612962722778" green="0.2943071722984314" blue="0.42621350288391113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="332-ri-Fhl" secondAttribute="trailing" constant="8" id="6kS-t2-ZZR"/>
                             <constraint firstItem="3o7-BU-5tf" firstAttribute="centerX" secondItem="yvA-U7-c3y" secondAttribute="centerX" id="FNf-zp-Pgt"/>
                             <constraint firstItem="Ncg-uf-Dlc" firstAttribute="top" secondItem="3o7-BU-5tf" secondAttribute="bottom" constant="26" id="Glo-OK-l8Y"/>
-                            <constraint firstItem="YtP-aT-ZmH" firstAttribute="top" secondItem="Ncg-uf-Dlc" secondAttribute="bottom" constant="12" id="IaU-Qa-gkv"/>
+                            <constraint firstItem="Dnt-zE-rXY" firstAttribute="centerX" secondItem="yvA-U7-c3y" secondAttribute="centerX" id="Ozo-0D-qOv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ncg-uf-Dlc" secondAttribute="trailing" constant="20" id="RWz-pJ-fvm"/>
                             <constraint firstItem="332-ri-Fhl" firstAttribute="leading" secondItem="yvA-U7-c3y" secondAttribute="leadingMargin" constant="8" id="aZk-aW-QYV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YtP-aT-ZmH" secondAttribute="trailing" constant="40" id="dg6-pP-SM5"/>
                             <constraint firstItem="332-ri-Fhl" firstAttribute="top" secondItem="7zu-Cy-Dk2" secondAttribute="bottom" constant="80" id="gSL-ZZ-w18"/>
                             <constraint firstItem="3o7-BU-5tf" firstAttribute="top" secondItem="332-ri-Fhl" secondAttribute="bottom" constant="20" id="hK0-PZ-PfV"/>
+                            <constraint firstItem="Dnt-zE-rXY" firstAttribute="top" secondItem="Ncg-uf-Dlc" secondAttribute="bottom" constant="12" id="n5L-Lj-Uxs"/>
                             <constraint firstItem="1VA-ox-ZGP" firstAttribute="top" secondItem="YtP-aT-ZmH" secondAttribute="bottom" constant="40" id="r5h-wl-lgF"/>
+                            <constraint firstItem="YtP-aT-ZmH" firstAttribute="top" secondItem="Dnt-zE-rXY" secondAttribute="bottom" constant="12" id="viw-s6-yba"/>
                             <constraint firstItem="YtP-aT-ZmH" firstAttribute="leading" secondItem="yvA-U7-c3y" secondAttribute="leadingMargin" constant="40" id="x3l-ka-MyB"/>
                             <constraint firstItem="Ncg-uf-Dlc" firstAttribute="leading" secondItem="yvA-U7-c3y" secondAttribute="leadingMargin" constant="20" id="y5C-TG-VWE"/>
                         </constraints>
@@ -430,25 +454,37 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="The specification is open which means any client can be used" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7P-Sj-fub">
-                                <rect key="frame" x="36" y="266" width="248" height="213"/>
+                                <rect key="frame" x="36" y="266" width="248" height="171"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-OD-daa" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                <rect key="frame" x="105" y="449" width="110" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="P0P-EM-Bc5"/>
+                                    <constraint firstAttribute="width" constant="110" id="WjS-Zo-r8Q"/>
+                                </constraints>
+                                <state key="normal" title="Learn More">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.38617384433746332" green="0.84693372249603271" blue="0.52412900602212165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.65730184316635132" green="0.87704658508300781" blue="0.391368567943573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="C2v-rx-up0" firstAttribute="top" secondItem="3dv-tv-QLH" secondAttribute="bottom" constant="40" id="3WI-BN-Bzv"/>
+                            <constraint firstItem="fy0-OD-daa" firstAttribute="top" secondItem="y7P-Sj-fub" secondAttribute="bottom" constant="12" id="AxB-jh-RpM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3dv-tv-QLH" secondAttribute="trailing" constant="40" id="He7-hK-50L"/>
                             <constraint firstItem="e0W-gi-vog" firstAttribute="top" secondItem="0cQ-2Z-1kX" secondAttribute="bottom" constant="20" id="Hpx-in-YgQ"/>
                             <constraint firstItem="y7P-Sj-fub" firstAttribute="top" secondItem="e0W-gi-vog" secondAttribute="bottom" constant="26" id="JLh-yx-WGV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="y7P-Sj-fub" secondAttribute="trailing" constant="20" id="Mx2-EM-tGH"/>
+                            <constraint firstItem="3dv-tv-QLH" firstAttribute="top" secondItem="fy0-OD-daa" secondAttribute="bottom" constant="12" id="OkU-Gp-gCc"/>
                             <constraint firstItem="y7P-Sj-fub" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="20" id="Sbk-cc-iVb"/>
                             <constraint firstItem="3dv-tv-QLH" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="40" id="WQg-Sw-FDy"/>
-                            <constraint firstItem="3dv-tv-QLH" firstAttribute="top" secondItem="y7P-Sj-fub" secondAttribute="bottom" constant="12" id="Zm9-2g-X5q"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0cQ-2Z-1kX" secondAttribute="trailing" constant="8" id="eDh-2G-SqZ"/>
                             <constraint firstItem="0cQ-2Z-1kX" firstAttribute="top" secondItem="229-iI-auZ" secondAttribute="bottom" constant="80" id="mZ2-9u-vPV"/>
+                            <constraint firstItem="fy0-OD-daa" firstAttribute="centerX" secondItem="XG5-nK-4GZ" secondAttribute="centerX" id="ohd-HA-ZG6"/>
                             <constraint firstItem="0cQ-2Z-1kX" firstAttribute="leading" secondItem="XG5-nK-4GZ" secondAttribute="leadingMargin" constant="8" id="x0A-Uy-4ey"/>
                             <constraint firstItem="e0W-gi-vog" firstAttribute="centerX" secondItem="XG5-nK-4GZ" secondAttribute="centerX" id="zMY-3j-cPh"/>
                         </constraints>
