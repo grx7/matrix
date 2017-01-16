@@ -255,13 +255,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-nU-OQ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Source" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9I-nU-OQ9">
                                 <rect key="frame" x="24" y="100" width="272" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="0B9-G5-nGL"/>
                                 </constraints>
-                                <string key="text">Open Source.
-Open Standard.</string>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -298,7 +296,48 @@ Open Standard.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="up2-Po-OGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3377" y="1251"/>
+            <point key="canvasLocation" x="-4223" y="1251"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6vv-NC-KFH">
+            <objects>
+                <viewController id="ISF-F3-NDQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7zu-Cy-Dk2"/>
+                        <viewControllerLayoutGuide type="bottom" id="1VA-ox-ZGP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yvA-U7-c3y">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Federated" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="332-ri-Fhl">
+                                <rect key="frame" x="24" y="126" width="272" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="0tH-UL-P0r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Built on an open federated specification, meaning you can host your own chat server and own your data." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Z-Kc-jPX">
+                                <rect key="frame" x="36" y="196" width="260" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="Fnn-ZL-Oew"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43358920834226827" green="0.38476711511611933" blue="0.848766028881073" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="d2Z-Kc-jPX" firstAttribute="top" secondItem="332-ri-Fhl" secondAttribute="bottom" constant="12" id="pNx-he-kcT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezG-qB-Rac" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2559.375" y="1250.7042253521126"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="izy-IR-212">
@@ -312,7 +351,7 @@ Open Standard.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Built on an open federated specification, meaning you can host your own chat server and own your data." lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCx-lz-Cwr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open spec - any clients" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCx-lz-Cwr">
                                 <rect key="frame" x="36" y="197" width="248" height="84"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="sFa-lz-Wh2"/>
@@ -321,19 +360,37 @@ Open Standard.</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="matrixLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-gi-vog">
+                                <rect key="frame" x="104" y="367" width="130" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="yPA-BS-4Ea"/>
+                                    <constraint firstAttribute="width" constant="199" id="zbM-ZP-zCr"/>
+                                </constraints>
+                            </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3dv-tv-QLH">
                                 <rect key="frame" x="56" y="471" width="208" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="rD4-RF-p8M"/>
                                 </constraints>
                             </pageControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="matrixLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-gi-vog">
-                                <rect key="frame" x="61" y="100" width="199" height="85"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Open Spec" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cQ-2Z-1kX">
+                                <rect key="frame" x="33" y="93" width="272" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="85" id="yPA-BS-4Ea"/>
-                                    <constraint firstAttribute="width" constant="199" id="zbM-ZP-zCr"/>
+                                    <constraint firstAttribute="height" constant="58" id="sOu-e9-Bh2"/>
                                 </constraints>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Built for" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-ck-h8L">
+                                <rect key="frame" x="104" y="337" width="130" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="fgH-UP-9Cm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.38617384433746332" green="0.84693372249603271" blue="0.52412900602212165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -350,7 +407,7 @@ Open Standard.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYl-KT-Rv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2516" y="1251"/>
+            <point key="canvasLocation" x="-3412.5" y="1250.7042253521126"/>
         </scene>
     </scenes>
     <resources>
