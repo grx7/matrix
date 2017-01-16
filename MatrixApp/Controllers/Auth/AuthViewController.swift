@@ -57,7 +57,6 @@ class AuthViewController: UIViewController {
             self.loginScrollView.isHidden = true
             self.registerScrollView.isHidden = false
         }
-        print(sender.selectedSegmentIndex)
     }
     
     @IBAction func toggleAdvancedOptions(sender: UIButton) {
@@ -81,6 +80,8 @@ class AuthViewController: UIViewController {
             self.registerPasswordField.returnKeyType = .next
             self.registerAdvancedButton.setTitle("Hide Advanced", for: .normal)
         }
+        
+        self.view.endEditing(true)
     }
     
     @IBAction func performLogin(sender: UIButton) {
@@ -151,24 +152,39 @@ extension AuthViewController: UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.returnKeyType == .go {
-            self.performLogin(sender: self.loginButton)
-        } else {
-            switch textField {
-            case self.loginUsernameField:
-                self.loginPasswordField.becomeFirstResponder()
-            case self.loginPasswordField:
+        
+        switch textField {
+        case self.loginUsernameField:
+            self.loginPasswordField.becomeFirstResponder()
+        case self.loginPasswordField:
+            if self.loginAdvancedView.isHidden {
+                self.performLogin(sender: self.loginButton)
+            } else {
                 self.loginHomeServerField.becomeFirstResponder()
-            case self.loginHomeServerField:
-                if !self.loginAdvancedView.isHidden {
-                    self.loginIdentityServerField.becomeFirstResponder()
-                } else {
-                    self.performLogin(sender: self.loginButton)
-                }
-            default:
-                self.resignFirstResponder()
             }
+        case self.loginHomeServerField:
+            self.loginIdentityServerField.becomeFirstResponder()
+        case self.loginIdentityServerField:
+            self.performLogin(sender: self.loginButton)
+        case self.registerEmailField:
+            self.registerUsernameField.becomeFirstResponder()
+        case self.registerUsernameField:
+            self.registerPasswordField.becomeFirstResponder()
+        case self.registerPasswordField:
+            if self.registerAdvancedView.isHidden {
+                // perform register
+            } else {
+                self.registerHomeServerField.becomeFirstResponder()
+            }
+        case self.registerHomeServerField:
+            self.registerIdentityServerField.becomeFirstResponder()
+        case self.registerIdentityServerField:
+            break
+            // perform register
+        default:
+            textField.resignFirstResponder()
         }
+        
         return true
     }
     
