@@ -77,7 +77,170 @@
                                     <segment title="Register"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="toggleModeWithSender:" destination="JDN-gR-vm0" eventType="valueChanged" id="wgn-PJ-5rA"/>
+                                </connections>
                             </segmentedControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rwq-hE-yVk">
+                                <rect key="frame" x="0.0" y="124" width="320" height="444"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="03C-R0-dhf">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="450"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ygi-AA-P9E" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="12" width="280" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="hRM-SR-oeT"/>
+                                                </constraints>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="JDN-gR-vm0" id="Q5e-wI-sdt"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOX-2G-FQ5" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="58" width="280" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="38" id="RNt-eb-vBn"/>
+                                                    <constraint firstAttribute="height" constant="38" id="oYw-Dw-fQA"/>
+                                                </constraints>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="JDN-gR-vm0" id="q07-Hi-RD5"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15a-EU-bvP" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="104" width="280" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="SYw-bs-2lZ"/>
+                                                </constraints>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="JDN-gR-vm0" id="095-Hi-UCl"/>
+                                                </connections>
+                                            </textField>
+                                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLJ-sg-z13">
+                                                <rect key="frame" x="20" y="150" width="280" height="176"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e3K-SX-TK8" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="280" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="38" id="vbD-a4-Y59"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="next"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="JDN-gR-vm0" id="M6D-ad-NNj"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Identity Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0x-sa-8il" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="46" width="280" height="38"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="38" id="fK5-MJ-DXc"/>
+                                                        </constraints>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="JDN-gR-vm0" id="VXc-Wa-o7b"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r1j-Tb-jJD">
+                                                        <rect key="frame" x="0.0" y="92" width="280" height="84"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="84" id="CRZ-kh-lL2"/>
+                                                        </constraints>
+                                                        <string key="text">Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs and phone numbers and other forms of identification.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <string key="userLabel">Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs and phone numbers and other forms of identification.</string>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="e3K-SX-TK8" secondAttribute="trailing" id="85O-NS-ckF"/>
+                                                    <constraint firstItem="r1j-Tb-jJD" firstAttribute="top" secondItem="c0x-sa-8il" secondAttribute="bottom" constant="8" id="9va-Qh-gCP"/>
+                                                    <constraint firstItem="c0x-sa-8il" firstAttribute="top" secondItem="e3K-SX-TK8" secondAttribute="bottom" constant="8" id="Feh-xg-hSd"/>
+                                                    <constraint firstItem="c0x-sa-8il" firstAttribute="leading" secondItem="ZLJ-sg-z13" secondAttribute="leading" id="IYE-EC-zyX"/>
+                                                    <constraint firstAttribute="height" constant="176" id="QxL-2i-Hsq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="r1j-Tb-jJD" secondAttribute="trailing" id="WZg-Sg-chn"/>
+                                                    <constraint firstItem="e3K-SX-TK8" firstAttribute="top" secondItem="ZLJ-sg-z13" secondAttribute="top" id="bnG-Kc-f3c"/>
+                                                    <constraint firstItem="r1j-Tb-jJD" firstAttribute="leading" secondItem="ZLJ-sg-z13" secondAttribute="leading" id="mAK-z4-B0P"/>
+                                                    <constraint firstAttribute="trailing" secondItem="c0x-sa-8il" secondAttribute="trailing" id="nYe-cE-xc1"/>
+                                                    <constraint firstItem="e3K-SX-TK8" firstAttribute="leading" secondItem="ZLJ-sg-z13" secondAttribute="leading" id="vja-ld-8Cc"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xfL-x3-F0D" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="388" width="280" height="38"/>
+                                                <color key="backgroundColor" red="0.1842715144" green="0.21562337879999999" blue="0.2508970499" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="X91-Uv-rtb"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.96993444579999999" green="1" blue="0.99140138190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Register"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vI-30-5KO" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="342" width="280" height="38"/>
+                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.096060739440000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="fPG-R8-9vf"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.96993444579999999" green="1" blue="0.99140138190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Show Advanced"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="toggleAdvancedOptionsWithSender:" destination="JDN-gR-vm0" eventType="touchUpInside" id="mc3-N1-POq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Ygi-AA-P9E" secondAttribute="trailing" constant="20" id="16Q-mZ-H49"/>
+                                            <constraint firstItem="Ygi-AA-P9E" firstAttribute="leading" secondItem="03C-R0-dhf" secondAttribute="leading" constant="20" id="5Mi-q7-rOG"/>
+                                            <constraint firstItem="ZLJ-sg-z13" firstAttribute="top" secondItem="15a-EU-bvP" secondAttribute="bottom" constant="8" id="7tJ-l6-LYT"/>
+                                            <constraint firstItem="UOX-2G-FQ5" firstAttribute="leading" secondItem="03C-R0-dhf" secondAttribute="leading" constant="20" id="Bpa-Wh-qnD"/>
+                                            <constraint firstItem="UOX-2G-FQ5" firstAttribute="top" secondItem="Ygi-AA-P9E" secondAttribute="bottom" constant="8" id="Gdb-Sj-PKk"/>
+                                            <constraint firstAttribute="trailing" secondItem="UOX-2G-FQ5" secondAttribute="trailing" constant="20" id="IPk-Ym-ZQ0"/>
+                                            <constraint firstAttribute="trailing" secondItem="8vI-30-5KO" secondAttribute="trailing" constant="20" id="L4W-2J-BEQ"/>
+                                            <constraint firstItem="8vI-30-5KO" firstAttribute="leading" secondItem="03C-R0-dhf" secondAttribute="leading" constant="20" id="OK8-Ig-WeY"/>
+                                            <constraint firstItem="ZLJ-sg-z13" firstAttribute="leading" secondItem="03C-R0-dhf" secondAttribute="leading" constant="20" id="PoL-Lb-Ium"/>
+                                            <constraint firstItem="Ygi-AA-P9E" firstAttribute="top" secondItem="03C-R0-dhf" secondAttribute="top" constant="12" id="SeZ-hX-kcl"/>
+                                            <constraint firstItem="xfL-x3-F0D" firstAttribute="top" secondItem="8vI-30-5KO" secondAttribute="bottom" constant="8" id="UmL-4r-LrD"/>
+                                            <constraint firstItem="8vI-30-5KO" firstAttribute="top" secondItem="ZLJ-sg-z13" secondAttribute="bottom" constant="16" id="WgA-Rt-fEG"/>
+                                            <constraint firstItem="15a-EU-bvP" firstAttribute="leading" secondItem="03C-R0-dhf" secondAttribute="leading" constant="20" id="aRf-EW-Pv8"/>
+                                            <constraint firstAttribute="bottom" secondItem="xfL-x3-F0D" secondAttribute="bottom" constant="24" id="duO-Hx-bgM"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZLJ-sg-z13" secondAttribute="trailing" constant="20" id="eAs-z6-zv8"/>
+                                            <constraint firstItem="xfL-x3-F0D" firstAttribute="leading" secondItem="03C-R0-dhf" secondAttribute="leading" constant="20" id="ikD-VS-NeZ"/>
+                                            <constraint firstItem="15a-EU-bvP" firstAttribute="top" secondItem="UOX-2G-FQ5" secondAttribute="bottom" constant="8" id="jjy-9G-4y0"/>
+                                            <constraint firstAttribute="trailing" secondItem="15a-EU-bvP" secondAttribute="trailing" constant="20" id="wa9-ky-BId"/>
+                                            <constraint firstAttribute="trailing" secondItem="xfL-x3-F0D" secondAttribute="trailing" constant="20" id="x5w-KV-tCy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="03C-R0-dhf" secondAttribute="trailing" id="5Rz-Dl-on0"/>
+                                    <constraint firstItem="03C-R0-dhf" firstAttribute="leading" secondItem="Rwq-hE-yVk" secondAttribute="leading" id="UMn-tg-ZHZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="03C-R0-dhf" secondAttribute="bottom" id="c2H-Cd-jnV"/>
+                                    <constraint firstItem="03C-R0-dhf" firstAttribute="top" secondItem="Rwq-hE-yVk" secondAttribute="top" id="oFo-qi-pJU"/>
+                                </constraints>
+                            </scrollView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-ag-T2I">
                                 <rect key="frame" x="0.0" y="124" width="320" height="444"/>
                                 <subviews>
@@ -228,14 +391,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95868045091629028" green="0.36097976565361023" blue="0.26166301965713501" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Rwq-hE-yVk" firstAttribute="top" secondItem="frq-bV-uYq" secondAttribute="bottom" constant="24" id="EL1-gO-49M"/>
                             <constraint firstAttribute="trailing" secondItem="GQe-ag-T2I" secondAttribute="trailing" id="MP9-ws-uYo"/>
                             <constraint firstItem="frq-bV-uYq" firstAttribute="top" secondItem="Xxw-Xl-WJj" secondAttribute="bottom" constant="50" id="NAP-OO-sQh"/>
                             <constraint firstItem="34r-nD-kcu" firstAttribute="width" secondItem="svX-tb-Dpk" secondAttribute="width" id="Nm6-w1-yjV"/>
                             <constraint firstItem="ws5-JP-SRy" firstAttribute="top" secondItem="GQe-ag-T2I" secondAttribute="bottom" id="OSs-JY-OQm"/>
                             <constraint firstItem="GQe-ag-T2I" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leading" id="Pvp-E5-Fbd"/>
+                            <constraint firstItem="Rwq-hE-yVk" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leading" id="U6N-sa-HIu"/>
                             <constraint firstItem="frq-bV-uYq" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leading" constant="20" id="WA7-4e-YRZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Rwq-hE-yVk" secondAttribute="bottom" id="XqB-Kt-uqn"/>
                             <constraint firstAttribute="trailing" secondItem="frq-bV-uYq" secondAttribute="trailing" constant="20" id="Ysl-0g-V1R"/>
+                            <constraint firstAttribute="trailing" secondItem="Rwq-hE-yVk" secondAttribute="trailing" id="aQC-ib-QwJ"/>
                             <constraint firstItem="GQe-ag-T2I" firstAttribute="top" secondItem="frq-bV-uYq" secondAttribute="bottom" constant="24" id="dLT-7v-kcU"/>
+                            <constraint firstItem="03C-R0-dhf" firstAttribute="width" secondItem="svX-tb-Dpk" secondAttribute="width" id="hvH-yv-zEU"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
@@ -247,15 +415,25 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="advancedButton" destination="iZq-yN-ow5" id="zIq-fz-Non"/>
-                        <outlet property="advancedHeight" destination="TMl-Z7-l8b" id="iLV-UU-vgQ"/>
-                        <outlet property="advancedView" destination="Yx7-hc-G9p" id="6c3-uo-PGr"/>
-                        <outlet property="homeServerField" destination="esK-fP-AH1" id="Bju-d1-ng2"/>
-                        <outlet property="identityServerField" destination="oHo-GH-z0r" id="eIX-7Z-XxU"/>
+                        <outlet property="loginAdvancedButton" destination="iZq-yN-ow5" id="WWN-Sm-YZR"/>
+                        <outlet property="loginAdvancedHeight" destination="TMl-Z7-l8b" id="gR3-4d-Ssy"/>
+                        <outlet property="loginAdvancedView" destination="Yx7-hc-G9p" id="5A1-J0-do7"/>
                         <outlet property="loginButton" destination="A4j-81-zJE" id="EqJ-L3-6SC"/>
-                        <outlet property="passwordField" destination="vRe-gU-nAJ" id="OCv-XA-50A"/>
-                        <outlet property="scrollView" destination="GQe-ag-T2I" id="bz8-C0-fwi"/>
-                        <outlet property="usernameField" destination="zT8-mO-jfY" id="cr7-9R-VLz"/>
+                        <outlet property="loginHomeServerField" destination="esK-fP-AH1" id="McD-fe-Jku"/>
+                        <outlet property="loginIdentityServerField" destination="oHo-GH-z0r" id="V2p-lh-FYV"/>
+                        <outlet property="loginPasswordField" destination="vRe-gU-nAJ" id="eya-90-t9E"/>
+                        <outlet property="loginScrollView" destination="GQe-ag-T2I" id="a26-Cc-RDp"/>
+                        <outlet property="loginUsernameField" destination="zT8-mO-jfY" id="vOe-vf-cLx"/>
+                        <outlet property="registerAdvancedButton" destination="8vI-30-5KO" id="K6l-Vk-cCn"/>
+                        <outlet property="registerAdvancedHeight" destination="QxL-2i-Hsq" id="hQS-Uw-rCv"/>
+                        <outlet property="registerAdvancedView" destination="ZLJ-sg-z13" id="2wN-Re-Ank"/>
+                        <outlet property="registerButton" destination="xfL-x3-F0D" id="cx5-Dd-r32"/>
+                        <outlet property="registerEmailField" destination="Ygi-AA-P9E" id="bWd-7v-1O7"/>
+                        <outlet property="registerHomeServerField" destination="e3K-SX-TK8" id="VdA-Nq-k0a"/>
+                        <outlet property="registerIdentityServerField" destination="c0x-sa-8il" id="IzP-lg-bX8"/>
+                        <outlet property="registerPasswordField" destination="15a-EU-bvP" id="oGY-hV-kUp"/>
+                        <outlet property="registerScrollView" destination="Rwq-hE-yVk" id="WHA-Qf-CBJ"/>
+                        <outlet property="registerUsernameField" destination="UOX-2G-FQ5" id="hvX-KI-YyW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyT-MS-dQo" userLabel="First Responder" sceneMemberID="firstResponder"/>

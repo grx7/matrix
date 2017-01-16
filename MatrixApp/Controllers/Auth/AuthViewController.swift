@@ -12,15 +12,25 @@ import MatrixSDK
 
 class AuthViewController: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var usernameField: BottomBorderTextField!
-    @IBOutlet weak var passwordField: BottomBorderTextField!
-    @IBOutlet weak var homeServerField: BottomBorderTextField!
-    @IBOutlet weak var identityServerField: BottomBorderTextField!
-    @IBOutlet weak var advancedView: UIView!
-    @IBOutlet weak var advancedButton: UIButton!
+    @IBOutlet weak var loginScrollView: UIScrollView!
+    @IBOutlet weak var registerScrollView: UIScrollView!
+    @IBOutlet weak var loginUsernameField: BottomBorderTextField!
+    @IBOutlet weak var loginPasswordField: BottomBorderTextField!
+    @IBOutlet weak var loginHomeServerField: BottomBorderTextField!
+    @IBOutlet weak var loginIdentityServerField: BottomBorderTextField!
+    @IBOutlet weak var loginAdvancedView: UIView!
+    @IBOutlet weak var loginAdvancedButton: UIButton!
+    @IBOutlet weak var loginAdvancedHeight: NSLayoutConstraint!
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var advancedHeight: NSLayoutConstraint!
+    @IBOutlet weak var registerEmailField: BottomBorderTextField!
+    @IBOutlet weak var registerUsernameField: BottomBorderTextField!
+    @IBOutlet weak var registerPasswordField: BottomBorderTextField!
+    @IBOutlet weak var registerHomeServerField: BottomBorderTextField!
+    @IBOutlet weak var registerIdentityServerField: BottomBorderTextField!
+    @IBOutlet weak var registerAdvancedView: UIView!
+    @IBOutlet weak var registerAdvancedButton: UIButton!
+    @IBOutlet weak var registerAdvancedHeight: NSLayoutConstraint!
+    @IBOutlet weak var registerButton: UIButton!
     
     let defaultAdvancedHeight: CGFloat = 176.0
     weak var activeField: UITextField?
@@ -28,26 +38,48 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
+        self.registerScrollView.isHidden = true
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
         
-        if let button = self.advancedButton {
+        if let button = self.loginAdvancedButton {
             self.toggleAdvancedOptions(sender: button)
         }
     }
     
+    @IBAction func toggleMode(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            self.loginScrollView.isHidden = false
+            self.registerScrollView.isHidden = true
+        default:
+            self.loginScrollView.isHidden = true
+            self.registerScrollView.isHidden = false
+        }
+        print(sender.selectedSegmentIndex)
+    }
+    
     @IBAction func toggleAdvancedOptions(sender: UIButton) {
-        self.advancedView.isHidden = !self.advancedView.isHidden
+        self.loginAdvancedView.isHidden = !self.loginAdvancedView.isHidden
+        self.registerAdvancedView.isHidden = !self.registerAdvancedView.isHidden
         
-        if self.advancedView.isHidden {
-            self.advancedHeight.constant = 0
-            self.passwordField.returnKeyType = .go
-            self.advancedButton.setTitle("Show Advanced", for: .normal)
+        if self.loginAdvancedView.isHidden {
+            self.loginAdvancedHeight.constant = 0
+            self.loginPasswordField.returnKeyType = .go
+            self.loginAdvancedButton.setTitle("Show Advanced", for: .normal)
+            
+            self.registerAdvancedHeight.constant = 0
+            self.registerPasswordField.returnKeyType = .go
+            self.registerAdvancedButton.setTitle("Show Advanced", for: .normal)
         } else {
-            self.advancedHeight.constant = self.defaultAdvancedHeight
-            self.passwordField.returnKeyType = .next
-            self.advancedButton.setTitle("Hide Advanced", for: .normal)
+            self.loginAdvancedHeight.constant = self.defaultAdvancedHeight
+            self.loginPasswordField.returnKeyType = .next
+            self.loginAdvancedButton.setTitle("Hide Advanced", for: .normal)
+            
+            self.registerAdvancedHeight.constant = self.defaultAdvancedHeight
+            self.registerPasswordField.returnKeyType = .next
+            self.registerAdvancedButton.setTitle("Hide Advanced", for: .normal)
         }
     }
     
@@ -56,35 +88,37 @@ class AuthViewController: UIViewController {
         
         if self.validateParameters() {
             _ = MatrixAccount(
-                loginAndStoreUser: self.usernameField.text!,
-                password: self.passwordField.text!,
-                homeServer: AppConfig.sharedInstance.getDefault(string: self.homeServerField.text, key: ConfigKey.defaultHomeServer),
-                identityServer: AppConfig.sharedInstance.getDefault(string: self.identityServerField.text, key: ConfigKey.defaultIdentityServer)
+                loginAndStoreUser: self.loginUsernameField.text!,
+                password: self.loginPasswordField.text!,
+                homeServer: AppConfig.sharedInstance.getDefault(string: self.loginHomeServerField.text, key: ConfigKey.defaultHomeServer),
+                identityServer: AppConfig.sharedInstance.getDefault(string: self.loginIdentityServerField.text, key: ConfigKey.defaultIdentityServer)
             )
         }
         
     }
     
     func validateParameters() -> Bool {
-        if let username = self.usernameField.text, !username.isEmpty, let password = self.passwordField.text, !password.isEmpty {
+        if let username = self.loginUsernameField.text, !username.isEmpty, let password = self.loginPasswordField.text, !password.isEmpty {
             return true
         }
         
         return false
     }
     
+    //MARK: - Keyboard Notifications
+    
     func keyboardDidShow(notification: NSNotification) {
         if let activeField = self.activeField, let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             let contentInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: keyboardSize.height, right: 0.0)
             
-            self.scrollView.contentInset = contentInsets
-            self.scrollView.scrollIndicatorInsets = contentInsets
+            self.updateScrollViewInsets(insets: contentInsets)
             
             var aRect = self.view.frame
             aRect.size.height -= keyboardSize.size.height
             
             if (!aRect.contains(activeField.frame.origin)) {
-                self.scrollView.scrollRectToVisible(activeField.frame, animated: true)
+                self.loginScrollView.scrollRectToVisible(activeField.frame, animated: true)
+                self.registerScrollView.scrollRectToVisible(activeField.frame, animated: true)
             }
         }
     }
@@ -92,8 +126,14 @@ class AuthViewController: UIViewController {
     func keyboardWillBeHidden(notification: NSNotification) {
         let contentInsets = UIEdgeInsets.zero
         
-        self.scrollView.contentInset = contentInsets
-        self.scrollView.scrollIndicatorInsets = contentInsets
+        self.updateScrollViewInsets(insets: contentInsets)
+    }
+    
+    func updateScrollViewInsets(insets: UIEdgeInsets) {
+        self.loginScrollView.contentInset = insets
+        self.registerScrollView.contentInset = insets
+        self.loginScrollView.scrollIndicatorInsets = insets
+        self.registerScrollView.scrollIndicatorInsets = insets
     }
 
 }
@@ -115,13 +155,13 @@ extension AuthViewController: UITextFieldDelegate {
             self.performLogin(sender: self.loginButton)
         } else {
             switch textField {
-            case self.usernameField:
-                self.passwordField.becomeFirstResponder()
-            case self.passwordField:
-                self.homeServerField.becomeFirstResponder()
-            case self.homeServerField:
-                if !self.advancedView.isHidden {
-                    self.identityServerField.becomeFirstResponder()
+            case self.loginUsernameField:
+                self.loginPasswordField.becomeFirstResponder()
+            case self.loginPasswordField:
+                self.loginHomeServerField.becomeFirstResponder()
+            case self.loginHomeServerField:
+                if !self.loginAdvancedView.isHidden {
+                    self.loginIdentityServerField.becomeFirstResponder()
                 } else {
                     self.performLogin(sender: self.loginButton)
                 }

@@ -27,7 +27,6 @@ class AuthPageViewController: UIPageViewController {
         let page3: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageTourThree")
         let page4: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageLogin")
         
-        
         pages.append(page1)
         pages.append(page2)
         pages.append(page3)
