@@ -24,11 +24,14 @@ class AuthPageViewController: UIPageViewController {
         
         let page1: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageTour")
         let page2: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageTourTwo")
-        let page3: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageLogin")
+        let page3: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageTourThree")
+        let page4: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageLogin")
+        
         
         pages.append(page1)
         pages.append(page2)
         pages.append(page3)
+        pages.append(page4)
         
         self.setViewControllers([page1], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
     }
@@ -37,26 +40,37 @@ class AuthPageViewController: UIPageViewController {
 
 extension AuthPageViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
     
-    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.index(of: viewController)!
-        let nextIndex = abs((currentIndex + 1) % pages.count)
+    func indexOfViewController(viewController: UIViewController) -> Int {
+        guard let index = pages.index(of: viewController) else {
+            return NSNotFound
+        }
         
-        if (nextIndex < 1) {
+        return index
+    }
+
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        var index = indexOfViewController(viewController: viewController)
+        
+        if (index == NSNotFound) || (index + 1 == pages.count) {
             return nil
         }
-            
-        return pages[nextIndex]
+        
+        index += 1
+        
+        return pages[index]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.index(of: viewController)!
-        let previousIndex = abs((currentIndex - 1) % pages.count)
+        var index = indexOfViewController(viewController: viewController)
         
-        if (previousIndex > 0) {
+        if (index == 0) || (index == NSNotFound) {
             return nil
         }
         
-        return pages[previousIndex]
+        index -= 1
+        
+        return pages[index]
     }
     
 }

@@ -47,6 +47,7 @@
                         <segue destination="JDN-gR-vm0" kind="show" identifier="authPageLogin" id="hGu-2w-na8"/>
                         <segue destination="LIZ-dY-Wyi" kind="show" identifier="authPageTour" id="jrw-x5-m1O"/>
                         <segue destination="2vp-gE-btC" kind="show" identifier="authPageTourTwo" id="2d3-tV-I00"/>
+                        <segue destination="ISF-F3-NDQ" kind="show" identifier="authPageTourThree" id="IwM-AP-YjJ"/>
                     </connections>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="seo-tX-ekQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -65,14 +66,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="frq-bV-uYq">
+                                <rect key="frame" x="20" y="70" width="280" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Tz-P3-fs3"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Login"/>
+                                    <segment title="Register"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-ag-T2I">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="124" width="320" height="444"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34r-nD-kcu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="522"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="404"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zT8-mO-jfY" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="130" width="280" height="38"/>
+                                                <rect key="frame" x="20" y="12" width="280" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="cZw-8a-ztN"/>
                                                 </constraints>
@@ -84,7 +97,7 @@
                                                 </connections>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-gU-nAJ" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="176" width="280" height="38"/>
+                                                <rect key="frame" x="20" y="58" width="280" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="vS2-60-gfy"/>
                                                 </constraints>
@@ -96,7 +109,7 @@
                                                 </connections>
                                             </textField>
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yx7-hc-G9p">
-                                                <rect key="frame" x="20" y="222" width="280" height="176"/>
+                                                <rect key="frame" x="20" y="104" width="280" height="176"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esK-fP-AH1" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="38"/>
@@ -150,7 +163,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE">
-                                                <rect key="frame" x="20" y="460" width="280" height="38"/>
+                                                <rect key="frame" x="20" y="342" width="280" height="38"/>
                                                 <color key="backgroundColor" red="0.81999999999999995" green="0.32193796264017194" blue="0.30588656745685894" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="aBD-q5-dxf"/>
@@ -162,7 +175,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-yN-ow5">
-                                                <rect key="frame" x="20" y="414" width="280" height="38"/>
+                                                <rect key="frame" x="20" y="296" width="280" height="38"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.096060739436619719" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="2uG-a5-9jZ"/>
@@ -173,35 +186,20 @@
                                                     <action selector="toggleAdvancedOptionsWithSender:" destination="JDN-gR-vm0" eventType="touchUpInside" id="9cR-O8-HZr"/>
                                                 </connections>
                                             </button>
-                                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KBu-mk-1Zi">
-                                                <rect key="frame" x="20" y="60" width="280" height="31"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Jsj-Dk-LRa"/>
-                                                </constraints>
-                                                <segments>
-                                                    <segment title="Login"/>
-                                                    <segment title="Register"/>
-                                                </segments>
-                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="A4j-81-zJE" secondAttribute="trailing" constant="20" id="2yN-aF-7aj"/>
                                             <constraint firstItem="A4j-81-zJE" firstAttribute="top" secondItem="iZq-yN-ow5" secondAttribute="bottom" constant="8" id="3ma-Qy-V93"/>
-                                            <constraint firstAttribute="trailing" secondItem="KBu-mk-1Zi" secondAttribute="trailing" constant="20" id="4OV-cv-Vdn"/>
                                             <constraint firstItem="zT8-mO-jfY" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="Ak5-aI-b5v"/>
                                             <constraint firstItem="vRe-gU-nAJ" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="D4K-zs-CGl"/>
-                                            <constraint firstItem="KBu-mk-1Zi" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="EHP-mD-m7W"/>
                                             <constraint firstAttribute="trailing" secondItem="zT8-mO-jfY" secondAttribute="trailing" constant="20" id="NLf-pO-S0o"/>
                                             <constraint firstItem="iZq-yN-ow5" firstAttribute="top" secondItem="Yx7-hc-G9p" secondAttribute="bottom" constant="16" id="PPL-zI-rln"/>
                                             <constraint firstItem="Yx7-hc-G9p" firstAttribute="top" secondItem="vRe-gU-nAJ" secondAttribute="bottom" constant="8" id="QGh-1b-GtE"/>
                                             <constraint firstAttribute="trailing" secondItem="iZq-yN-ow5" secondAttribute="trailing" constant="20" id="T7T-H1-Cac"/>
-                                            <constraint firstItem="zT8-mO-jfY" firstAttribute="top" secondItem="KBu-mk-1Zi" secondAttribute="bottom" constant="40" id="YwE-zW-TXR"/>
+                                            <constraint firstItem="zT8-mO-jfY" firstAttribute="top" secondItem="34r-nD-kcu" secondAttribute="top" constant="12" id="apy-CF-zCW"/>
                                             <constraint firstItem="vRe-gU-nAJ" firstAttribute="top" secondItem="zT8-mO-jfY" secondAttribute="bottom" constant="8" id="bWW-Zn-MAG"/>
                                             <constraint firstItem="Yx7-hc-G9p" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="etP-Gj-S4N"/>
-                                            <constraint firstItem="KBu-mk-1Zi" firstAttribute="top" secondItem="34r-nD-kcu" secondAttribute="top" constant="60" id="hpg-aP-Znp"/>
                                             <constraint firstAttribute="bottom" secondItem="A4j-81-zJE" secondAttribute="bottom" constant="24" id="jO0-gb-EWl"/>
                                             <constraint firstItem="iZq-yN-ow5" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="kLK-ew-1q7"/>
                                             <constraint firstAttribute="trailing" secondItem="vRe-gU-nAJ" secondAttribute="trailing" constant="20" id="r4R-2d-YUh"/>
@@ -221,10 +219,13 @@
                         <color key="backgroundColor" red="0.88235294119999996" green="0.3921568627" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GQe-ag-T2I" secondAttribute="trailing" id="MP9-ws-uYo"/>
+                            <constraint firstItem="frq-bV-uYq" firstAttribute="top" secondItem="Xxw-Xl-WJj" secondAttribute="bottom" constant="50" id="NAP-OO-sQh"/>
                             <constraint firstItem="34r-nD-kcu" firstAttribute="width" secondItem="svX-tb-Dpk" secondAttribute="width" id="Nm6-w1-yjV"/>
                             <constraint firstItem="ws5-JP-SRy" firstAttribute="top" secondItem="GQe-ag-T2I" secondAttribute="bottom" id="OSs-JY-OQm"/>
                             <constraint firstItem="GQe-ag-T2I" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leading" id="Pvp-E5-Fbd"/>
-                            <constraint firstItem="GQe-ag-T2I" firstAttribute="top" secondItem="Xxw-Xl-WJj" secondAttribute="bottom" id="jrU-dg-taq"/>
+                            <constraint firstItem="frq-bV-uYq" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leading" constant="20" id="WA7-4e-YRZ"/>
+                            <constraint firstAttribute="trailing" secondItem="frq-bV-uYq" secondAttribute="trailing" constant="20" id="Ysl-0g-V1R"/>
+                            <constraint firstItem="GQe-ag-T2I" firstAttribute="top" secondItem="frq-bV-uYq" secondAttribute="bottom" constant="24" id="dLT-7v-kcU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -241,7 +242,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyT-MS-dQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1714" y="1251"/>
+            <point key="canvasLocation" x="-1715.625" y="1250.7042253521126"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hPA-7B-fxO">
@@ -301,7 +302,7 @@
         <!--View Controller-->
         <scene sceneID="6vv-NC-KFH">
             <objects>
-                <viewController id="ISF-F3-NDQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authPageTourThree" id="ISF-F3-NDQ" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7zu-Cy-Dk2"/>
                         <viewControllerLayoutGuide type="bottom" id="1VA-ox-ZGP"/>
@@ -337,7 +338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezG-qB-Rac" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2559.375" y="1250.7042253521126"/>
+            <point key="canvasLocation" x="-2516" y="1251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="izy-IR-212">
@@ -362,6 +363,7 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="matrixLogo" translatesAutoresizingMaskIntoConstraints="NO" id="e0W-gi-vog">
                                 <rect key="frame" x="104" y="367" width="130" height="55"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="yPA-BS-4Ea"/>
                                     <constraint firstAttribute="width" constant="199" id="zbM-ZP-zCr"/>
