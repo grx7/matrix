@@ -19,7 +19,7 @@ struct Constants {
     static let activeAccount = "activeAccount"
 }
 
-extension Notification.Name {
+struct Notifications {
     static let accountAdded = Notification.Name("matrixAccountWasAddedNotification")
     static let accountRemoved = Notification.Name("matrixAccountWasRemovedNotification")
 }
