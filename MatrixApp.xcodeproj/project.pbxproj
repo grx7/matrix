@@ -10,6 +10,9 @@
 		1060BD23477186DDBAE213D4 /* Pods_MatrixApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */; };
 		11481FDEDFB6E828F6D1823E /* Pods_MatrixAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DC7CED376B6C6843F74AE8 /* Pods_MatrixAppUITests.framework */; };
 		892423271E2CFFE200B20E64 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423261E2CFFE200B20E64 /* BorderedButton.swift */; };
+		892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423281E2E7D7800B20E64 /* LoginViewController.swift */; };
+		8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */; };
+		8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232C1E2E7D9D00B20E64 /* TourViewController.swift */; };
 		894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C775C1E27EE9C008D5C86 /* AppDelegate.swift */; };
 		894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894C775E1E27EE9C008D5C86 /* MatrixApp.xcdatamodeld */; };
 		894C77671E27EE9D008D5C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C77651E27EE9D008D5C86 /* Main.storyboard */; };
@@ -55,6 +58,9 @@
 		7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.release.xcconfig"; sourceTree = "<group>"; };
 		85A9B0E7A935874E50473EB6 /* Pods-MatrixAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		892423261E2CFFE200B20E64 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BorderedButton.swift; path = Classes/BorderedButton.swift; sourceTree = "<group>"; };
+		892423281E2E7D7800B20E64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		8924232C1E2E7D9D00B20E64 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		894C77591E27EE9C008D5C86 /* MatrixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C775C1E27EE9C008D5C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894C775F1E27EE9C008D5C86 /* MatrixApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MatrixApp.xcdatamodel; sourceTree = "<group>"; };
@@ -70,7 +76,7 @@
 		894C77831E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894C778F1E27EF44008D5C86 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InitialViewController.swift; path = Controllers/InitialViewController.swift; sourceTree = "<group>"; };
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = Classes/GradientView.swift; sourceTree = "<group>"; };
-		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = MatrixApp/Controllers/Auth/AuthViewController.swift; sourceTree = SOURCE_ROOT; };
+		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = MatrixApp/Controllers/Tour/AuthViewController.swift; sourceTree = SOURCE_ROOT; };
 		895DD9711E2BD23C00BCF6A2 /* AuthPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPageViewController.swift; sourceTree = "<group>"; };
 		89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BottomBorderTextField.swift; path = Classes/BottomBorderTextField.swift; sourceTree = "<group>"; };
 		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatrixAccount.swift; path = Models/Account/MatrixAccount.swift; sourceTree = "<group>"; };
@@ -195,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				894C778F1E27EF44008D5C86 /* InitialViewController.swift */,
-				895DD9731E2BD24100BCF6A2 /* Auth */,
+				895DD9731E2BD24100BCF6A2 /* Tour */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -211,14 +217,17 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		895DD9731E2BD24100BCF6A2 /* Auth */ = {
+		895DD9731E2BD24100BCF6A2 /* Tour */ = {
 			isa = PBXGroup;
 			children = (
 				894C77951E28021C008D5C86 /* AuthViewController.swift */,
 				895DD9711E2BD23C00BCF6A2 /* AuthPageViewController.swift */,
+				892423281E2E7D7800B20E64 /* LoginViewController.swift */,
+				8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */,
+				8924232C1E2E7D9D00B20E64 /* TourViewController.swift */,
 			);
-			name = Auth;
-			path = Controllers/Auth;
+			name = Tour;
+			path = Controllers/Tour;
 			sourceTree = "<group>";
 		};
 		89EDB1BA1E2910A900AB7516 /* Account */ = {
@@ -549,8 +558,11 @@
 				894C77901E27EF44008D5C86 /* InitialViewController.swift in Sources */,
 				894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */,
 				894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */,
+				8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */,
+				8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */,
 				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,
+				892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */,
 				894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

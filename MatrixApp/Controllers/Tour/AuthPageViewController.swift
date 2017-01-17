@@ -26,11 +26,13 @@ class AuthPageViewController: UIPageViewController {
         let page2: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageTourTwo")
         let page3: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageTourThree")
         let page4: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageLogin")
+        let page5: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "authPageRegister")
         
         pages.append(page1)
         pages.append(page2)
         pages.append(page3)
         pages.append(page4)
+        pages.append(page5)
         
         self.setViewControllers([page1], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
     }

@@ -14,6 +14,7 @@ class AuthViewController: UIViewController {
     
     @IBOutlet weak var loginScrollView: UIScrollView!
     @IBOutlet weak var registerScrollView: UIScrollView!
+    @IBOutlet weak var loginErrorLabel: UILabel!
     @IBOutlet weak var loginUsernameField: BottomBorderTextField!
     @IBOutlet weak var loginPasswordField: BottomBorderTextField!
     @IBOutlet weak var loginHomeServerField: BottomBorderTextField!
@@ -22,6 +23,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var loginAdvancedButton: UIButton!
     @IBOutlet weak var loginAdvancedHeight: NSLayoutConstraint!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var registerErrorLabel: UILabel!
     @IBOutlet weak var registerEmailField: BottomBorderTextField!
     @IBOutlet weak var registerUsernameField: BottomBorderTextField!
     @IBOutlet weak var registerPasswordField: BottomBorderTextField!
@@ -37,6 +39,9 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loginUsernameField.text = "test"
+        self.loginPasswordField.text = "test"
         
         self.registerScrollView.isHidden = true
         
