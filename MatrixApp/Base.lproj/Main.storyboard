@@ -32,28 +32,49 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <segue destination="t41-wk-qDD" kind="presentation" identifier="showAuth" animates="NO" id="pH0-hr-Hg3"/>
+                        <segue destination="hOd-lv-YHP" kind="presentation" identifier="showAuth" animates="NO" id="zIH-Kb-WhD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qjp-Cw-Q5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1526" y="-597"/>
+            <point key="canvasLocation" x="-2516" y="-488"/>
         </scene>
-        <!--Auth Page View Controller-->
-        <scene sceneID="J8z-57-rIA">
+        <!--Tour View Controller-->
+        <scene sceneID="wEX-dH-R7L">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="t41-wk-qDD" customClass="AuthPageViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hOd-lv-YHP" customClass="TourViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lF2-lw-hYJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="pnf-Oc-81G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Vn-80-VLn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9q-A2-7FM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S9q-A2-7FM" firstAttribute="top" secondItem="0Vn-80-VLn" secondAttribute="top" id="OAe-p8-5r2"/>
+                            <constraint firstAttribute="trailing" secondItem="S9q-A2-7FM" secondAttribute="trailing" id="Rby-je-Qwd"/>
+                            <constraint firstItem="S9q-A2-7FM" firstAttribute="leading" secondItem="0Vn-80-VLn" secondAttribute="leading" id="Wzh-Vd-y6g"/>
+                            <constraint firstItem="pnf-Oc-81G" firstAttribute="top" secondItem="S9q-A2-7FM" secondAttribute="bottom" id="bin-2f-MTd"/>
+                        </constraints>
+                    </view>
                     <connections>
-                        <segue destination="JDN-gR-vm0" kind="show" identifier="authPageLogin" id="hGu-2w-na8"/>
-                        <segue destination="LIZ-dY-Wyi" kind="show" identifier="authPageTour" id="jrw-x5-m1O"/>
-                        <segue destination="2vp-gE-btC" kind="show" identifier="authPageTourTwo" id="2d3-tV-I00"/>
-                        <segue destination="ISF-F3-NDQ" kind="show" identifier="authPageTourThree" id="IwM-AP-YjJ"/>
-                        <segue destination="Rwg-uN-bN7" kind="show" identifier="authPageRegister" id="RBl-g3-nEy"/>
+                        <outlet property="scrollView" destination="S9q-A2-7FM" id="noc-KD-W6G"/>
+                        <segue destination="LIZ-dY-Wyi" kind="show" identifier="authPageTourOne" id="oTb-U4-IzF"/>
+                        <segue destination="2vp-gE-btC" kind="show" identifier="authPageTourTwo" id="5Pd-NA-q4j"/>
+                        <segue destination="ISF-F3-NDQ" kind="show" identifier="authPageTourThree" id="q5y-AU-03X"/>
+                        <segue destination="JDN-gR-vm0" kind="show" identifier="authPageLogin" id="79Q-Ba-XN8"/>
+                        <segue destination="Rwg-uN-bN7" kind="show" identifier="authPageRegister" id="huq-Kx-u71"/>
                     </connections>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="seo-tX-ekQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Njj-gr-zf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2516" y="379"/>
+            <point key="canvasLocation" x="-2516.25" y="384.50704225352115"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="9kZ-zo-ZPS">
@@ -68,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQe-ag-T2I">
-                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                                <rect key="frame" x="0.0" y="115" width="320" height="453"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34r-nD-kcu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
@@ -237,7 +258,7 @@
                             <constraint firstItem="ws5-JP-SRy" firstAttribute="top" secondItem="GQe-ag-T2I" secondAttribute="bottom" id="OSs-JY-OQm"/>
                             <constraint firstItem="GQe-ag-T2I" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leading" id="Pvp-E5-Fbd"/>
                             <constraint firstItem="VEn-kx-fbM" firstAttribute="leading" secondItem="svX-tb-Dpk" secondAttribute="leadingMargin" constant="20" id="Sm2-vg-1Wt"/>
-                            <constraint firstItem="GQe-ag-T2I" firstAttribute="top" secondItem="KgN-HO-Rza" secondAttribute="bottom" constant="20" id="clA-qb-hrk"/>
+                            <constraint firstItem="GQe-ag-T2I" firstAttribute="top" secondItem="KgN-HO-Rza" secondAttribute="bottom" constant="8" id="clA-qb-hrk"/>
                             <constraint firstItem="VEn-kx-fbM" firstAttribute="top" secondItem="Xxw-Xl-WJj" secondAttribute="bottom" constant="28" id="hVR-Xb-Y6A"/>
                             <constraint firstAttribute="trailingMargin" secondItem="VEn-kx-fbM" secondAttribute="trailing" constant="20" id="lLz-zy-fVH"/>
                         </constraints>
@@ -253,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyT-MS-dQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1715.625" y="1250.7042253521126"/>
+            <point key="canvasLocation" x="-1821" y="1250"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hPA-7B-fxO">
@@ -336,7 +357,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="up2-Po-OGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4224.375" y="1250.7042253521126"/>
+            <point key="canvasLocation" x="-3915" y="1251"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6vv-NC-KFH">
@@ -503,7 +524,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYl-KT-Rv1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3412.5" y="1250.7042253521126"/>
+            <point key="canvasLocation" x="-3210" y="1250"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="UaM-bD-liM">
@@ -518,7 +539,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lu9-Wi-mgg">
-                                <rect key="frame" x="0.0" y="127" width="320" height="441"/>
+                                <rect key="frame" x="0.0" y="115" width="320" height="453"/>
                                 <subviews>
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZN-EZ-a9B">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="432"/>
@@ -704,7 +725,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="TGa-8f-WCI" secondAttribute="trailing" constant="20" id="bSq-a1-5WN"/>
                             <constraint firstAttribute="bottom" secondItem="lu9-Wi-mgg" secondAttribute="bottom" id="eWY-MQ-RIs"/>
                             <constraint firstItem="TGa-8f-WCI" firstAttribute="top" secondItem="xTF-pZ-Kqs" secondAttribute="bottom" constant="8" id="gXq-GP-mnJ"/>
-                            <constraint firstItem="lu9-Wi-mgg" firstAttribute="top" secondItem="TGa-8f-WCI" secondAttribute="bottom" constant="20" id="iOh-9l-uUf"/>
+                            <constraint firstItem="lu9-Wi-mgg" firstAttribute="top" secondItem="TGa-8f-WCI" secondAttribute="bottom" constant="8" id="iOh-9l-uUf"/>
                             <constraint firstItem="TGa-8f-WCI" firstAttribute="leading" secondItem="Za5-z1-30I" secondAttribute="leadingMargin" constant="20" id="rug-aH-qtn"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -719,7 +740,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgY-dv-mcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-864" y="1251"/>
+            <point key="canvasLocation" x="-1140" y="1250"/>
         </scene>
     </scenes>
     <resources>
