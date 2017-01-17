@@ -4,6 +4,12 @@ MatrixApp is a Matrix client built for day to day instant messaging, it is a fed
 
 ---
 
+## Todo
+
+* Big Authentication & User Management refactor.
+
+---
+
 ## Features
 
 * End-to-end encryption.
