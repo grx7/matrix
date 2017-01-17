@@ -23,21 +23,33 @@ class MatrixAccountManager {
     private func loadAccounts() {
         if let data = UserDefaults.standard.object(forKey: Constants.userAccounts) as? [AnyObject] {
             for account in data {
-                if let userId = account["matrixId"] as? String,
-                    let homeServer = account["homeServer"] as? String,
-                    let deviceId = account["deviceId"] as? String,
-                    let accessToken = self.tokenFor(userId: userId),
-                    let credentials = MXCredentials(homeServer: homeServer, userId: userId, accessToken: accessToken) {
-                        credentials.deviceId = deviceId
-                
-                        self.accounts.append(MatrixAccount(credentials: credentials))
+                if let userId = account["matrixId"] as? String, let homeServer = account["homeServer"] as? String, let deviceId = account["deviceId"] as? String, let accessToken = self.tokenFor(userId: userId), let credentials = MXCredentials(homeServer: homeServer, userId: userId, accessToken: accessToken) {
+                    credentials.deviceId = deviceId
+                    
+                    self.accounts.append(MatrixAccount(credentials: credentials))
                 }
             }
+        }
+        
+        if (UserDefaults.standard.string(forKey: Constants.activeAccount) == nil) && (self.accounts.count > 0) {
+            UserDefaults.standard.set(self.accounts.first?.credentials.userId, forKey: Constants.activeAccount)
         }
     }
     
     func hasAccounts() -> Bool {
         return (self.accounts.count > 0)
+    }
+    
+    func getActiveAccount() -> MatrixAccount? {
+        self.loadAccounts()
+        
+        if let activeAccountId = UserDefaults.standard.string(forKey: Constants.activeAccount) {
+            return self.accounts.filter({ (account) -> Bool in
+                return account.credentials.userId == activeAccountId
+            }).first
+        }
+        
+        return nil
     }
     
     func addAccount(username: String, password: String, homeServer: String, identityServer: String, success: @escaping (() -> ()), failure: ((Error) -> ())) {
@@ -73,6 +85,7 @@ class MatrixAccountManager {
             ])
             
             defaults.set(accounts, forKey: Constants.userAccounts)
+            defaults.set(matrixId, forKey: Constants.activeAccount)
         }
         catch _ {
             return false

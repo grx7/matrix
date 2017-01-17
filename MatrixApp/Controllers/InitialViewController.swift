@@ -23,6 +23,9 @@ class InitialViewController: UIViewController {
             self.showAuthScreen()
         } else {
             print("I have at least 1 account")
+            
+            let activeAccount = MatrixAccountManager.sharedInstance.getActiveAccount()
+            print("Its User is: \(activeAccount?.credentials.userId)")
         }
     }
     
