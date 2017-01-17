@@ -52,11 +52,14 @@ class MatrixAccountManager {
         return nil
     }
     
-    func addAccount(username: String, password: String, homeServer: String, identityServer: String, success: @escaping (() -> ()), failure: ((Error) -> ())) {
+    func addAccount(username: String, password: String, homeServer: String, identityServer: String, success: @escaping ((MatrixAccount) -> ()), failure: ((Error) -> ())) {
         MatrixAccount.authenticateUser(username: username, password: password, homeServer: homeServer, success: { (credentials) in
-            if self.storeUser(username: username, accessToken: credentials.accessToken, matrixId: credentials.userId, deviceId: credentials.deviceId, homeServer: credentials.homeServer, identityServer: identityServer) {
+            if let account = self.storeAccount(username: username, accessToken: credentials.accessToken, matrixId: credentials.userId, deviceId: credentials.deviceId, homeServer: credentials.homeServer, identityServer: identityServer) {
                 self.loadAccounts()
-                success()
+                
+                NotificationCenter.default.post(name: Notifications.accountAdded, object: account)
+                
+                success(account)
             } else {
                 print("Could not store!")
             }
@@ -67,7 +70,7 @@ class MatrixAccountManager {
         }
     }
     
-    func storeUser(username: String, accessToken: String, matrixId: String, deviceId: String, homeServer: String, identityServer: String) -> Bool {
+    func storeAccount(username: String, accessToken: String, matrixId: String, deviceId: String, homeServer: String, identityServer: String) -> MatrixAccount? {
         let keychain = Keychain(service: Constants.service)
         let defaults = UserDefaults.standard
         
@@ -86,12 +89,12 @@ class MatrixAccountManager {
             
             defaults.set(accounts, forKey: Constants.userAccounts)
             defaults.set(matrixId, forKey: Constants.activeAccount)
+            
+            return MatrixAccount(credentials: MXCredentials(homeServer: homeServer, userId: matrixId, accessToken: accessToken))
         }
         catch _ {
-            return false
+            return nil
         }
-        
-        return true
     }
     
     func tokenFor(userId: String) -> String? {

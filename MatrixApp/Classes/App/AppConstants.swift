@@ -6,6 +6,8 @@
 //  Copyright © 2017 Oliver Lumby. All rights reserved.
 //
 
+import UIKit
+
 struct ConfigKey {
     static let defaultHomeServer = "defaultHomeServer"
     static let defaultIdentityServer = "defaultIdentityServer"
@@ -15,4 +17,9 @@ struct Constants {
     static let service = "me.lumby.matrix.server-token"
     static let userAccounts = "userAccounts"
     static let activeAccount = "activeAccount"
+}
+
+extension Notification.Name {
+    static let accountAdded = Notification.Name("matrixAccountWasAddedNotification")
+    static let accountRemoved = Notification.Name("matrixAccountWasRemovedNotification")
 }
