@@ -23,6 +23,7 @@ class TourViewController: UIViewController {
 
         self.scrollView.isPagingEnabled = true
         self.scrollView.bounces = false
+        self.scrollView.delegate = self
         
         self.pages.append((storyboard?.instantiateViewController(withIdentifier: "authPageTour"))!)
         self.pages.append((storyboard?.instantiateViewController(withIdentifier: "authPageTourTwo"))!)
@@ -31,21 +32,22 @@ class TourViewController: UIViewController {
         self.pages.append((storyboard?.instantiateViewController(withIdentifier: "authPageRegister"))!)
         
         for (index, viewController) in self.pages.enumerated() {
-            self.addChildViewController(viewController)
             self.scrollView.addSubview(viewController.view)
-            viewController.didMove(toParentViewController: self)
             
             viewController.view.frame.origin.x = (CGFloat(index) * self.view.frame.width)
         }
         
         self.scrollView.contentSize = CGSize(width: self.view.frame.width * CGFloat(self.pages.count), height: self.view.frame.height)
-        
-        // Do any additional setup after loading the view.
     }
+    
+}
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+// MARK: - UIScrollViewDelegate
+
+extension TourViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        scrollView.endEditing(true)
     }
     
 }

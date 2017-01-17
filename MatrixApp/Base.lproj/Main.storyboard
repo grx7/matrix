@@ -172,20 +172,6 @@
                                                     <constraint firstItem="esK-fP-AH1" firstAttribute="top" secondItem="Yx7-hc-G9p" secondAttribute="top" id="px2-av-r2V"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="324" width="280" height="38"/>
-                                                <color key="backgroundColor" red="0.1842715144" green="0.21562337879999999" blue="0.2508970499" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="38" id="aBD-q5-dxf"/>
-                                                </constraints>
-                                                <color key="tintColor" red="0.96993444579999999" green="1" blue="0.99140138190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <state key="normal" title="Login"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-yN-ow5" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="278" width="280" height="38"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.096060739436619719" colorSpace="custom" customColorSpace="sRGB"/>
@@ -197,6 +183,23 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                         <color key="value" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="toggleAdvancedOptions:" destination="JDN-gR-vm0" eventType="touchUpInside" id="DdN-dx-ZnH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="324" width="280" height="38"/>
+                                                <color key="backgroundColor" red="0.1842715144" green="0.21562337879999999" blue="0.2508970499" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="aBD-q5-dxf"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.96993444579999999" green="1" blue="0.99140138190000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Login"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
@@ -271,6 +274,17 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="advancedView" destination="Yx7-hc-G9p" id="NT1-h5-M1v"/>
+                        <outlet property="advancedViewHeight" destination="TMl-Z7-l8b" id="pSy-p0-xUn"/>
+                        <outlet property="homeServerField" destination="esK-fP-AH1" id="PBM-VO-5Xc"/>
+                        <outlet property="identityServerField" destination="oHo-GH-z0r" id="xHX-VM-7AY"/>
+                        <outlet property="loginButton" destination="A4j-81-zJE" id="dYN-BL-tcC"/>
+                        <outlet property="passwordField" destination="vRe-gU-nAJ" id="fbh-1P-Tyl"/>
+                        <outlet property="scrollView" destination="GQe-ag-T2I" id="HxY-po-ipa"/>
+                        <outlet property="showAdvancedButton" destination="iZq-yN-ow5" id="8R0-vX-cir"/>
+                        <outlet property="usernameField" destination="zT8-mO-jfY" id="eMd-GI-D71"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nyT-MS-dQo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
