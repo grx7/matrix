@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UINavigationController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -16,8 +16,8 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        //UserDefaults.standard.removeObject(forKey: Constants.userAccounts)
+
+        self.navigationBar.setBottomBorderColor(color: UIColor.init(red: 58/255, green: 77/255, blue: 84/255, alpha: 1), height: 1)
         
         if !MatrixAccountManager.sharedInstance.hasAccounts() {
             self.showAuthScreen()

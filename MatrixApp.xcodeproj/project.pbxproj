@@ -14,6 +14,9 @@
 		8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */; };
 		8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232C1E2E7D9D00B20E64 /* TourViewController.swift */; };
 		8924232F1E2FC39200B20E64 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232E1E2FC39200B20E64 /* MainViewController.swift */; };
+		892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423311E2FC63800B20E64 /* RoomsViewController.swift */; };
+		892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */; };
+		892423381E3023E600B20E64 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423371E3023E600B20E64 /* AccountsViewController.swift */; };
 		894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C775C1E27EE9C008D5C86 /* AppDelegate.swift */; };
 		894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894C775E1E27EE9C008D5C86 /* MatrixApp.xcdatamodeld */; };
 		894C77671E27EE9D008D5C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C77651E27EE9D008D5C86 /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8924232C1E2E7D9D00B20E64 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		8924232E1E2FC39200B20E64 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		892423311E2FC63800B20E64 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
+		892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Matrix.swift"; sourceTree = "<group>"; };
+		892423371E3023E600B20E64 /* AccountsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		894C77591E27EE9C008D5C86 /* MatrixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C775C1E27EE9C008D5C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894C775F1E27EE9C008D5C86 /* MatrixApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MatrixApp.xcdatamodel; sourceTree = "<group>"; };
@@ -138,6 +144,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		892423301E2FC5F900B20E64 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				892423311E2FC63800B20E64 /* RoomsViewController.swift */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
+		892423331E2FCAAE00B20E64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		892423361E3023B600B20E64 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				892423371E3023E600B20E64 /* AccountsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		894C77501E27EE9C008D5C86 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +202,7 @@
 				894C77911E27EF48008D5C86 /* Controllers */,
 				89EDB1BC1E2922E400AB7516 /* Models */,
 				894C77941E27FB8A008D5C86 /* Classes */,
+				892423331E2FCAAE00B20E64 /* Extensions */,
 				89EDB1C61E2A512100AB7516 /* Resources */,
 			);
 			path = MatrixApp;
@@ -199,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				8924232E1E2FC39200B20E64 /* MainViewController.swift */,
+				892423301E2FC5F900B20E64 /* Rooms */,
+				892423361E3023B600B20E64 /* Settings */,
 				895DD9731E2BD24100BCF6A2 /* Tour */,
 			);
 			path = Controllers;
@@ -548,12 +581,15 @@
 				89EDB1CA1E2A645F00AB7516 /* MatrixAccountManager.swift in Sources */,
 				89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */,
 				892423271E2CFFE200B20E64 /* BorderedButton.swift in Sources */,
+				892423381E3023E600B20E64 /* AccountsViewController.swift in Sources */,
 				89EDB1C51E2A510D00AB7516 /* AppConstants.swift in Sources */,
 				89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */,
 				894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */,
 				894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */,
+				892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */,
 				8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */,
 				8924232F1E2FC39200B20E64 /* MainViewController.swift in Sources */,
+				892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */,
 				8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */,
 				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,

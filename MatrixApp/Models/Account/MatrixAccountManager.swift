@@ -21,6 +21,8 @@ class MatrixAccountManager {
     }
     
     private func loadAccounts() {
+        self.accounts.removeAll()
+        
         if let data = UserDefaults.standard.object(forKey: Constants.userAccounts) as? [AnyObject] {
             for account in data {
                 if let userId = account["matrixId"] as? String, let homeServer = account["homeServer"] as? String, let deviceId = account["deviceId"] as? String, let accessToken = self.tokenFor(userId: userId), let credentials = MXCredentials(homeServer: homeServer, userId: userId, accessToken: accessToken) {
@@ -88,6 +90,7 @@ class MatrixAccountManager {
             
             defaults.set(accounts, forKey: Constants.userAccounts)
             defaults.set(matrixId, forKey: Constants.activeAccount)
+            defaults.synchronize()
             
             return MatrixAccount(credentials: MXCredentials(homeServer: homeServer, userId: matrixId, accessToken: accessToken))
         }
@@ -108,12 +111,37 @@ class MatrixAccountManager {
         }
     }
     
-    func deleteAccount(matrixId: String) {
-        // check exists
-        // delete access token from keychain
-        // delete account from user defaults
-        // update AccountManager
-        // perform success closure
+    func deleteAccount(account: MatrixAccount, success: @escaping ((String) -> ()), failure: @escaping ((Error) -> ())) {
+        let keychain = Keychain(service: Constants.service)
+        let defaults = UserDefaults.standard
+        
+        do {
+            try keychain.remove(account.credentials.userId)
+            
+            var accounts: [[String: String]] = defaults.object(forKey: Constants.userAccounts) as? [[String: String]] ?? []
+            
+            for (index, parsedAccount) in accounts.enumerated() {
+                if parsedAccount["matrixId"] == account.credentials.userId {
+                    accounts.remove(at: index)
+                }
+            }
+            
+            defaults.set(accounts, forKey: Constants.userAccounts)
+
+            if defaults.string(forKey: Constants.activeAccount) == account.credentials.userId {
+                defaults.removeObject(forKey: Constants.activeAccount)
+            }
+            
+            defaults.synchronize()
+            
+            NotificationCenter.default.post(name: Notifications.accountRemoved, object: nil)
+            self.loadAccounts()
+            
+            success(account.credentials.userId)
+        }
+        catch let error {
+            failure(error)
+        }
     }
     
 }

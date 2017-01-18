@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0En-GG-dmg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="emv-lL-REa">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,33 +11,62 @@
     </dependencies>
     <scenes>
         <!--Main View Controller-->
-        <scene sceneID="P0M-Z1-Wia">
+        <scene sceneID="JZg-7d-k1O">
             <objects>
-                <viewController id="0En-GG-dmg" customClass="MainViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="emv-lL-REa" customClass="MainViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MXW-iF-z68">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.18647842699137132" green="0.24619270140348856" blue="0.27000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hOd-lv-YHP" kind="presentation" identifier="showAuth" animates="NO" id="rFu-qt-1bU"/>
+                        <segue destination="4kl-Vf-Z3x" kind="relationship" relationship="rootViewController" id="N3N-ce-50F"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ifL-ag-Ngv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2516" y="-488"/>
+        </scene>
+        <!--ROOMS-->
+        <scene sceneID="kTt-fJ-4rg">
+            <objects>
+                <viewController id="4kl-Vf-Z3x" customClass="RoomsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gj8-Ag-GYJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="FoJ-oM-kkq"/>
+                        <viewControllerLayoutGuide type="top" id="SWG-e4-ptP"/>
+                        <viewControllerLayoutGuide type="bottom" id="XMW-85-Jbm"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="a9R-nB-Uzl" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <view key="view" contentMode="scaleToFill" id="gVu-9H-ohl" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.18427151441574097" green="0.21562337875366211" blue="0.25089704990386963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.59889652500430535" green="0.71401774475448687" blue="0.84068467881944442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" red="0.20387005805969238" green="0.24305841326713562" blue="0.28617703914642334" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" red="0.18427151441574097" green="0.21562337875366211" blue="0.25089704990386963" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.10197249799966812" green="0.12150626629590988" blue="0.15679481625556946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.18412226438522339" green="0.24308204650878906" blue="0.26658853888511658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <connections>
-                        <segue destination="hOd-lv-YHP" kind="presentation" identifier="showAuth" animates="NO" id="zIH-Kb-WhD"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="ROOMS" id="kQ4-gz-ygv">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="Ehg-T8-kdF">
+                            <connections>
+                                <action selector="openTour:" destination="4kl-Vf-Z3x" id="Oh8-nP-y1H"/>
+                                <segue destination="hzl-CL-Sz5" kind="presentation" id="oMH-aQ-9Vf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="lfs-36-uo4"/>
+                    </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qjp-Cw-Q5C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XZv-sA-6ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2516" y="-488"/>
+            <point key="canvasLocation" x="-1509" y="-488"/>
         </scene>
         <!--Tour View Controller-->
         <scene sceneID="wEX-dH-R7L">
@@ -55,7 +84,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.28228241205215454" green="0.33323287963867188" blue="0.38810974359512329" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="S9q-A2-7FM" firstAttribute="top" secondItem="0Vn-80-VLn" secondAttribute="top" id="OAe-p8-5r2"/>
                             <constraint firstAttribute="trailing" secondItem="S9q-A2-7FM" secondAttribute="trailing" id="Rby-je-Qwd"/>
@@ -798,6 +827,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgY-dv-mcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1140" y="1250"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="w45-uP-3SI">
+            <objects>
+                <navigationController id="hzl-CL-Sz5" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="AeQ-lZ-etb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.186478427" green="0.24619270139999999" blue="0.27000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                            <color key="textColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VkP-kh-af1" kind="relationship" relationship="rootViewController" id="WhK-fp-UxT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pMW-eG-3lr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="-848"/>
+        </scene>
+        <!--ACCOUNTS-->
+        <scene sceneID="44e-9C-4Ei">
+            <objects>
+                <viewController id="VkP-kh-af1" customClass="AccountsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2os-A2-T4s"/>
+                        <viewControllerLayoutGuide type="bottom" id="VG8-s4-jRg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n7s-0x-Qgb" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4PD-Je-x6N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="VkP-kh-af1" id="Rli-ZA-lRM"/>
+                                    <outlet property="delegate" destination="VkP-kh-af1" id="7gt-51-dXU"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59889652500000001" green="0.71401774480000002" blue="0.84068467879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4PD-Je-x6N" firstAttribute="top" secondItem="2os-A2-T4s" secondAttribute="bottom" id="9Ia-F8-3sL"/>
+                            <constraint firstAttribute="trailing" secondItem="4PD-Je-x6N" secondAttribute="trailing" id="i8g-A5-YOz"/>
+                            <constraint firstItem="VG8-s4-jRg" firstAttribute="top" secondItem="4PD-Je-x6N" secondAttribute="bottom" id="saP-OR-PSN"/>
+                            <constraint firstItem="4PD-Je-x6N" firstAttribute="leading" secondItem="n7s-0x-Qgb" secondAttribute="leading" id="wp1-3R-sa3"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
+                                <color key="value" red="0.10197249799999999" green="0.1215062663" blue="0.1567948163" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
+                                <color key="value" red="0.18412226440000001" green="0.24308204650000001" blue="0.2665885389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <navigationItem key="navigationItem" title="ACCOUNTS" id="lK1-Bi-stS">
+                        <barButtonItem key="leftBarButtonItem" title="Done" id="xyb-D0-Xwa">
+                            <connections>
+                                <action selector="unwindToRooms:" destination="VkP-kh-af1" id="JXR-3E-rLZ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="UhI-Xh-4TH"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6kF-mQ-s8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="321" y="-848"/>
         </scene>
     </scenes>
     <resources>
