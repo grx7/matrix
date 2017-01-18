@@ -186,7 +186,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="toggleAdvancedOptions:" destination="JDN-gR-vm0" eventType="touchUpInside" id="DdN-dx-ZnH"/>
+                                                    <action selector="toggleAdvancedOptions:" destination="JDN-gR-vm0" eventType="touchUpInside" id="d49-tD-FW1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
@@ -202,6 +202,9 @@
                                                         <color key="value" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="performLogin:" destination="JDN-gR-vm0" eventType="touchUpInside" id="50Q-TD-WVb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -277,6 +280,7 @@
                     <connections>
                         <outlet property="advancedView" destination="Yx7-hc-G9p" id="NT1-h5-M1v"/>
                         <outlet property="advancedViewHeight" destination="TMl-Z7-l8b" id="pSy-p0-xUn"/>
+                        <outlet property="errorLabel" destination="KgN-HO-Rza" id="7hM-vc-8op"/>
                         <outlet property="homeServerField" destination="esK-fP-AH1" id="PBM-VO-5Xc"/>
                         <outlet property="identityServerField" destination="oHo-GH-z0r" id="xHX-VM-7AY"/>
                         <outlet property="loginButton" destination="A4j-81-zJE" id="dYN-BL-tcC"/>
@@ -662,6 +666,9 @@
                                                         <color key="value" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="performRegistration:" destination="Rwg-uN-bN7" eventType="touchUpInside" id="O3F-oL-afx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-k7-BWu" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="324" width="280" height="38"/>
@@ -676,6 +683,9 @@
                                                         <color key="value" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="toggleAdvancedOptions:" destination="Rwg-uN-bN7" eventType="touchUpInside" id="zTV-b6-GGm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -751,6 +761,19 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <connections>
+                        <outlet property="advancedView" destination="v9A-pU-rFV" id="Ne4-CJ-DZS"/>
+                        <outlet property="advancedViewHeight" destination="BdZ-YY-GOE" id="0at-z9-O7O"/>
+                        <outlet property="emailField" destination="mwW-m2-i7N" id="Sff-RD-Sb2"/>
+                        <outlet property="errorLabel" destination="TGa-8f-WCI" id="k2O-os-S0X"/>
+                        <outlet property="homeServerField" destination="tbd-1F-b0v" id="12s-qh-0p0"/>
+                        <outlet property="identityServerField" destination="Dj8-qp-RIC" id="Dxy-88-iHs"/>
+                        <outlet property="passwordField" destination="xRE-Ie-iRI" id="jFe-fA-8YF"/>
+                        <outlet property="registerButton" destination="xYE-KA-7Er" id="SXd-Xt-dth"/>
+                        <outlet property="scrollView" destination="lu9-Wi-mgg" id="Kxz-7j-nJz"/>
+                        <outlet property="showAdvancedButton" destination="HHk-k7-BWu" id="UCb-v3-qSa"/>
+                        <outlet property="usernameField" destination="Y1Y-m7-VzT" id="998-0k-cq0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BgY-dv-mcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
