@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="P0M-Z1-Wia">
             <objects>
-                <viewController id="0En-GG-dmg" customClass="InitialViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0En-GG-dmg" customClass="MainViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gj8-Ag-GYJ"/>
                         <viewControllerLayoutGuide type="bottom" id="FoJ-oM-kkq"/>
