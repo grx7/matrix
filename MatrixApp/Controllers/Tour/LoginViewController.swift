@@ -11,22 +11,25 @@ import UIKit
 class LoginViewController: AuthViewController {
 
     @IBOutlet weak var loginButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     @IBAction func performLogin(_ sender: UIButton) {
         self.view.endEditing(true)
-        self.showButtonLoading(loading: true, button: self.loginButton)
 
         if self.validateParameters() {
+            self.showButtonLoading(loading: true, button: self.loginButton)
+            
             MatrixAccountManager.sharedInstance.addAccount(
                 username: self.usernameField.text!,
                 password: self.passwordField.text!,
                 homeServer: AppConfig.sharedInstance.getDefault(string: self.homeServerField.text, key: ConfigKey.defaultHomeServer),
                 identityServer: AppConfig.sharedInstance.getDefault(string: self.identityServerField.text, key: ConfigKey.defaultIdentityServer),
-                success: { (account) in
-                    self.parent?.dismiss(animated: true, completion: nil)
-            }, failure: { (error) in
-                self.errorLabel.text = error.localizedDescription.localizedCapitalized
-                self.showButtonLoading(loading: false, button: self.loginButton)
+                success: { (account) in }, failure: { (error) in
+                    self.errorLabel.text = error.localizedDescription.localizedCapitalized
+                    self.showButtonLoading(loading: false, button: self.loginButton)
             })
         }
     }

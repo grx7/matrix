@@ -21,6 +21,8 @@ class TourViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NotificationCenter.default.addObserver(self, selector: #selector(accountAdded), name: Notifications.accountAdded, object: nil)
+        
         self.scrollView.isPagingEnabled = true
         self.scrollView.bounces = false
         self.scrollView.delegate = self
@@ -38,6 +40,10 @@ class TourViewController: UIViewController {
         }
         
         self.scrollView.contentSize = CGSize(width: self.view.frame.width * CGFloat(self.pages.count), height: self.view.frame.height)
+    }
+    
+    func accountAdded() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
