@@ -21,9 +21,19 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var advancedView: UIView!
     @IBOutlet weak var showAdvancedButton: UIButton!
     @IBOutlet weak var advancedViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     let defaultAdvancedHeight: CGFloat = 176.0
     weak var activeField: UITextField?
+    
+    override func viewDidLoad() {
+        self.errorLabel.text = ""
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
+        
+        self.toggleAdvancedOptions(self.showAdvancedButton)
+    }
     
     @IBAction func toggleAdvancedOptions(_ sender: UIButton) {
         self.advancedView.isHidden = !self.advancedView.isHidden
@@ -40,7 +50,18 @@ class AuthViewController: UIViewController {
         
         self.view.endEditing(true)
     }
-
+    
+    func showButtonLoading(loading: Bool, button: UIButton) {
+        if loading {
+            button.isEnabled = false
+            button.titleLabel?.removeFromSuperview()
+            self.activityIndicator.startAnimating()
+        } else {
+            button.isEnabled = true
+            button.addSubview(button.titleLabel!)
+            self.activityIndicator.stopAnimating()
+        }
+    }
     
     //MARK: - Keyboard Notifications
     

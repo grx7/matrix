@@ -13,15 +13,6 @@ class RegisterViewController: AuthViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
-        
-        self.toggleAdvancedOptions(self.showAdvancedButton)
-    }
-    
     @IBAction func performRegistration(_ sender: UIButton) {
         self.view.endEditing(true)
     }

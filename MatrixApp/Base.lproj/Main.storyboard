@@ -191,7 +191,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="324" width="280" height="38"/>
-                                                <color key="backgroundColor" red="0.1842715144" green="0.21562337879999999" blue="0.2508970499" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="aBD-q5-dxf"/>
                                                 </constraints>
@@ -206,6 +206,13 @@
                                                     <action selector="performLogin:" destination="JDN-gR-vm0" eventType="touchUpInside" id="50Q-TD-WVb"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="rLK-Nu-dVV">
+                                                <rect key="frame" x="150" y="333" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Wkn-49-0yU"/>
+                                                    <constraint firstAttribute="width" constant="20" id="aY0-xM-9EW"/>
+                                                </constraints>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -216,6 +223,7 @@
                                             <constraint firstAttribute="trailing" secondItem="zT8-mO-jfY" secondAttribute="trailing" constant="20" id="NLf-pO-S0o"/>
                                             <constraint firstItem="iZq-yN-ow5" firstAttribute="top" secondItem="Yx7-hc-G9p" secondAttribute="bottom" constant="16" id="PPL-zI-rln"/>
                                             <constraint firstItem="Yx7-hc-G9p" firstAttribute="top" secondItem="vRe-gU-nAJ" secondAttribute="bottom" constant="8" id="QGh-1b-GtE"/>
+                                            <constraint firstItem="rLK-Nu-dVV" firstAttribute="centerX" secondItem="34r-nD-kcu" secondAttribute="centerX" id="RE3-Uz-DSz"/>
                                             <constraint firstAttribute="trailing" secondItem="iZq-yN-ow5" secondAttribute="trailing" constant="20" id="T7T-H1-Cac"/>
                                             <constraint firstItem="zT8-mO-jfY" firstAttribute="top" secondItem="34r-nD-kcu" secondAttribute="top" constant="12" id="apy-CF-zCW"/>
                                             <constraint firstItem="vRe-gU-nAJ" firstAttribute="top" secondItem="zT8-mO-jfY" secondAttribute="bottom" constant="8" id="bWW-Zn-MAG"/>
@@ -224,6 +232,7 @@
                                             <constraint firstItem="iZq-yN-ow5" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="kLK-ew-1q7"/>
                                             <constraint firstAttribute="trailing" secondItem="vRe-gU-nAJ" secondAttribute="trailing" constant="20" id="r4R-2d-YUh"/>
                                             <constraint firstAttribute="trailing" secondItem="Yx7-hc-G9p" secondAttribute="trailing" constant="20" id="rTe-eP-lvi"/>
+                                            <constraint firstItem="rLK-Nu-dVV" firstAttribute="top" secondItem="iZq-yN-ow5" secondAttribute="bottom" constant="17" id="yXj-55-91U"/>
                                             <constraint firstItem="A4j-81-zJE" firstAttribute="leading" secondItem="34r-nD-kcu" secondAttribute="leading" constant="20" id="z1o-8l-ed3"/>
                                         </constraints>
                                     </view>
@@ -278,6 +287,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="rLK-Nu-dVV" id="GJD-0o-QcV"/>
                         <outlet property="advancedView" destination="Yx7-hc-G9p" id="NT1-h5-M1v"/>
                         <outlet property="advancedViewHeight" destination="TMl-Z7-l8b" id="pSy-p0-xUn"/>
                         <outlet property="errorLabel" destination="KgN-HO-Rza" id="7hM-vc-8op"/>
@@ -655,7 +665,7 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYE-KA-7Er" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="370" width="280" height="38"/>
-                                                <color key="backgroundColor" red="0.1842715144" green="0.21562337879999999" blue="0.2508970499" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="Ig3-WG-ExW"/>
                                                 </constraints>
@@ -687,6 +697,13 @@
                                                     <action selector="toggleAdvancedOptions:" destination="Rwg-uN-bN7" eventType="touchUpInside" id="zTV-b6-GGm"/>
                                                 </connections>
                                             </button>
+                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="MvJ-s4-p0k">
+                                                <rect key="frame" x="150" y="379" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="3kU-Vo-Y6d"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Fzh-MW-gdc"/>
+                                                </constraints>
+                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -697,11 +714,13 @@
                                             <constraint firstItem="mwW-m2-i7N" firstAttribute="leading" secondItem="VZN-EZ-a9B" secondAttribute="leading" constant="20" id="7UQ-8c-lon"/>
                                             <constraint firstItem="mwW-m2-i7N" firstAttribute="top" secondItem="VZN-EZ-a9B" secondAttribute="top" constant="12" id="DA2-Xp-AD6"/>
                                             <constraint firstItem="xYE-KA-7Er" firstAttribute="top" secondItem="HHk-k7-BWu" secondAttribute="bottom" constant="8" id="Dyi-T1-d1D"/>
+                                            <constraint firstItem="MvJ-s4-p0k" firstAttribute="centerX" secondItem="VZN-EZ-a9B" secondAttribute="centerX" id="IsX-AK-shZ"/>
                                             <constraint firstAttribute="trailing" secondItem="HHk-k7-BWu" secondAttribute="trailing" constant="20" id="K7A-PR-vKJ"/>
                                             <constraint firstAttribute="trailing" secondItem="xRE-Ie-iRI" secondAttribute="trailing" constant="20" id="MXP-8x-jPq"/>
                                             <constraint firstAttribute="bottom" secondItem="xYE-KA-7Er" secondAttribute="bottom" constant="24" id="Mtt-4X-8AA"/>
                                             <constraint firstItem="xRE-Ie-iRI" firstAttribute="leading" secondItem="VZN-EZ-a9B" secondAttribute="leading" constant="20" id="Wh8-oF-Dpd"/>
                                             <constraint firstAttribute="trailing" secondItem="mwW-m2-i7N" secondAttribute="trailing" constant="20" id="Z0d-YR-9xs"/>
+                                            <constraint firstItem="MvJ-s4-p0k" firstAttribute="top" secondItem="HHk-k7-BWu" secondAttribute="bottom" constant="17" id="abi-ee-Kul"/>
                                             <constraint firstAttribute="trailing" secondItem="v9A-pU-rFV" secondAttribute="trailing" constant="20" id="cIn-7d-X1V"/>
                                             <constraint firstAttribute="trailing" secondItem="xYE-KA-7Er" secondAttribute="trailing" constant="20" id="fiy-5e-ZAU"/>
                                             <constraint firstItem="v9A-pU-rFV" firstAttribute="top" secondItem="xRE-Ie-iRI" secondAttribute="bottom" constant="8" id="ghj-ow-hGE"/>
@@ -762,6 +781,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="MvJ-s4-p0k" id="bUT-cX-PVL"/>
                         <outlet property="advancedView" destination="v9A-pU-rFV" id="Ne4-CJ-DZS"/>
                         <outlet property="advancedViewHeight" destination="BdZ-YY-GOE" id="0at-z9-O7O"/>
                         <outlet property="emailField" destination="mwW-m2-i7N" id="Sff-RD-Sb2"/>

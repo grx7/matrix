@@ -12,18 +12,31 @@ class LoginViewController: AuthViewController {
 
     @IBOutlet weak var loginButton: UIButton!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidShow(notification:)), name: .UIKeyboardDidShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
-        
-        self.toggleAdvancedOptions(self.showAdvancedButton)
-    }
-
-    
     @IBAction func performLogin(_ sender: UIButton) {
         self.view.endEditing(true)
+        self.showButtonLoading(loading: true, button: self.loginButton)
+
+        if self.validateParameters() {
+            MatrixAccountManager.sharedInstance.addAccount(
+                username: self.usernameField.text!,
+                password: self.passwordField.text!,
+                homeServer: AppConfig.sharedInstance.getDefault(string: self.homeServerField.text, key: ConfigKey.defaultHomeServer),
+                identityServer: AppConfig.sharedInstance.getDefault(string: self.identityServerField.text, key: ConfigKey.defaultIdentityServer),
+                success: { (account) in
+                    self.parent?.dismiss(animated: true, completion: nil)
+            }, failure: { (error) in
+                self.errorLabel.text = error.localizedDescription.localizedCapitalized
+                self.showButtonLoading(loading: false, button: self.loginButton)
+            })
+        }
+    }
+    
+    func validateParameters() -> Bool {
+        if let username = self.usernameField.text, !username.isEmpty, let password = self.passwordField.text, !password.isEmpty {
+            return true
+        }
+        
+        return false
     }
 
 }

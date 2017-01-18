@@ -52,7 +52,7 @@ class MatrixAccountManager {
         return nil
     }
     
-    func addAccount(username: String, password: String, homeServer: String, identityServer: String, success: @escaping ((MatrixAccount) -> ()), failure: ((Error) -> ())) {
+    func addAccount(username: String, password: String, homeServer: String, identityServer: String, success: @escaping ((MatrixAccount) -> ()), failure: @escaping ((Error) -> ())) {
         MatrixAccount.authenticateUser(username: username, password: password, homeServer: homeServer, success: { (credentials) in
             if let account = self.storeAccount(username: username, accessToken: credentials.accessToken, matrixId: credentials.userId, deviceId: credentials.deviceId, homeServer: credentials.homeServer, identityServer: identityServer) {
                 self.loadAccounts()
@@ -65,12 +65,11 @@ class MatrixAccountManager {
             }
             
         }) { (error) in
-            // could not authenticate user
-            print("\(error)")
+            failure(error)
         }
     }
     
-    func storeAccount(username: String, accessToken: String, matrixId: String, deviceId: String, homeServer: String, identityServer: String) -> MatrixAccount? {
+    private func storeAccount(username: String, accessToken: String, matrixId: String, deviceId: String, homeServer: String, identityServer: String) -> MatrixAccount? {
         let keychain = Keychain(service: Constants.service)
         let defaults = UserDefaults.standard
         
