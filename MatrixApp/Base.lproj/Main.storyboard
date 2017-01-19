@@ -44,7 +44,24 @@
                     <view key="view" contentMode="scaleToFill" id="gVu-9H-ohl" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zhu-9t-ZK8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4kl-Vf-Z3x" id="xD6-KK-HbU"/>
+                                    <outlet property="delegate" destination="4kl-Vf-Z3x" id="0eZ-Oj-6u0"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="0.59889652500430535" green="0.71401774475448687" blue="0.84068467881944442" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="XMW-85-Jbm" firstAttribute="top" secondItem="zhu-9t-ZK8" secondAttribute="bottom" id="WnE-y2-oiS"/>
+                            <constraint firstItem="zhu-9t-ZK8" firstAttribute="top" secondItem="SWG-e4-ptP" secondAttribute="bottom" id="ZS1-dc-NOk"/>
+                            <constraint firstItem="zhu-9t-ZK8" firstAttribute="leading" secondItem="gVu-9H-ohl" secondAttribute="leading" id="gnR-d2-ygt"/>
+                            <constraint firstAttribute="trailing" secondItem="zhu-9t-ZK8" secondAttribute="trailing" id="ssK-m9-oMQ"/>
+                        </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
                                 <color key="value" red="0.10197249799966812" green="0.12150626629590988" blue="0.15679481625556946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,6 +80,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="lfs-36-uo4"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="zhu-9t-ZK8" id="EXq-3n-0Jp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZv-sA-6ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

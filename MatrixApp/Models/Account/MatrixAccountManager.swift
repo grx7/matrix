@@ -25,7 +25,7 @@ class MatrixAccountManager {
         
         if let data = UserDefaults.standard.object(forKey: Constants.userAccounts) as? [AnyObject] {
             for account in data {
-                if let userId = account["matrixId"] as? String, let homeServer = account["homeServer"] as? String, let deviceId = account["deviceId"] as? String, let accessToken = self.tokenFor(userId: userId), let credentials = MXCredentials(homeServer: homeServer, userId: userId, accessToken: accessToken) {
+                if let userId = account["matrixId"] as? String, let homeServer = account["homeServer"] as? String, let deviceId = account["deviceId"] as? String, let accessToken = self.tokenFor(userId: userId), let credentials = MXCredentials(homeServer: "https://\(homeServer)", userId: userId, accessToken: accessToken) {
                     credentials.deviceId = deviceId
                     
                     self.accounts.append(MatrixAccount(credentials: credentials))

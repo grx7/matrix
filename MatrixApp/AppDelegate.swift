@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        self.startMatrix()
+        
         return true
     }
 
@@ -43,6 +45,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    
+    // MARK: - Matrix
+    
+    func startMatrix() {
+        if let account = MatrixAccountManager.sharedInstance.getActiveAccount() {
+            
+            print(account.session.state)
+            
+            account.session.start({
+            
+                print(account.session.state)
+
+            }, failure: { (error) in
+                print("\(error)")
+            })
+            
+        }
+    }
+    
+    
+    
 
     // MARK: - Core Data stack
 
