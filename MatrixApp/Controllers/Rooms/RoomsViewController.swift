@@ -18,12 +18,25 @@ class RoomsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(matrixSessionStateDidChange), name: Notification.Name("kMXSessionStateDidChangeNotification"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(matrixSessionDidSync), name: Notification.Name("kMXSessionDidSyncNotification"), object: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func matrixSessionStateDidChange(notification: Notification) {
+        if let session = notification.object as? MXSession {
+            self.loadRooms(session: session)
+        }
+    }
+    
+    func matrixSessionDidSync(notification: Notification) {
+        if let session = notification.object as? MXSession {
+            self.loadRooms(session: session)
+        }
+    }
+    
+    func loadRooms(session: MXSession) {
+        self.rooms = session.rooms()
+        self.tableView.reloadData()
     }
 
 }
@@ -39,20 +52,37 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "hey")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roomDirect", for: indexPath) as! RoomDirectTableViewCell
         
         let room = self.rooms[indexPath.row]
 
-        for member in room.state.members {
-            if member.userId != room.mxSession.myUser.userId {
-                print("\(member.displayname)")
-            }
-        }
+//        for member in room.state.members {
+//            
+//            print("members \(room.state.members)")
+//            
+//            if (member.userId != room.mxSession.myUser.userId) && room.isDirect {
+//                
+//                
+//                print("other member \(member.displayname), url: \(member.avatarUrl)")
+//                
+//                cell.avatarImageView.downloadedFrom(link: member.avatarUrl)
+//                print(member.avatarUrl)
+//            }
+//        }
         
-        cell.textLabel?.text = room.state.name
-        cell.detailTextLabel?.text = (room.isDirect) ? "Direct (\(room.roomId!))" : "Group (\(room.roomId!))"
+        
+        
+        //cell.timeLabel.text = room
+        cell.nameLabel.text = room.state.displayname
+        cell.previewLabel.text = (room.isDirect) ? "Direct (\(room.roomId!))" : "Group (\(room.roomId!))"
+        
+        
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 98
     }
     
 }

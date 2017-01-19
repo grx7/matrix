@@ -52,16 +52,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func startMatrix() {
         if let account = MatrixAccountManager.sharedInstance.getActiveAccount() {
             
-            print(account.session.state)
+            let store = MXFileStore()
             
-            account.session.start({
-            
-                print(account.session.state)
-
+            account.session.setStore(store, success: { 
+                account.session.start({
+                    
+                }, failure: { (error) in
+                    print("O*- StartSession: \(error)")
+                })
             }, failure: { (error) in
-                print("\(error)")
+                print("O*- SetStore: \(error)")
             })
-            
         }
     }
     
