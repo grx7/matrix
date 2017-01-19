@@ -54,32 +54,17 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "roomDirect", for: indexPath) as! RoomDirectTableViewCell
         
-        let room = self.rooms[indexPath.row]
-        
-        if room.isDirect {
-            print("O*: Room is Direct")
-            room.state.members.forEach({ (member) in
-                if (member.userId != room.mxSession.myUser.userId) {
-                    if member.avatarUrl != nil {
-                        print("O*: Member not me, has avatar")
-                        if let avatarUrl = room.mxSession.matrixRestClient.url(ofContentThumbnail: member.avatarUrl, toFitViewSize: CGSize(width: 60, height: 60), with: MXThumbnailingMethodCrop) {
-                            cell.setAvatarImage(avatarUrl)
-                        }
-                    } else {
-                        print("O*: Member not me, no avatar")
-                        cell.setAvatarInitials(member.displayname.components(separatedBy: " "))
-                    }
-                }
-            })
+        let room = MatrixRoom(room: self.rooms[indexPath.row])
+
+        if let avatarUrl = room.avatarUrl(size: CGSize(width: 60, height: 60)) {
+            cell.setAvatarImage(avatarUrl)
         } else {
-            cell.setAvatarInitials(room.state.displayname.components(separatedBy: " "))
+            cell.setAvatarInitials(room.initials())
         }
         
         //cell.timeLabel.text = room
-        cell.nameLabel.text = room.state.displayname
-        cell.previewLabel.text = (room.isDirect) ? "Direct (\(room.roomId!))" : "Group (\(room.roomId!))"
-        
-        
+        cell.nameLabel.text = room.room.state.displayname
+        cell.previewLabel.text = (room.room.isDirect) ? "Direct (\(room.room.roomId!))" : "Group (\(room.room.roomId!))"
         
         return cell
     }

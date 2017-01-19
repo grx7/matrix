@@ -31,15 +31,13 @@ class RoomDirectTableViewCell: UITableViewCell {
         //self.avatarImageView.downloadedFrom(link: "https://pbs.twimg.com/profile_images/700005024898748416/OyntEaBX_400x400.jpg")
     }
     
-    func setAvatarInitials(_ initials: [String]) {
-        print("O*: Called Set Initials")
+    func setAvatarInitials(_ initials: String) {
         self.avatarImageView.image = UIImage()
-        self.avatarInitialsLabel.text = initials.reduce("") { $0.0 + String($0.1.characters.first!) }
+        self.avatarInitialsLabel.text = initials
         self.avatarInitialsLabel.isHidden = false
     }
     
     func setAvatarImage(_ imageLink: String) {
-        print("O*: Called Set Image")
         self.avatarImageView.downloadedFrom(link: imageLink)
         self.avatarInitialsLabel.isHidden = true
     }
