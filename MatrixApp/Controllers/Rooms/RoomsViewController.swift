@@ -55,22 +55,25 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "roomDirect", for: indexPath) as! RoomDirectTableViewCell
         
         let room = self.rooms[indexPath.row]
-
-//        for member in room.state.members {
-//            
-//            print("members \(room.state.members)")
-//            
-//            if (member.userId != room.mxSession.myUser.userId) && room.isDirect {
-//                
-//                
-//                print("other member \(member.displayname), url: \(member.avatarUrl)")
-//                
-//                cell.avatarImageView.downloadedFrom(link: member.avatarUrl)
-//                print(member.avatarUrl)
-//            }
-//        }
         
-        
+        if room.isDirect {
+            print("O*: Room is Direct")
+            room.state.members.forEach({ (member) in
+                if (member.userId != room.mxSession.myUser.userId) {
+                    if member.avatarUrl != nil {
+                        print("O*: Member not me, has avatar")
+                        if let avatarUrl = room.mxSession.matrixRestClient.url(ofContentThumbnail: member.avatarUrl, toFitViewSize: CGSize(width: 60, height: 60), with: MXThumbnailingMethodCrop) {
+                            cell.setAvatarImage(avatarUrl)
+                        }
+                    } else {
+                        print("O*: Member not me, no avatar")
+                        cell.setAvatarInitials(member.displayname.components(separatedBy: " "))
+                    }
+                }
+            })
+        } else {
+            cell.setAvatarInitials(room.state.displayname.components(separatedBy: " "))
+        }
         
         //cell.timeLabel.text = room
         cell.nameLabel.text = room.state.displayname

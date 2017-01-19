@@ -14,10 +14,13 @@ class RoomDirectTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var previewLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var avatarInitialsLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        self.avatarInitialsLabel.isHidden = true
         
         self.avatarImageView.layer.cornerRadius = 30
         self.avatarImageView.layer.masksToBounds = true
@@ -26,6 +29,19 @@ class RoomDirectTableViewCell: UITableViewCell {
         self.avatarImageView.backgroundColor = UIColor.init(white: 1, alpha: 0.2)
         
         //self.avatarImageView.downloadedFrom(link: "https://pbs.twimg.com/profile_images/700005024898748416/OyntEaBX_400x400.jpg")
+    }
+    
+    func setAvatarInitials(_ initials: [String]) {
+        print("O*: Called Set Initials")
+        self.avatarImageView.image = UIImage()
+        self.avatarInitialsLabel.text = initials.reduce("") { $0.0 + String($0.1.characters.first!) }
+        self.avatarInitialsLabel.isHidden = false
+    }
+    
+    func setAvatarImage(_ imageLink: String) {
+        print("O*: Called Set Image")
+        self.avatarImageView.downloadedFrom(link: imageLink)
+        self.avatarInitialsLabel.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
