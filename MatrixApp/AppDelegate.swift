@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.startMatrix()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.updateMatrixSessions), name: Notifications.accountAdded, object: nil)
+        
         return true
     }
 
@@ -48,6 +50,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     // MARK: - Matrix
+    
+    func updateMatrixSessions() {
+        if let account = MatrixAccountManager.sharedInstance.getActiveAccount() {
+            account.session.close()
+            
+            self.startMatrix()
+        }
+    }
     
     func startMatrix() {
         if let account = MatrixAccountManager.sharedInstance.getActiveAccount() {
