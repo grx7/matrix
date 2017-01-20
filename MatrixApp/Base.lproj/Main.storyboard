@@ -33,7 +33,7 @@
             </objects>
             <point key="canvasLocation" x="-2516" y="-488"/>
         </scene>
-        <!--ROOMS-->
+        <!--Chats-->
         <scene sceneID="kTt-fJ-4rg">
             <objects>
                 <viewController id="4kl-Vf-Z3x" customClass="RoomsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,7 +170,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" title="ROOMS" id="kQ4-gz-ygv">
+                    <navigationItem key="navigationItem" title="Chats" id="kQ4-gz-ygv">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="Ehg-T8-kdF">
                             <connections>
                                 <action selector="openTour:" destination="4kl-Vf-Z3x" id="Oh8-nP-y1H"/>
@@ -969,7 +969,7 @@
             </objects>
             <point key="canvasLocation" x="-686" y="-848"/>
         </scene>
-        <!--ACCOUNTS-->
+        <!--Accounts-->
         <scene sceneID="44e-9C-4Ei">
             <objects>
                 <viewController id="VkP-kh-af1" customClass="AccountsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -1007,7 +1007,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" title="ACCOUNTS" id="lK1-Bi-stS">
+                    <navigationItem key="navigationItem" title="Accounts" id="lK1-Bi-stS">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="xyb-D0-Xwa">
                             <connections>
                                 <action selector="unwindToRooms:" destination="VkP-kh-af1" id="JXR-3E-rLZ"/>
