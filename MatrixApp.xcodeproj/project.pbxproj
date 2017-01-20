@@ -22,6 +22,8 @@
 		8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */; };
 		892423421E317C2400B20E64 /* MatrixRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423411E317C2400B20E64 /* MatrixRoom.swift */; };
 		892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423431E325E8100B20E64 /* NSDate+Matrix.swift */; };
+		892423471E3283CE00B20E64 /* MatrixEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423461E3283CE00B20E64 /* MatrixEvent.swift */; };
+		892423491E3283D900B20E64 /* MatrixEventFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423481E3283D900B20E64 /* MatrixEventFormatter.swift */; };
 		894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C775C1E27EE9C008D5C86 /* AppDelegate.swift */; };
 		894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894C775E1E27EE9C008D5C86 /* MatrixApp.xcdatamodeld */; };
 		894C77671E27EE9D008D5C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C77651E27EE9D008D5C86 /* Main.storyboard */; };
@@ -77,6 +79,8 @@
 		8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Matrix.swift"; sourceTree = "<group>"; };
 		892423411E317C2400B20E64 /* MatrixRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixRoom.swift; sourceTree = "<group>"; };
 		892423431E325E8100B20E64 /* NSDate+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Matrix.swift"; sourceTree = "<group>"; };
+		892423461E3283CE00B20E64 /* MatrixEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixEvent.swift; sourceTree = "<group>"; };
+		892423481E3283D900B20E64 /* MatrixEventFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixEventFormatter.swift; sourceTree = "<group>"; };
 		894C77591E27EE9C008D5C86 /* MatrixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C775C1E27EE9C008D5C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894C775F1E27EE9C008D5C86 /* MatrixApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MatrixApp.xcdatamodel; sourceTree = "<group>"; };
@@ -197,6 +201,15 @@
 			path = Room;
 			sourceTree = "<group>";
 		};
+		892423451E3283BD00B20E64 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				892423461E3283CE00B20E64 /* MatrixEvent.swift */,
+				892423481E3283D900B20E64 /* MatrixEventFormatter.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
 		894C77501E27EE9C008D5C86 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +314,7 @@
 		89EDB1BC1E2922E400AB7516 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				892423451E3283BD00B20E64 /* Event */,
 				892423401E317C0900B20E64 /* Room */,
 				89EDB1BA1E2910A900AB7516 /* Account */,
 			);
@@ -617,6 +631,7 @@
 				89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */,
 				892423421E317C2400B20E64 /* MatrixRoom.swift in Sources */,
 				894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */,
+				892423491E3283D900B20E64 /* MatrixEventFormatter.swift in Sources */,
 				894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */,
 				892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */,
 				892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */,
@@ -630,6 +645,7 @@
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,
 				8924233B1E31143D00B20E64 /* RoomDirectTableViewCell.swift in Sources */,
 				892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */,
+				892423471E3283CE00B20E64 /* MatrixEvent.swift in Sources */,
 				894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
