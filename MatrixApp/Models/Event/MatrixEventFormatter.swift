@@ -12,9 +12,11 @@ import MatrixSDK
 class MatrixEventFormatter {
 
     var event: MXEvent
+    var room: MatrixRoom
     
-    init(event: MXEvent) {
+    init(event: MXEvent, room: MatrixRoom) {
         self.event = event
+        self.room = room
     }
     
     func formattedEvent() -> String {
@@ -41,13 +43,7 @@ class MatrixEventFormatter {
                     profileChange = "\(profileChange) changed name from \(previousDisplayName)"
                 }
                 
-                
-                
             }
-            
-            print(event)
-            print(event.content)
-            print(event.prevContent)
             
             return profileChange
             
@@ -59,10 +55,18 @@ class MatrixEventFormatter {
             
         } else {
             if self.event.content["membership"] as? String == "join", let displayName = self.event.content["displayname"] as? String  {
-                return "\(displayName) joined"
+                return "\(self.displayNameFor(user: self.event.sender, provided: displayName)) joined"
             }
         }
         return ""
+    }
+    
+    func displayNameFor(user: String, provided: String? = "") -> String {
+        if self.event.sender == self.room.session.myUser.userId {
+            return "you"
+        }
+        
+        return user
     }
     
 }

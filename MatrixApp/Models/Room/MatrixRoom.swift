@@ -93,7 +93,7 @@ class MatrixRoom {
     }
     
     func lastEvent() -> MatrixEvent {
-        return MatrixEvent(event: self.room.lastMessageWithType(in: [kMXEventTypeStringRoomName, kMXEventTypeStringRoomTopic, kMXEventTypeStringRoomAvatar, kMXEventTypeStringRoomMember, kMXEventTypeStringRoomCreate, kMXEventTypeStringRoomJoinRules, kMXEventTypeStringRoomPowerLevels, kMXEventTypeStringRoomAliases, kMXEventTypeStringRoomCanonicalAlias, kMXEventTypeStringRoomEncrypted, kMXEventTypeStringRoomEncryption, kMXEventTypeStringRoomGuestAccess, kMXEventTypeStringRoomKey, kMXEventTypeStringRoomHistoryVisibility, kMXEventTypeStringRoomMessage, kMXEventTypeStringRoomMessageFeedback, kMXEventTypeStringRoomRedaction, kMXEventTypeStringRoomThirdPartyInvite, kMXEventTypeStringRoomTag, kMXEventTypeStringPresence]))
+        return MatrixEvent(event: self.room.lastMessageWithType(in: [kMXEventTypeStringRoomName, kMXEventTypeStringRoomTopic, kMXEventTypeStringRoomAvatar, kMXEventTypeStringRoomMember, kMXEventTypeStringRoomCreate, kMXEventTypeStringRoomJoinRules, kMXEventTypeStringRoomPowerLevels, kMXEventTypeStringRoomAliases, kMXEventTypeStringRoomCanonicalAlias, kMXEventTypeStringRoomEncrypted, kMXEventTypeStringRoomEncryption, kMXEventTypeStringRoomGuestAccess, kMXEventTypeStringRoomKey, kMXEventTypeStringRoomHistoryVisibility, kMXEventTypeStringRoomMessage, kMXEventTypeStringRoomMessageFeedback, kMXEventTypeStringRoomRedaction, kMXEventTypeStringRoomThirdPartyInvite, kMXEventTypeStringRoomTag, kMXEventTypeStringPresence]), room: self)
     }
 
     private func fullAvatarUrl(url: String, size: CGSize) -> String {

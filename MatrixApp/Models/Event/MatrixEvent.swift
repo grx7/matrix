@@ -12,11 +12,13 @@ import MatrixSDK
 class MatrixEvent {
     
     var event: MXEvent
+    var room: MatrixRoom
     var eventFormatter: MatrixEventFormatter
     
-    init(event: MXEvent) {
+    init(event: MXEvent, room: MatrixRoom) {
         self.event = event
-        self.eventFormatter = MatrixEventFormatter(event: event)
+        self.room = room
+        self.eventFormatter = MatrixEventFormatter(event: self.event, room: self.room)
     }
     
     func timeAgo() -> String {

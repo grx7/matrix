@@ -17,7 +17,7 @@ class MainViewController: UINavigationController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        self.navigationBar.setBottomBorderColor(color: UIColor.init(red: 58/255, green: 77/255, blue: 84/255, alpha: 1), height: 1)
+        self.navigationBar.setBottomBorderColor(color: UIColor.init(red: 23/255, green: 38/255, blue: 47/255, alpha: 1), height: 1)
     }
     
     override func viewDidLoad() {
