@@ -53,15 +53,12 @@ class MatrixRoom {
     
     func preview() -> String {
         let type = (self.directChat()) ? "Direct" : "Group"
-        
-//        let lastMessage = self.room.lastMessageWithType(in: [kMXEventTypeStringRoomName, kMXEventTypeStringRoomTopic, kMXEventTypeStringRoomMember, kMXEventTypeStringRoomMessage, kMXEventTypeStringRoomMessageFeedback, kMXEventTypeStringRoomThirdPartyInvite])
-//        print(lastMessage)
-        
+
         switch self.room.state.membership {
         case MXMembershipInvite:
             return "Tap to Join - \(type)"
         case MXMembershipJoin:
-            return "Message Preview - \(type)"
+            return self.lastEvent().asString()
         default:
             return ""
         }
@@ -92,19 +89,13 @@ class MatrixRoom {
     }
     
     func lastActivity() -> String {
-        if let lastMessage = self.room.lastMessageWithType(in: [kMXEventTypeStringRoomName, kMXEventTypeStringRoomTopic, kMXEventTypeStringRoomAvatar, kMXEventTypeStringRoomMember, kMXEventTypeStringRoomCreate, kMXEventTypeStringRoomJoinRules, kMXEventTypeStringRoomPowerLevels, kMXEventTypeStringRoomAliases, kMXEventTypeStringRoomCanonicalAlias, kMXEventTypeStringRoomEncrypted, kMXEventTypeStringRoomEncryption, kMXEventTypeStringRoomGuestAccess, kMXEventTypeStringRoomKey, kMXEventTypeStringRoomHistoryVisibility, kMXEventTypeStringRoomMessage, kMXEventTypeStringRoomMessageFeedback, kMXEventTypeStringRoomRedaction, kMXEventTypeStringRoomThirdPartyInvite, kMXEventTypeStringRoomTag, kMXEventTypeStringPresence]) {
-            return self.timeSinceEvent(time: lastMessage.ageLocalTs)
-        }
-        
-        return ""
+        return self.lastEvent().timeAgo()
     }
     
-    private func timeSinceEvent(time: UInt64) -> String {
-        let date = NSDate(timeIntervalSince1970: TimeInterval(time/1000))
-        
-        return date.timeAgo().lowercased()
+    private func lastEvent() -> MatrixEvent {
+        return MatrixEvent(event: self.room.lastMessageWithType(in: [kMXEventTypeStringRoomName, kMXEventTypeStringRoomTopic, kMXEventTypeStringRoomAvatar, kMXEventTypeStringRoomMember, kMXEventTypeStringRoomCreate, kMXEventTypeStringRoomJoinRules, kMXEventTypeStringRoomPowerLevels, kMXEventTypeStringRoomAliases, kMXEventTypeStringRoomCanonicalAlias, kMXEventTypeStringRoomEncrypted, kMXEventTypeStringRoomEncryption, kMXEventTypeStringRoomGuestAccess, kMXEventTypeStringRoomKey, kMXEventTypeStringRoomHistoryVisibility, kMXEventTypeStringRoomMessage, kMXEventTypeStringRoomMessageFeedback, kMXEventTypeStringRoomRedaction, kMXEventTypeStringRoomThirdPartyInvite, kMXEventTypeStringRoomTag, kMXEventTypeStringPresence]))
     }
-    
+
     private func fullAvatarUrl(url: String, size: CGSize) -> String {
         if url.hasPrefix(Constants.contentUriScheme) {
             return self.restClient.url(ofContentThumbnail: url, toFitViewSize: size, with: MXThumbnailingMethodCrop)
