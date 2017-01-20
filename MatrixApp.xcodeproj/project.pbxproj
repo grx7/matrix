@@ -24,6 +24,8 @@
 		892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423431E325E8100B20E64 /* NSDate+Matrix.swift */; };
 		892423471E3283CE00B20E64 /* MatrixEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423461E3283CE00B20E64 /* MatrixEvent.swift */; };
 		892423491E3283D900B20E64 /* MatrixEventFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423481E3283D900B20E64 /* MatrixEventFormatter.swift */; };
+		8924234C1E32C5BC00B20E64 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8924234E1E32C5BC00B20E64 /* Localizable.strings */; };
+		892423541E32C77800B20E64 /* String+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423531E32C77800B20E64 /* String+Matrix.swift */; };
 		894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C775C1E27EE9C008D5C86 /* AppDelegate.swift */; };
 		894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894C775E1E27EE9C008D5C86 /* MatrixApp.xcdatamodeld */; };
 		894C77671E27EE9D008D5C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C77651E27EE9D008D5C86 /* Main.storyboard */; };
@@ -81,6 +83,11 @@
 		892423431E325E8100B20E64 /* NSDate+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Matrix.swift"; sourceTree = "<group>"; };
 		892423461E3283CE00B20E64 /* MatrixEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixEvent.swift; sourceTree = "<group>"; };
 		892423481E3283D900B20E64 /* MatrixEventFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixEventFormatter.swift; sourceTree = "<group>"; };
+		8924234D1E32C5BC00B20E64 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		892423501E32C64B00B20E64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		892423511E32C64B00B20E64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		892423521E32C64C00B20E64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		892423531E32C77800B20E64 /* String+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Matrix.swift"; sourceTree = "<group>"; };
 		894C77591E27EE9C008D5C86 /* MatrixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C775C1E27EE9C008D5C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894C775F1E27EE9C008D5C86 /* MatrixApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MatrixApp.xcdatamodel; sourceTree = "<group>"; };
@@ -172,6 +179,7 @@
 				892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */,
 				8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */,
 				892423431E325E8100B20E64 /* NSDate+Matrix.swift */,
+				892423531E32C77800B20E64 /* String+Matrix.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				89EDB1C71E2A514400AB7516 /* Config.plist */,
+				8924234E1E32C5BC00B20E64 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -439,6 +448,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 894C77501E27EE9C008D5C86;
 			productRefGroup = 894C775A1E27EE9C008D5C86 /* Products */;
@@ -457,6 +467,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8924234C1E32C5BC00B20E64 /* Localizable.strings in Resources */,
 				89EDB1C81E2A514400AB7516 /* Config.plist in Resources */,
 				894C776C1E27EE9D008D5C86 /* LaunchScreen.storyboard in Resources */,
 				894C77691E27EE9D008D5C86 /* Assets.xcassets in Resources */,
@@ -631,6 +642,7 @@
 				89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */,
 				892423421E317C2400B20E64 /* MatrixRoom.swift in Sources */,
 				894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */,
+				892423541E32C77800B20E64 /* String+Matrix.swift in Sources */,
 				892423491E3283D900B20E64 /* MatrixEventFormatter.swift in Sources */,
 				894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */,
 				892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */,
@@ -682,10 +694,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8924234E1E32C5BC00B20E64 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8924234D1E32C5BC00B20E64 /* en */,
+				892423521E32C64C00B20E64 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		894C77651E27EE9D008D5C86 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				894C77661E27EE9D008D5C86 /* Base */,
+				892423501E32C64B00B20E64 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -694,6 +716,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				894C776B1E27EE9D008D5C86 /* Base */,
+				892423511E32C64B00B20E64 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -705,6 +728,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -755,6 +779,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

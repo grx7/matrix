@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  MatrixApp
+
+  Created by Oliver Lumby on 20/01/2017.
+  Copyright © 2017 Oliver Lumby. All rights reserved.
+*/
+
+"account.by_user" = "by %@ and %@";

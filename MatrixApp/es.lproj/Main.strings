@@ -1,0 +1,105 @@
+
+/* Class = "UILabel"; text = "Open Spec"; ObjectID = "0cQ-2Z-1kX"; */
+"0cQ-2Z-1kX.text" = "Open Spec";
+
+/* Class = "UILabel"; text = "Federated"; ObjectID = "332-ri-Fhl"; */
+"332-ri-Fhl.text" = "Federated";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "A4j-81-zJE"; */
+"A4j-81-zJE.normalTitle" = "Login";
+
+/* Class = "UITextField"; placeholder = "Identity Server"; ObjectID = "Dj8-qp-RIC"; */
+"Dj8-qp-RIC.placeholder" = "Identity Server";
+
+/* Class = "UIButton"; normalTitle = "Learn More"; ObjectID = "Dnt-zE-rXY"; */
+"Dnt-zE-rXY.normalTitle" = "Learn More";
+
+/* Class = "UILabel"; text = "Open Source"; ObjectID = "E9I-nU-OQ9"; */
+"E9I-nU-OQ9.text" = "Open Source";
+
+/* Class = "UIButton"; normalTitle = "Show Advanced"; ObjectID = "HHk-k7-BWu"; */
+"HHk-k7-BWu.normalTitle" = "Show Advanced";
+
+/* Class = "UITextView"; text = "{{ App Name }} is completely open source and hosted on GitHub."; ObjectID = "IzJ-T3-VrJ"; */
+"IzJ-T3-VrJ.text" = "{{ App Name }} is completely open source and hosted on GitHub.";
+
+/* Class = "UILabel"; text = "Error Text"; ObjectID = "KgN-HO-Rza"; */
+"KgN-HO-Rza.text" = "Error Text";
+
+/* Class = "UITextView"; text = "Built on an open federated specification, meaning you can host your own chat server and own your data."; ObjectID = "Ncg-uf-Dlc"; */
+"Ncg-uf-Dlc.text" = "Built on an open federated specification, meaning you can host your own chat server and own your data.";
+
+/* Class = "UILabel"; text = "Error Text"; ObjectID = "TGa-8f-WCI"; */
+"TGa-8f-WCI.text" = "Error Text";
+
+/* Class = "UILabel"; text = "LOGIN"; ObjectID = "VEn-kx-fbM"; */
+"VEn-kx-fbM.text" = "LOGIN";
+
+/* Class = "UILabel"; text = "Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs, phone numbers or other forms of ID."; ObjectID = "XGf-WI-klb"; */
+"XGf-WI-klb.text" = "Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs, phone numbers or other forms of ID.";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "Y1Y-m7-VzT"; */
+"Y1Y-m7-VzT.placeholder" = "Username";
+
+/* Class = "UITextField"; placeholder = "Home Server"; ObjectID = "esK-fP-AH1"; */
+"esK-fP-AH1.placeholder" = "Home Server";
+
+/* Class = "UILabel"; text = "Oliver Lumby"; ObjectID = "f7s-U0-Xrw"; */
+"f7s-U0-Xrw.text" = "Oliver Lumby";
+
+/* Class = "UIButton"; normalTitle = "Learn More"; ObjectID = "fy0-OD-daa"; */
+"fy0-OD-daa.normalTitle" = "Learn More";
+
+/* Class = "UILabel"; text = "OL"; ObjectID = "i4g-pk-iUa"; */
+"i4g-pk-iUa.text" = "OL";
+
+/* Class = "UILabel"; text = "now"; ObjectID = "iNr-qc-MVw"; */
+"iNr-qc-MVw.text" = "now";
+
+/* Class = "UIButton"; normalTitle = "Show Advanced"; ObjectID = "iZq-yN-ow5"; */
+"iZq-yN-ow5.normalTitle" = "Show Advanced";
+
+/* Class = "UIButton"; normalTitle = "Learn More"; ObjectID = "j0x-xA-bS1"; */
+"j0x-xA-bS1.normalTitle" = "Learn More";
+
+/* Class = "UINavigationItem"; title = "Chats"; ObjectID = "kQ4-gz-ygv"; */
+"kQ4-gz-ygv.title" = "Chats";
+
+/* Class = "UINavigationItem"; title = "Accounts"; ObjectID = "lK1-Bi-stS"; */
+"lK1-Bi-stS.title" = "Accounts";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "mwW-m2-i7N"; */
+"mwW-m2-i7N.placeholder" = "Email";
+
+/* Class = "UILabel"; text = "Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs, phone numbers or other forms of ID."; ObjectID = "oCZ-ua-U8o"; */
+"oCZ-ua-U8o.text" = "Your home server stores all your conversations and account data.  Identity servers track the relationship between Matrix IDs, phone numbers or other forms of ID.";
+
+/* Class = "UITextField"; placeholder = "Identity Server"; ObjectID = "oHo-GH-z0r"; */
+"oHo-GH-z0r.placeholder" = "Identity Server";
+
+/* Class = "UILabel"; text = "A line of preview content goes here it is trimmed"; ObjectID = "qr5-5b-DUX"; */
+"qr5-5b-DUX.text" = "A line of preview content goes here it is trimmed";
+
+/* Class = "UITextField"; placeholder = "Home Server"; ObjectID = "tbd-1F-b0v"; */
+"tbd-1F-b0v.placeholder" = "Home Server";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "vRe-gU-nAJ"; */
+"vRe-gU-nAJ.placeholder" = "Password";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "xRE-Ie-iRI"; */
+"xRE-Ie-iRI.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "REGISTER"; ObjectID = "xTF-pZ-Kqs"; */
+"xTF-pZ-Kqs.text" = "REGISTER";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "xYE-KA-7Er"; */
+"xYE-KA-7Er.normalTitle" = "Register";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "xyb-D0-Xwa"; */
+"xyb-D0-Xwa.title" = "Done";
+
+/* Class = "UITextView"; text = "The specification is open which means any client can be used"; ObjectID = "y7P-Sj-fub"; */
+"y7P-Sj-fub.text" = "The specification is open which means any client can be used";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "zT8-mO-jfY"; */
+"zT8-mO-jfY.placeholder" = "Username";
