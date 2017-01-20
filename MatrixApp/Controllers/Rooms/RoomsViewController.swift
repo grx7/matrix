@@ -13,7 +13,7 @@ class RoomsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var rooms: [MXRoom] = []
+    var rooms: [MatrixRoom] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,11 @@ class RoomsViewController: UIViewController {
     }
     
     func loadRooms(session: MXSession) {
-        self.rooms = session.rooms()
+        self.rooms = session.rooms().map({ (room) -> MatrixRoom in
+            return MatrixRoom(room: room)
+        }).sorted(by: { (a, b) -> Bool in
+            return a.lastEvent().event.age < b.lastEvent().event.age
+        })
         self.tableView.reloadData()
     }
 
@@ -54,7 +58,7 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "roomDirect", for: indexPath) as! RoomDirectTableViewCell
         
-        let room = MatrixRoom(room: self.rooms[indexPath.row])
+        let room = self.rooms[indexPath.row]
 
         if let avatarUrl = room.avatarUrl(size: CGSize(width: 60, height: 60)) {
             cell.setAvatarImage(avatarUrl)
