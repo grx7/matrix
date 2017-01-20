@@ -21,6 +21,7 @@
 		8924233D1E31144600B20E64 /* RoomGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233C1E31144600B20E64 /* RoomGroupTableViewCell.swift */; };
 		8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */; };
 		892423421E317C2400B20E64 /* MatrixRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423411E317C2400B20E64 /* MatrixRoom.swift */; };
+		892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423431E325E8100B20E64 /* NSDate+Matrix.swift */; };
 		894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C775C1E27EE9C008D5C86 /* AppDelegate.swift */; };
 		894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 894C775E1E27EE9C008D5C86 /* MatrixApp.xcdatamodeld */; };
 		894C77671E27EE9D008D5C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C77651E27EE9D008D5C86 /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 		8924233C1E31144600B20E64 /* RoomGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomGroupTableViewCell.swift; sourceTree = "<group>"; };
 		8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Matrix.swift"; sourceTree = "<group>"; };
 		892423411E317C2400B20E64 /* MatrixRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixRoom.swift; sourceTree = "<group>"; };
+		892423431E325E8100B20E64 /* NSDate+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Matrix.swift"; sourceTree = "<group>"; };
 		894C77591E27EE9C008D5C86 /* MatrixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C775C1E27EE9C008D5C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894C775F1E27EE9C008D5C86 /* MatrixApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MatrixApp.xcdatamodel; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			children = (
 				892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */,
 				8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */,
+				892423431E325E8100B20E64 /* NSDate+Matrix.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 				892423421E317C2400B20E64 /* MatrixRoom.swift in Sources */,
 				894C77601E27EE9C008D5C86 /* MatrixApp.xcdatamodeld in Sources */,
 				894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */,
+				892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */,
 				892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */,
 				8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */,
 				8924233D1E31144600B20E64 /* RoomGroupTableViewCell.swift in Sources */,

@@ -62,9 +62,9 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
             cell.setAvatarInitials(room.initials())
         }
         
-        //cell.timeLabel.text = room
-        cell.nameLabel.text = room.room.state.displayname
-        cell.previewLabel.text = (room.room.isDirect) ? "Direct (\(room.room.roomId!))" : "Group (\(room.room.roomId!))"
+        cell.timeLabel.text = room.lastActivity()
+        cell.nameLabel.text = room.displayName()
+        cell.previewLabel.text = room.preview()
         
         return cell
     }
