@@ -18,15 +18,6 @@ class MainViewController: UINavigationController {
         super.viewDidAppear(animated)
 
         self.navigationBar.setBottomBorderColor(color: UIColor.init(red: 58/255, green: 77/255, blue: 84/255, alpha: 1), height: 1)
-        
-        if !MatrixAccountManager.sharedInstance.hasAccounts() {
-            self.showAuthScreen()
-        } else {
-            print("I have at least 1 account")
-            
-            let activeAccount = MatrixAccountManager.sharedInstance.getActiveAccount()
-            print("Its User is: \(activeAccount?.credentials.userId)")
-        }
     }
     
     override func viewDidLoad() {
