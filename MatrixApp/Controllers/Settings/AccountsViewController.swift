@@ -38,25 +38,25 @@ extension AccountsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // TODO: FixME
-        return 0
-        // return MatrixAccountManager.sharedInstance.accounts.count
+         return MatrixAccount.accounts().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "hey")
 
-        // TODO: FixME
-//        let account = MatrixAccountManager.sharedInstance.accounts[indexPath.row]
-//        
-//        cell.textLabel?.text = account.credentials.userId
-//        cell.detailTextLabel?.text = account.credentials.homeServer
+        let account = MatrixAccount.accounts()[indexPath.row]
+        
+        cell.backgroundColor = UIColor.clear
+        cell.textLabel?.textColor = UIColor.white
+        cell.textLabel?.text = account.userId
+        cell.detailTextLabel?.textColor = UIColor.white
+        cell.detailTextLabel?.text = account.homeServer
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        // TODO: FixME
+        // TODO: FixME∫∫
         //        return [UITableViewRowAction(style: .destructive, title: "Delete", handler: { (action, indexPath) in
 //            let account = MatrixAccountManager.sharedInstance.accounts[indexPath.row]
 //            
