@@ -16,6 +16,10 @@ class MainViewController: UINavigationController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        if !MatrixAccountManager.sharedInstance.hasAccounts() {
+            self.showAuthScreen()
+        }
 
         self.navigationBar.setBottomBorderColor(color: UIColor.init(red: 23/255, green: 38/255, blue: 47/255, alpha: 1), height: 1)
     }
