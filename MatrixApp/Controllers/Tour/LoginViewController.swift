@@ -22,16 +22,15 @@ class LoginViewController: AuthViewController {
         if self.validateParameters() {
             self.showButtonLoading(loading: true, button: self.loginButton)
 
-            // TODO: FixME
-//            MatrixAccountManager.sharedInstance.addAccount(
-//                username: self.usernameField.text!,
-//                password: self.passwordField.text!,
-//                homeServer: AppConfig.sharedInstance.getDefault(string: self.homeServerField.text, key: ConfigKey.defaultHomeServer),
-//                identityServer: AppConfig.sharedInstance.getDefault(string: self.identityServerField.text, key: ConfigKey.defaultIdentityServer),
-//                success: { (account) in }, failure: { (error) in
-//                    self.errorLabel.text = error.localizedDescription.localizedCapitalized
-//                    self.showButtonLoading(loading: false, button: self.loginButton)
-//            })
+            MatrixAccount.saveAccount(
+                username: self.usernameField.text!,
+                password: self.passwordField.text!,
+                homeServer: AppConfig.sharedInstance.getDefault(string: self.homeServerField.text, key: ConfigKey.defaultHomeServer),
+                identityServer: AppConfig.sharedInstance.getDefault(string: self.identityServerField.text, key: ConfigKey.defaultIdentityServer),
+                success: { (account) in }, failure: { (error) in
+                    self.errorLabel.text = error.localizedDescription.localizedCapitalized
+                    self.showButtonLoading(loading: false, button: self.loginButton)
+            })
         }
     }
     
