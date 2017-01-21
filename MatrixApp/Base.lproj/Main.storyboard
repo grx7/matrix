@@ -161,14 +161,6 @@
                             <constraint firstItem="zhu-9t-ZK8" firstAttribute="leading" secondItem="gVu-9H-ohl" secondAttribute="leading" id="gnR-d2-ygt"/>
                             <constraint firstAttribute="trailing" secondItem="zhu-9t-ZK8" secondAttribute="trailing" id="ssK-m9-oMQ"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="secondColor">
-                                <color key="value" red="0.10197249799966812" green="0.12150626629590988" blue="0.15679481625556946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="color" keyPath="firstColor">
-                                <color key="value" red="0.18412226438522339" green="0.24308204650878906" blue="0.26658853888511658" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" title="Chats" id="kQ4-gz-ygv">
                         <barButtonItem key="leftBarButtonItem" systemItem="organize" id="Ehg-T8-kdF">
