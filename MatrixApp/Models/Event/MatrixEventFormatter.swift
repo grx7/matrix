@@ -21,6 +21,8 @@ class MatrixEventFormatter {
     
     func formattedEvent() -> String {
         switch self.event.eventType {
+        case MXEventTypeRoomMessage:
+            return self.formatRoomMessageEvent()
         case MXEventTypeRoomMember:
             return self.formatRoomMemberEvent()
         default:
@@ -30,43 +32,44 @@ class MatrixEventFormatter {
         return ""
     }
     
+    func formatRoomMessageEvent() -> String {
+        let senderName = self.displayNameFor(user: self.event.sender)
+        
+        if let messageBody = self.event.content["body"] as? String {
+            return "events.user_sent_text_message".localized(arguments: [senderName, messageBody])
+        }
+        
+        return "events.user_sent_text_message_unknown".localized(arguments: [senderName])
+    }
+    
     func formatRoomMemberEvent() -> String {
+        
+        let senderName = self.displayNameFor(user: self.event.sender)
+        
         if self.event.isUserProfileChange() {
-            
-            var profileChange = ""
-            
-            if let displayName = event.content["displayname"] as? String {
-                
-                profileChange = "\(displayName)"
-                
-                if let previousDisplayName = event.prevContent["displayname"] as? String, displayName != previousDisplayName {
-                    profileChange = "\(profileChange) changed name from \(previousDisplayName)"
-                }
-                
+
+            if let displayName = self.event.content["displayname"] as? String, let previousName = event.prevContent["displayname"] as? String, senderName != previousName {
+                return "events.user_changed_name".localized(arguments: [previousName, displayName])
             }
-            
-            return profileChange
-            
-            if let avatar = event.content["avatar_url"] as? String, let previousAvatar = event.prevContent["avatar_url"] as? String {
-                if avatar != previousAvatar {
-                    return "Avatar changed"
-                }
+                
+            if let avatar = event.content["avatar_url"] as? String, let previousAvatar = event.prevContent["avatar_url"] as? String, avatar != previousAvatar {
+                return "events.user_changed_avatar".localized(arguments: [senderName])
             }
             
         } else {
-            if self.event.content["membership"] as? String == "join", let displayName = self.event.content["displayname"] as? String  {
-                return "\(self.displayNameFor(user: self.event.sender, provided: displayName)) joined"
+            if self.event.content["membership"] as? String == "join" {
+                return "events.user_joined_room".localized(arguments: [senderName])
             }
         }
         return ""
     }
     
-    func displayNameFor(user: String, provided: String? = "") -> String {
+    func displayNameFor(user: String) -> String {
         if self.event.sender == self.room.session.myUser.userId {
-            return "you"
+            return "You"
         }
         
-        return user
+        return self.room.room.state.memberName(user)
     }
     
 }

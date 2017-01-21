@@ -10,6 +10,10 @@ import UIKit
 
 extension String {
     
+    var uppercaseFirst: String {
+        return String(characters.prefix(1)).uppercased() + String(characters.dropFirst())
+    }
+    
     func localized(arguments: [String] = []) -> String {
         return String(format: NSLocalizedString(self, comment: ""), arguments: arguments)
     }
