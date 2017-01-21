@@ -60,15 +60,7 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let room = self.rooms[indexPath.row]
 
-        if let avatarUrl = room.avatarUrl(size: CGSize(width: 60, height: 60)) {
-            cell.setAvatarImage(avatarUrl)
-        } else {
-            cell.setAvatarInitials(room.initials())
-        }
-        
-        cell.timeLabel.text = room.lastActivity()
-        cell.nameLabel.text = room.displayName()
-        cell.previewLabel.text = room.preview()
+        cell.setCell(room: room)
         
         return cell
     }

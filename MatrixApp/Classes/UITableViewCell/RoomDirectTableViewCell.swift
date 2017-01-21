@@ -31,13 +31,25 @@ class RoomDirectTableViewCell: UITableViewCell {
         //self.avatarImageView.downloadedFrom(link: "https://pbs.twimg.com/profile_images/700005024898748416/OyntEaBX_400x400.jpg")
     }
     
-    func setAvatarInitials(_ initials: String) {
+    func setCell(room: MatrixRoom) {
+        if let avatarUrl = room.avatarUrl(size: CGSize(width: 60, height: 60)) {
+            self.setAvatarImage(avatarUrl)
+        } else {
+            self.setAvatarInitials(room.initials())
+        }
+        
+        self.timeLabel.text = room.lastActivity()
+        self.nameLabel.text = room.displayName()
+        self.previewLabel.text = room.preview()
+    }
+    
+    private func setAvatarInitials(_ initials: String) {
         self.avatarImageView.image = UIImage()
         self.avatarInitialsLabel.text = initials
         self.avatarInitialsLabel.isHidden = false
     }
     
-    func setAvatarImage(_ imageLink: String) {
+    private func setAvatarImage(_ imageLink: String) {
         self.avatarImageView.downloadedFrom(link: imageLink)
         self.avatarInitialsLabel.isHidden = true
     }
