@@ -69,4 +69,8 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
         return 78
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
 }

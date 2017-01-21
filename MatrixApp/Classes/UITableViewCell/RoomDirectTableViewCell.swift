@@ -28,6 +28,10 @@ class RoomDirectTableViewCell: UITableViewCell {
         self.avatarImageView.layer.borderWidth = 1
         self.avatarImageView.backgroundColor = UIColor.init(white: 1, alpha: 0.2)
         
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.init(white: 1, alpha: 0.1)
+        self.selectedBackgroundView = backgroundView
+        
         //self.avatarImageView.downloadedFrom(link: "https://pbs.twimg.com/profile_images/700005024898748416/OyntEaBX_400x400.jpg")
     }
     
@@ -38,6 +42,7 @@ class RoomDirectTableViewCell: UITableViewCell {
             self.setAvatarInitials(room.initials())
         }
         
+        self.setBackgroundHighlight((room.notificationCount() > 0) ? true : false)
         self.timeLabel.text = room.lastActivity()
         self.nameLabel.text = room.displayName()
         self.previewLabel.text = room.preview()
@@ -52,6 +57,14 @@ class RoomDirectTableViewCell: UITableViewCell {
     private func setAvatarImage(_ imageLink: String) {
         self.avatarImageView.downloadedFrom(link: imageLink)
         self.avatarInitialsLabel.isHidden = true
+    }
+    
+    private func setBackgroundHighlight(_ highlighted: Bool) {
+        if highlighted {
+            self.backgroundColor = UIColor.init(white: 1, alpha: 0.05)
+        } else {
+            self.backgroundColor = UIColor.clear
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

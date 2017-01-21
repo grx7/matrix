@@ -95,6 +95,10 @@ class MatrixRoom {
     func lastEvent() -> MatrixEvent {
         return MatrixEvent(event: self.room.lastMessageWithType(in: [kMXEventTypeStringRoomName, kMXEventTypeStringRoomTopic, kMXEventTypeStringRoomAvatar, kMXEventTypeStringRoomMember, kMXEventTypeStringRoomCreate, kMXEventTypeStringRoomJoinRules, kMXEventTypeStringRoomPowerLevels, kMXEventTypeStringRoomAliases, kMXEventTypeStringRoomCanonicalAlias, kMXEventTypeStringRoomEncrypted, kMXEventTypeStringRoomEncryption, kMXEventTypeStringRoomGuestAccess, kMXEventTypeStringRoomKey, kMXEventTypeStringRoomHistoryVisibility, kMXEventTypeStringRoomMessage, kMXEventTypeStringRoomMessageFeedback, kMXEventTypeStringRoomRedaction, kMXEventTypeStringRoomThirdPartyInvite, kMXEventTypeStringRoomTag, kMXEventTypeStringPresence]), room: self)
     }
+    
+    func notificationCount() -> Int {
+        return Int(self.room.notificationCount)
+    }
 
     private func fullAvatarUrl(url: String, size: CGSize) -> String {
         if url.hasPrefix(Constants.contentUriScheme) {
