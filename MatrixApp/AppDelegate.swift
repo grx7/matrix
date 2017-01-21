@@ -52,30 +52,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - Matrix
     
     func updateMatrixSessions() {
-        // TODO: FixME
-//        if let account = MatrixAccountManager.sharedInstance.getActiveAccount() {
-//            account.session.close()
-//            
-//            self.startMatrix()
-//        }
+        if let account = MatrixAccount.activeAccount() {
+            account.session.close()
+            
+            self.startMatrix()
+        }
     }
     
     func startMatrix() {
-        // TODO: FixME
-//        if let account = MatrixAccountManager.sharedInstance.getActiveAccount() {
-//            
-//            let store = MXFileStore()
-//            
-//            account.session.setStore(store, success: { 
-//                account.session.start({
-//                    
-//                }, failure: { (error) in
-//                    print("O*- StartSession: \(error)")
-//                })
-//            }, failure: { (error) in
-//                print("O*- SetStore: \(error)")
-//            })
-//        }
+        if let account = MatrixAccount.activeAccount() {
+            
+            let store = MXFileStore()
+            
+            account.session.setStore(store, success: { 
+                account.session.start({
+                    
+                }, failure: { (error) in
+                    print("Could not start session: \(error)")
+                })
+            }, failure: { (error) in
+                print("Could not set store: \(error)")
+            })
+        }
     }
     
     

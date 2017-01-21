@@ -14,6 +14,34 @@ import KeychainAccess
 @objc(MatrixAccount)
 class MatrixAccount: NSManagedObject {
     
+    var credentials: MXCredentials = MXCredentials()
+    var restClient: MXRestClient = MXRestClient()
+    var session: MXSession = MXSession()
+    
+    var token: String? {
+        let keychain = Keychain(service: Constants.service)
+        
+        do {
+            let token = try keychain.get(self.userId!)
+            
+            return token
+        } catch let error {
+            print("Could not fetch token: \(error)")
+        }
+        
+        return nil
+    }
+
+    override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+        
+        if self.homeServer != nil && self.userId != nil && self.token != nil {
+            self.credentials = MXCredentials(homeServer: self.homeServer!, userId: self.userId!, accessToken: self.token!)
+            self.restClient = MXRestClient(credentials: self.credentials, andOnUnrecognizedCertificateBlock: nil)
+            self.session = MXSession(matrixRestClient: restClient)
+        }
+    }
+    
     static func accounts() -> [MatrixAccount] {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
@@ -28,6 +56,10 @@ class MatrixAccount: NSManagedObject {
         }
         
         return []
+    }
+    
+    static func activeAccount() -> MatrixAccount? {
+        return self.accounts().first
     }
     
     static func saveAccount(username: String, password: String, homeServer: String, identityServer: String, success: @escaping ((MatrixAccount) -> ()), failure: @escaping ((Error) -> ())) {
