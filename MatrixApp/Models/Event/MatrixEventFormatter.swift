@@ -57,8 +57,19 @@ class MatrixEventFormatter {
             }
             
         } else {
-            if self.event.content["membership"] as? String == "join" {
-                return "events.user_joined_room".localized(arguments: [senderName])
+            if let membership = self.event.content["membership"] as? String {
+                return { () -> String in
+                    switch membership {
+                    case "join":
+                        return "events.user_joined_room".localized(arguments: [senderName])
+                    case "leave":
+                        return "events.user_left_room".localized(arguments: [senderName])
+                    case "invite":
+                        return "events.user_invited_room".localized(arguments: [senderName])
+                    default:
+                        return ""
+                    }
+                }()
             }
         }
         return ""
