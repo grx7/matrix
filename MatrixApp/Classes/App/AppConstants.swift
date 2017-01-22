@@ -28,4 +28,5 @@ struct Notifications {
 struct AppColors {
     static let darkBlue = UIColor.init(red: 28/255, green: 38/255, blue: 47/255, alpha: 1)
     static let blue = UIColor.init(red: 36/255, green: 47/255, blue: 59/255, alpha: 1)
+    static let lightBlue = UIColor.init(red: 62/255, green: 73/255, blue: 85/255, alpha: 1)
 }

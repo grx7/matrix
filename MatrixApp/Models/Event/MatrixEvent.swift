@@ -39,18 +39,14 @@ class MatrixEvent {
         let user = self.room.room.state.member(withUserId: self.event.sender)
         
         if let avatarUrl = user?.avatarUrl {
-            return self.fullAvatarUrl(url: avatarUrl, size: CGSize(width: 30, height: 30))
+            if avatarUrl.hasPrefix(Constants.contentUriScheme) {
+                return self.room.restClient.url(ofContentThumbnail: avatarUrl, toFitViewSize: CGSize(width: 30, height: 30), with: MXThumbnailingMethodCrop)
+            }
+            
+            return avatarUrl
         }
         
         return nil
-    }
-    
-    private func fullAvatarUrl(url: String, size: CGSize) -> String {
-        if url.hasPrefix(Constants.contentUriScheme) {
-            return self.room.restClient.url(ofContentThumbnail: url, toFitViewSize: size, with: MXThumbnailingMethodCrop)
-        }
-        
-        return url
     }
 
 }

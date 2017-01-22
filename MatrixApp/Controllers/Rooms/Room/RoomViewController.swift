@@ -26,13 +26,18 @@ class RoomViewController: UIViewController {
         self.tableView.estimatedRowHeight = 140
         
         self.room.room.liveTimeline.listen { (event, direction, state) in
-            
-            if event != nil && event?.eventType == MXEventTypeRoomMessage {
-                self.events.append(MatrixEvent(event: event!, room: self.room))
-                self.tableView.beginUpdates()
-                self.tableView.insertRows(at: [IndexPath(row: self.events.count-1, section: 0)], with: .automatic)
-                self.tableView.endUpdates()
-                self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
+            if event != nil {
+             
+                if (event?.eventType == MXEventTypeRoomMessage) ||
+                    (event?.eventType == MXEventTypeRoomMember) {
+                    self.events.append(MatrixEvent(event: event!, room: self.room))
+                    self.tableView.beginUpdates()
+                    self.tableView.insertRows(at: [IndexPath(row: self.events.count-1, section: 0)], with: .automatic)
+                    self.tableView.endUpdates()
+                    self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
+                }
+                
+                
             }
         }
         
@@ -73,12 +78,20 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
         if (indexPath.row - 1) >= 0 {
             let previousEvent = self.events[indexPath.row - 1]
             
-            if event.event.sender == previousEvent.event.sender {
+            if (event.event.sender == previousEvent.event.sender) && (event.event.eventType == MXEventTypeRoomMessage) {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
                 cell.messageLabel.text = event.asString
                 
                 return cell
             }
+        }
+        
+        if event.event.eventType == MXEventTypeRoomMember {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "noticeMessageTableViewCell", for: indexPath) as! NoticeMessageTableViewCell
+                        
+            cell.noticeLabel.text = event.asString
+            
+            return cell
         }
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstMessageTableViewCell", for: indexPath) as! FirstMessageTableViewCell

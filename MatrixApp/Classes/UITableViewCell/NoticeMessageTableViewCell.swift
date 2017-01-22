@@ -18,6 +18,7 @@ class NoticeMessageTableViewCell: UITableViewCell {
         
         self.noticeView.layer.cornerRadius = 4
         self.noticeView.layer.masksToBounds = true
+        self.noticeView.backgroundColor = AppColors.lightBlue
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
