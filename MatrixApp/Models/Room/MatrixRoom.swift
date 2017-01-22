@@ -73,19 +73,16 @@ class MatrixRoom {
             }
         }
         
-        if (self.room.state.displayname != nil) {
-            return self.room.state.displayname!
+        // Empty room
+        if self.room.state.members.count == 0 {
+            return self.lastEvent().event.sender
         }
         
-        return ""
+        return self.room.state.displayname
     }
     
     func directChat() -> Bool {
-        if self.room.state.members.count == 2 {
-            return true
-        }
-        
-        return false
+        return self.room.isDirect
     }
     
     func lastActivity() -> String {
