@@ -21,20 +21,24 @@ class MatrixEvent {
         self.eventFormatter = MatrixEventFormatter(event: self.event, room: self.room)
     }
     
+    /// How long ago the event occured in human format.
     var timeAgo: String {
         let date = NSDate(timeIntervalSince1970: TimeInterval(self.event.ageLocalTs / 1000))
         
         return date.timeAgo().lowercased()
     }
     
+    /// String to convey event message with user identifiers included.
     var asPreview: String {
         return self.eventFormatter.formattedEvent(isPreview: true)
     }
     
+    /// String to convey event message.
     var asString: String {
         return self.eventFormatter.formattedEvent()
     }
     
+    /// The avatar of the sending user.
     var senderAvatarLink: String? {
         let user = self.room.room.state.member(withUserId: self.event.sender)
         
