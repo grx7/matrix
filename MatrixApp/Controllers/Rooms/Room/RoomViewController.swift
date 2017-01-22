@@ -20,11 +20,14 @@ class RoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = self.room.displayName()
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140
         
         self.room.room.liveTimeline.listen { (event, direction, state) in
-            if event != nil {
+            
+            if event != nil && event?.eventType == MXEventTypeRoomMessage {
                 self.events.append(MatrixEvent(event: event!, room: self.room))
                 self.tableView.beginUpdates()
                 self.tableView.insertRows(at: [IndexPath(row: self.events.count-1, section: 0)], with: .automatic)
@@ -65,9 +68,20 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
-        
         let event = self.events[indexPath.row]
+        
+        if (indexPath.row - 1) >= 0 {
+            let previousEvent = self.events[indexPath.row - 1]
+            
+            if event.event.sender == previousEvent.event.sender {
+                let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
+                cell.messageLabel.text = event.asString()
+                
+                return cell
+            }
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "firstMessageTableViewCell", for: indexPath) as! FirstMessageTableViewCell
         
         cell.messageLabel.text = event.asString()
         cell.authorLabel.text = event.event.sender

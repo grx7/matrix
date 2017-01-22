@@ -188,7 +188,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageTableViewCell" rowHeight="120" id="vci-6d-88L" customClass="MessageTableViewCell" customModule="MatrixApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstMessageTableViewCell" rowHeight="120" id="vci-6d-88L" customClass="FirstMessageTableViewCell" customModule="MatrixApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vci-6d-88L" id="DPH-8t-ZRG">
@@ -235,6 +235,32 @@
                                             <outlet property="authorLabel" destination="Nr0-Te-Oyu" id="FE1-gk-tfN"/>
                                             <outlet property="avatarImageView" destination="7SX-kX-368" id="qbX-OH-UMh"/>
                                             <outlet property="messageLabel" destination="S5O-lw-3eO" id="AUB-AY-baT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageTableViewCell" rowHeight="120" id="98e-Vy-ef0" customClass="MessageTableViewCell" customModule="MatrixApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="148" width="320" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="98e-Vy-ef0" id="5SO-W0-tyx">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQZ-pE-R6J">
+                                                    <rect key="frame" x="62" y="8" width="246" height="103.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XQZ-pE-R6J" firstAttribute="top" secondItem="5SO-W0-tyx" secondAttribute="top" constant="8" id="aEh-AU-DHT"/>
+                                                <constraint firstAttribute="bottom" secondItem="XQZ-pE-R6J" secondAttribute="bottom" constant="8" id="ac2-dj-D3P"/>
+                                                <constraint firstItem="XQZ-pE-R6J" firstAttribute="leading" secondItem="5SO-W0-tyx" secondAttribute="leading" constant="62" id="eZ4-jv-4pb"/>
+                                                <constraint firstAttribute="trailing" secondItem="XQZ-pE-R6J" secondAttribute="trailing" constant="12" id="hmj-K7-DaF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="messageLabel" destination="XQZ-pE-R6J" id="RtP-8W-5NP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

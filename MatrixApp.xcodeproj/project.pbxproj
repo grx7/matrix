@@ -35,6 +35,7 @@
 		896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF8C1E34E4D500736117 /* RoomViewController.swift */; };
 		896EBF8F1E34E95C00736117 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF8E1E34E95C00736117 /* SettingsViewController.swift */; };
 		896EBF911E352D5400736117 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF901E352D5400736117 /* MessageTableViewCell.swift */; };
+		896EBF931E35458200736117 /* FirstMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */; };
 		89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */; };
 		89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */; };
 		89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */; };
@@ -103,6 +104,7 @@
 		896EBF8C1E34E4D500736117 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		896EBF8E1E34E95C00736117 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		896EBF901E352D5400736117 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstMessageTableViewCell.swift; sourceTree = "<group>"; };
 		89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAccount.swift; sourceTree = "<group>"; };
 		89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				8924233A1E31143D00B20E64 /* RoomTableViewCell.swift */,
 				896EBF901E352D5400736117 /* MessageTableViewCell.swift */,
+				896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */,
 				8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */,
 				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
+				896EBF931E35458200736117 /* FirstMessageTableViewCell.swift in Sources */,
 				896EBF911E352D5400736117 /* MessageTableViewCell.swift in Sources */,
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,
 				8924233B1E31143D00B20E64 /* RoomTableViewCell.swift in Sources */,
