@@ -49,7 +49,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomDirect" rowHeight="78" id="4LF-Jh-6NS" customClass="RoomDirectTableViewCell" customModule="MatrixApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomTableViewCell" rowHeight="78" id="4LF-Jh-6NS" customClass="RoomTableViewCell" customModule="MatrixApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4LF-Jh-6NS" id="7Mv-vh-obi">
@@ -136,15 +136,6 @@
                                             <outlet property="previewLabel" destination="qr5-5b-DUX" id="eHO-hX-YdL"/>
                                             <outlet property="timeLabel" destination="iNr-qc-MVw" id="deq-q0-lQR"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomGroup" rowHeight="98" id="bqL-FD-lWx" customClass="RoomGroupTableViewCell" customModule="MatrixApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="106" width="320" height="98"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bqL-FD-lWx" id="LXJ-qd-OUY">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

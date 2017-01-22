@@ -15,8 +15,7 @@
 		8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232C1E2E7D9D00B20E64 /* TourViewController.swift */; };
 		892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423311E2FC63800B20E64 /* RoomsViewController.swift */; };
 		892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */; };
-		8924233B1E31143D00B20E64 /* RoomDirectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233A1E31143D00B20E64 /* RoomDirectTableViewCell.swift */; };
-		8924233D1E31144600B20E64 /* RoomGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233C1E31144600B20E64 /* RoomGroupTableViewCell.swift */; };
+		8924233B1E31143D00B20E64 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233A1E31143D00B20E64 /* RoomTableViewCell.swift */; };
 		8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */; };
 		892423421E317C2400B20E64 /* MatrixRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423411E317C2400B20E64 /* MatrixRoom.swift */; };
 		892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423431E325E8100B20E64 /* NSDate+Matrix.swift */; };
@@ -74,8 +73,7 @@
 		8924232C1E2E7D9D00B20E64 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		892423311E2FC63800B20E64 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Matrix.swift"; sourceTree = "<group>"; };
-		8924233A1E31143D00B20E64 /* RoomDirectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDirectTableViewCell.swift; sourceTree = "<group>"; };
-		8924233C1E31144600B20E64 /* RoomGroupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomGroupTableViewCell.swift; sourceTree = "<group>"; };
+		8924233A1E31143D00B20E64 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		8924233E1E311A6400B20E64 /* UIImageView+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Matrix.swift"; sourceTree = "<group>"; };
 		892423411E317C2400B20E64 /* MatrixRoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixRoom.swift; sourceTree = "<group>"; };
 		892423431E325E8100B20E64 /* NSDate+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Matrix.swift"; sourceTree = "<group>"; };
@@ -196,8 +194,7 @@
 		892423391E31141100B20E64 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				8924233A1E31143D00B20E64 /* RoomDirectTableViewCell.swift */,
-				8924233C1E31144600B20E64 /* RoomGroupTableViewCell.swift */,
+				8924233A1E31143D00B20E64 /* RoomTableViewCell.swift */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -655,14 +652,13 @@
 				892423441E325E8100B20E64 /* NSDate+Matrix.swift in Sources */,
 				892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */,
 				8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */,
-				8924233D1E31144600B20E64 /* RoomGroupTableViewCell.swift in Sources */,
 				896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */,
 				8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */,
 				892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */,
 				8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */,
 				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,
-				8924233B1E31143D00B20E64 /* RoomDirectTableViewCell.swift in Sources */,
+				8924233B1E31143D00B20E64 /* RoomTableViewCell.swift in Sources */,
 				892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */,
 				892423471E3283CE00B20E64 /* MatrixEvent.swift in Sources */,
 				894C775D1E27EE9C008D5C86 /* AppDelegate.swift in Sources */,

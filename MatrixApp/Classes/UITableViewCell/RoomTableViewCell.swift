@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RoomDirectTableViewCell: UITableViewCell {
+class RoomTableViewCell: UITableViewCell {
 
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!

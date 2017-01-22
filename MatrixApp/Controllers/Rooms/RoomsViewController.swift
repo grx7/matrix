@@ -63,7 +63,7 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "roomDirect", for: indexPath) as! RoomDirectTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "roomTableViewCell", for: indexPath) as! RoomTableViewCell
         
         let room = self.rooms[indexPath.row]
 
