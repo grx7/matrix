@@ -9,6 +9,10 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    let settings = ["Setting 1", "Setting 2"]
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -23,6 +27,8 @@ class SettingsViewController: UIViewController {
 
         self.navigationController?.navigationBar.barTintColor = AppColors.darkBlue
         self.navigationController?.navigationBar.setBottomBorderColor(color: AppColors.darkBlue, height: 1)
+        
+        self.tableView.backgroundColor = UIColor.clear
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,12 +41,18 @@ class SettingsViewController: UIViewController {
 extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-//        return MatrixAccount.accounts().count
+        switch section {
+        case 0:
+            return 1
+        case 1:
+            return self.settings.count
+        default:
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
