@@ -85,6 +85,9 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.messageLabel.text = event.asString
         cell.authorLabel.text = event.event.sender
+        if event.senderAvatarLink != nil {
+            cell.avatarImageView.downloadedFrom(link: event.senderAvatarLink!)
+        }
         
         return cell
     }
