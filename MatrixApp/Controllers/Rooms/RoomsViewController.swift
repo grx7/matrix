@@ -18,6 +18,13 @@ class RoomsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.navigationBar.barTintColor = AppColors.darkBlue
+        self.navigationController?.navigationBar.setBottomBorderColor(color: AppColors.darkBlue, height: 1)
+        
+        if MatrixAccount.accounts().isEmpty {
+            self.performSegue(withIdentifier: "showAuth", sender: self)
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(matrixSessionStateDidChange), name: Notification.Name("kMXSessionStateDidChangeNotification"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(matrixSessionDidSync), name: Notification.Name("kMXSessionDidSyncNotification"), object: nil)
     }

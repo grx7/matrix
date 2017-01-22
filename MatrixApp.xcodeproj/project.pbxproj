@@ -13,7 +13,6 @@
 		892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423281E2E7D7800B20E64 /* LoginViewController.swift */; };
 		8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */; };
 		8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232C1E2E7D9D00B20E64 /* TourViewController.swift */; };
-		8924232F1E2FC39200B20E64 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232E1E2FC39200B20E64 /* MainViewController.swift */; };
 		892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423311E2FC63800B20E64 /* RoomsViewController.swift */; };
 		892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */; };
 		8924233B1E31143D00B20E64 /* RoomDirectTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924233A1E31143D00B20E64 /* RoomDirectTableViewCell.swift */; };
@@ -73,7 +72,6 @@
 		892423281E2E7D7800B20E64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		8924232C1E2E7D9D00B20E64 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
-		8924232E1E2FC39200B20E64 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		892423311E2FC63800B20E64 /* RoomsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		892423341E2FCAD500B20E64 /* UINavigationBar+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Matrix.swift"; sourceTree = "<group>"; };
 		8924233A1E31143D00B20E64 /* RoomDirectTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomDirectTableViewCell.swift; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 		894C77911E27EF48008D5C86 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8924232E1E2FC39200B20E64 /* MainViewController.swift */,
 				892423301E2FC5F900B20E64 /* Rooms */,
 				892423361E3023B600B20E64 /* Settings */,
 				895DD9731E2BD24100BCF6A2 /* Tour */,
@@ -661,7 +658,6 @@
 				8924233D1E31144600B20E64 /* RoomGroupTableViewCell.swift in Sources */,
 				896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */,
 				8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */,
-				8924232F1E2FC39200B20E64 /* MainViewController.swift in Sources */,
 				892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */,
 				8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */,
 				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
