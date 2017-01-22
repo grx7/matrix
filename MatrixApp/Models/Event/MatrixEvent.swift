@@ -21,13 +21,13 @@ class MatrixEvent {
         self.eventFormatter = MatrixEventFormatter(event: self.event, room: self.room)
     }
     
-    func timeAgo() -> String {
+    var timeAgo: String {
         let date = NSDate(timeIntervalSince1970: TimeInterval(self.event.ageLocalTs / 1000))
         
         return date.timeAgo().lowercased()
     }
     
-    func asString() -> String {
+    var asString: String {
         return self.eventFormatter.formattedEvent()
     }
 

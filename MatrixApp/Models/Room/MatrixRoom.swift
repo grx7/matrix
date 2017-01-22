@@ -58,7 +58,7 @@ class MatrixRoom {
         case MXMembershipInvite:
             return "Tap to Join - \(type)"
         case MXMembershipJoin:
-            return self.lastEvent().asString()
+            return self.lastEvent().asString
         default:
             return ""
         }
@@ -86,7 +86,7 @@ class MatrixRoom {
     }
     
     func lastActivity() -> String {
-        return self.lastEvent().timeAgo()
+        return self.lastEvent().timeAgo
     }
     
     func lastEvent() -> MatrixEvent {

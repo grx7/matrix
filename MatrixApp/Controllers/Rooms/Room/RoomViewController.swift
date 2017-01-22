@@ -75,7 +75,7 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
             
             if event.event.sender == previousEvent.event.sender {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
-                cell.messageLabel.text = event.asString()
+                cell.messageLabel.text = event.asString
                 
                 return cell
             }
@@ -83,7 +83,7 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "firstMessageTableViewCell", for: indexPath) as! FirstMessageTableViewCell
         
-        cell.messageLabel.text = event.asString()
+        cell.messageLabel.text = event.asString
         cell.authorLabel.text = event.event.sender
         
         return cell
