@@ -24,3 +24,8 @@ struct Notifications {
     static let accountAdded = Notification.Name("matrixAccountWasAddedNotification")
     static let accountRemoved = Notification.Name("matrixAccountWasRemovedNotification")
 }
+
+struct AppColors {
+    static let darkBlue = UIColor.init(red: 28/255, green: 38/255, blue: 47/255, alpha: 1)
+    static let blue = UIColor.init(red: 36/255, green: 47/255, blue: 59/255, alpha: 1)
+}

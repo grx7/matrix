@@ -21,7 +21,8 @@ class MainViewController: UINavigationController {
             self.showAuthScreen()
         }
 
-        self.navigationBar.setBottomBorderColor(color: UIColor.init(red: 23/255, green: 38/255, blue: 47/255, alpha: 1), height: 1)
+        self.navigationBar.barTintColor = AppColors.darkBlue
+        self.navigationBar.setBottomBorderColor(color: AppColors.darkBlue, height: 1)
     }
     
     override func viewDidLoad() {

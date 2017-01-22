@@ -199,11 +199,11 @@
                                     <constraint firstAttribute="height" constant="21" id="imm-R5-mHT"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.13961857557296753" green="0.18357285857200623" blue="0.22935369610786438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="j4a-pn-KcV" firstAttribute="centerX" secondItem="VXb-Gp-T0q" secondAttribute="centerX" id="cT4-bb-PmN"/>
                             <constraint firstItem="j4a-pn-KcV" firstAttribute="centerY" secondItem="VXb-Gp-T0q" secondAttribute="centerY" id="eHT-Pv-RyU"/>
