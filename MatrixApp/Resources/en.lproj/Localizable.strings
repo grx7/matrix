@@ -13,5 +13,4 @@
 "events.user_changed_name" = "%@ became %@";
 "events.user_changed_avatar" = "%@ changed their avatar";
 
-"events.user_sent_text_message" = "%@: %@";
 "events.user_sent_text_message_unknown" = "%@ sent a message";"

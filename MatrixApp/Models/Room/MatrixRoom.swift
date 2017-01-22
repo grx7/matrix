@@ -58,7 +58,7 @@ class MatrixRoom {
         case MXMembershipInvite:
             return "Tap to Join - \(type)"
         case MXMembershipJoin:
-            return self.lastEvent().asString
+            return self.lastEvent().asPreview
         default:
             return ""
         }

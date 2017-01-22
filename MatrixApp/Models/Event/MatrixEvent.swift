@@ -27,6 +27,10 @@ class MatrixEvent {
         return date.timeAgo().lowercased()
     }
     
+    var asPreview: String {
+        return self.eventFormatter.formattedEvent(isPreview: true)
+    }
+    
     var asString: String {
         return self.eventFormatter.formattedEvent()
     }

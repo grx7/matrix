@@ -31,8 +31,6 @@ class RoomTableViewCell: UITableViewCell {
         let backgroundView = UIView()
         backgroundView.backgroundColor = UIColor.init(white: 1, alpha: 0.1)
         self.selectedBackgroundView = backgroundView
-        
-        //self.avatarImageView.downloadedFrom(link: "https://pbs.twimg.com/profile_images/700005024898748416/OyntEaBX_400x400.jpg")
     }
     
     func setCell(room: MatrixRoom) {

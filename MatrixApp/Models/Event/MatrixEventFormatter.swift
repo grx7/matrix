@@ -19,10 +19,10 @@ class MatrixEventFormatter {
         self.room = room
     }
     
-    func formattedEvent() -> String {
+    func formattedEvent(isPreview: Bool = false) -> String {
         switch self.event.eventType {
         case MXEventTypeRoomMessage:
-            return self.formatRoomMessageEvent()
+            return self.formatRoomMessageEvent(includeName: isPreview)
         case MXEventTypeRoomMember:
             return self.formatRoomMemberEvent()
         default:
@@ -32,11 +32,15 @@ class MatrixEventFormatter {
         return ""
     }
     
-    func formatRoomMessageEvent() -> String {
+    func formatRoomMessageEvent(includeName: Bool = false) -> String {
         let senderName = self.displayNameFor(user: self.event.sender)
         
         if let messageBody = self.event.content["body"] as? String {
-            return "events.user_sent_text_message".localized(arguments: [senderName, messageBody])
+            if includeName {
+                return String(format: "%@: %@", senderName, messageBody)
+            }
+            
+            return messageBody
         }
         
         return "events.user_sent_text_message_unknown".localized(arguments: [senderName])
