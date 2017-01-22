@@ -20,6 +20,9 @@ class RoomViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 140
+        
         self.room.room.liveTimeline.listen { (event, direction, state) in
             if event != nil {
                 self.events.append(MatrixEvent(event: event!, room: self.room))
@@ -62,18 +65,14 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: "roomTableViewCell", for: indexPath) as! RoomTableViewCell
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "Hey")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
         
         let event = self.events[indexPath.row]
         
-        cell.textLabel?.text = event.asString()
+        cell.messageLabel.text = event.asString()
+        cell.authorLabel.text = event.event.sender
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 78
-    }
-    
+
 }
