@@ -173,11 +173,46 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zhu-9t-ZK8" id="EXq-3n-0Jp"/>
+                        <segue destination="Tfw-sy-HLG" kind="show" identifier="showRoom" id="9cy-6u-77e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XZv-sA-6ae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1509.375" y="-488.02816901408454"/>
+        </scene>
+        <!--Room View Controller-->
+        <scene sceneID="dzj-8U-Pk0">
+            <objects>
+                <viewController id="Tfw-sy-HLG" customClass="RoomViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yh3-2Y-r4M"/>
+                        <viewControllerLayoutGuide type="bottom" id="GUj-lb-kfL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VXb-Gp-T0q">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4a-pn-KcV">
+                                <rect key="frame" x="137.5" y="242" width="45" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="YK7-QM-0Yh"/>
+                                    <constraint firstAttribute="height" constant="21" id="imm-R5-mHT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j4a-pn-KcV" firstAttribute="centerX" secondItem="VXb-Gp-T0q" secondAttribute="centerX" id="cT4-bb-PmN"/>
+                            <constraint firstItem="j4a-pn-KcV" firstAttribute="centerY" secondItem="VXb-Gp-T0q" secondAttribute="centerY" id="eHT-Pv-RyU"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ojd-D3-nvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-654.375" y="-488.02816901408454"/>
         </scene>
         <!--Tour View Controller-->
         <scene sceneID="wEX-dH-R7L">
@@ -959,7 +994,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMW-eG-3lr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-686" y="-848"/>
+            <point key="canvasLocation" x="-653" y="-1309"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="44e-9C-4Ei">
@@ -1010,7 +1045,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kF-mQ-s8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="321" y="-848"/>
+            <point key="canvasLocation" x="354" y="-1309"/>
         </scene>
     </scenes>
     <resources>

@@ -70,7 +70,17 @@ extension RoomsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "showRoom", sender: indexPath)
+
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRoom" {
+            if let vc = segue.destination as? RoomViewController, let indexPath = sender as? IndexPath {
+                vc.room = self.rooms[indexPath.row]
+            }
+        }
     }
     
 }

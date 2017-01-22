@@ -35,6 +35,7 @@
 		894C77821E27EE9D008D5C86 /* MatrixAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77811E27EE9D008D5C86 /* MatrixAppUITests.swift */; };
 		894C77931E27FB84008D5C86 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77921E27FB84008D5C86 /* GradientView.swift */; };
 		894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77951E28021C008D5C86 /* AuthViewController.swift */; };
+		896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF8C1E34E4D500736117 /* RoomViewController.swift */; };
 		89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */; };
 		89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */; };
 		89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */; };
@@ -103,6 +104,7 @@
 		894C77831E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		896EBF8C1E34E4D500736117 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAccount.swift; sourceTree = "<group>"; };
 		89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				892423311E2FC63800B20E64 /* RoomsViewController.swift */,
+				896EBF8B1E34E4B900736117 /* Room */,
 			);
 			path = Rooms;
 			sourceTree = "<group>";
@@ -308,6 +311,14 @@
 				8924232C1E2E7D9D00B20E64 /* TourViewController.swift */,
 			);
 			path = Tour;
+			sourceTree = "<group>";
+		};
+		896EBF8B1E34E4B900736117 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				896EBF8C1E34E4D500736117 /* RoomViewController.swift */,
+			);
+			path = Room;
 			sourceTree = "<group>";
 		};
 		89EDB1BA1E2910A900AB7516 /* Account */ = {
@@ -649,6 +660,7 @@
 				892423321E2FC63800B20E64 /* RoomsViewController.swift in Sources */,
 				8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */,
 				8924233D1E31144600B20E64 /* RoomGroupTableViewCell.swift in Sources */,
+				896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */,
 				8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */,
 				8924232F1E2FC39200B20E64 /* MainViewController.swift in Sources */,
 				892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */,
