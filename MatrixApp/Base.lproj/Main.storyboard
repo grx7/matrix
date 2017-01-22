@@ -14,7 +14,7 @@
         <scene sceneID="JZg-7d-k1O">
             <objects>
                 <navigationController id="emv-lL-REa" customClass="MainViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="MXW-iF-z68">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="MXW-iF-z68">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-2516" y="-488"/>
         </scene>
-        <!--Chats-->
+        <!--Rooms View Controller-->
         <scene sceneID="kTt-fJ-4rg">
             <objects>
-                <viewController id="4kl-Vf-Z3x" customClass="RoomsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Rooms View Controller" id="4kl-Vf-Z3x" customClass="RoomsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SWG-e4-ptP"/>
                         <viewControllerLayoutGuide type="bottom" id="XMW-85-Jbm"/>
@@ -978,7 +978,7 @@
         <scene sceneID="w45-uP-3SI">
             <objects>
                 <navigationController id="hzl-CL-Sz5" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="AeQ-lZ-etb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="AeQ-lZ-etb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="0.90000000000000002" colorSpace="calibratedWhite"/>
@@ -996,10 +996,10 @@
             </objects>
             <point key="canvasLocation" x="-653" y="-1309"/>
         </scene>
-        <!--Accounts-->
+        <!--Settings View Controller-->
         <scene sceneID="44e-9C-4Ei">
             <objects>
-                <viewController id="VkP-kh-af1" customClass="AccountsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings View Controller" id="VkP-kh-af1" customClass="SettingsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2os-A2-T4s"/>
                         <viewControllerLayoutGuide type="bottom" id="VG8-s4-jRg"/>
@@ -1034,7 +1034,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <navigationItem key="navigationItem" title="Accounts" id="lK1-Bi-stS">
+                    <navigationItem key="navigationItem" title="Settings" id="lK1-Bi-stS">
                         <barButtonItem key="leftBarButtonItem" title="Done" id="xyb-D0-Xwa">
                             <connections>
                                 <action selector="unwindToRooms:" destination="VkP-kh-af1" id="JXR-3E-rLZ"/>
