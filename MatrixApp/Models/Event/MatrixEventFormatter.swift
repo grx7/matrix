@@ -73,7 +73,7 @@ class MatrixEventFormatter {
         
         if self.event.isUserProfileChange() {
 
-            if let displayName = self.event.content["displayname"] as? String, let previousName = event.prevContent["displayname"] as? String, senderName != previousName {
+            if let displayName = self.event.content["displayname"] as? String, let previousName = event.prevContent["displayname"] as? String, displayName != previousName {
                 return "events.user_changed_name".localized(arguments: [previousName, displayName])
             }
                 

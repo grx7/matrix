@@ -52,5 +52,38 @@ class MatrixEvent {
         
         return nil
     }
+    
+    func shouldShowEventInChat() -> Bool {
+        if self.event.eventType == MXEventTypeRoomMessage {
+            return true
+        }
+        
+        if self.event.eventType == MXEventTypeRoomMember {
+            if self.event.isUserProfileChange() {
+                if let displayName = self.event.content["displayname"] as? String,
+                    let avatarUrl = self.event.content["avatar_url"] as? String,
+                    let prevDisplayName = self.event.prevContent["displayname"] as? String,
+                    let prevAvatarUrl = self.event.prevContent["avatar_url"] as? String {
+                    
+                    print("Event: \(self.asString)")
+                    
+                    print("Display: \(displayName) - \(prevDisplayName)")
+                    
+                    if (displayName != prevDisplayName) || (avatarUrl != prevAvatarUrl) {
+                        return true
+                    }
+                }
+                
+                return false
+            }
+            
+            if (self.event.content["membership"] as? String) != nil {
+                return true
+            }
+            
+        }
+        
+        return false
+    }
 
 }

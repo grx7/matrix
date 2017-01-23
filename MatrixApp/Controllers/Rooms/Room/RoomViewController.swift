@@ -25,19 +25,13 @@ class RoomViewController: UIViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140
         
-        self.room.room.liveTimeline.listen { (event, direction, state) in
-            if event != nil {
-             
-                if (event?.eventType == MXEventTypeRoomMessage) ||
-                    (event?.eventType == MXEventTypeRoomMember) {
-                    self.events.append(MatrixEvent(event: event!, room: self.room))
-                    self.tableView.beginUpdates()
-                    self.tableView.insertRows(at: [IndexPath(row: self.events.count-1, section: 0)], with: .automatic)
-                    self.tableView.endUpdates()
-                    self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
+        self.room.room.liveTimeline.listen { (matrixEvent, direction, state) in
+            if matrixEvent != nil {
+                let event = MatrixEvent(event: matrixEvent!, room: self.room)
+                
+                if event.shouldShowEventInChat() {
+                    self.addEvent(event)
                 }
-                
-                
             }
         }
         
@@ -54,9 +48,12 @@ class RoomViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func addEvent(_ event: MatrixEvent) {
+        self.events.append(event)
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: self.events.count-1, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
+        self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
     }
 
 }
