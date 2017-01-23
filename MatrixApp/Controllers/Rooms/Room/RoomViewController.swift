@@ -48,7 +48,7 @@ class RoomViewController: UIViewController {
         }
         
         self.room.room.liveTimeline.resetPagination()
-        self.room.room.liveTimeline.paginate(10, direction: MXTimelineDirectionBackwards, onlyFromStore: false, complete: {
+        self.room.room.liveTimeline.paginate(30, direction: MXTimelineDirectionBackwards, onlyFromStore: false, complete: {
             self.events = self.events.sorted(by: { (a, b) -> Bool in
                 return a.event.age > b.event.age
             })
