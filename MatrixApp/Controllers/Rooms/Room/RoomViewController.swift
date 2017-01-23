@@ -12,6 +12,8 @@ import MatrixSDK
 class RoomViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bottomSpaceConstraint: NSLayoutConstraint!
+    @IBOutlet weak var messageTextField: UITextField!
     
     var room: MatrixRoom!
     
@@ -24,6 +26,12 @@ class RoomViewController: UIViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140
+        
+        self.messageTextField.backgroundColor = AppColors.lightBlue
+        self.messageTextField.textColor = UIColor.lightGray
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
         
         self.room.room.liveTimeline.listen { (matrixEvent, direction, state) in
             if matrixEvent != nil {
@@ -55,9 +63,33 @@ class RoomViewController: UIViewController {
         self.tableView.endUpdates()
         self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
     }
+    
+    //MARK: - Keyboard Notifications
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
+            let animationDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]) as? Double,
+            let animationOptions = (notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey]) as? UInt {
+            
+            self.bottomSpaceConstraint.constant = keyboardSize.height
+            UIView.animate(withDuration: animationDuration, delay: 0, options: UIViewAnimationOptions(rawValue: animationOptions), animations: {
+            
+                self.view.layoutIfNeeded()
+                
+                
+            }, completion: { (success) in
+                self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
+            })
+            
+            
+        }
+    }
+    
+    func keyboardWillBeHidden(notification: NSNotification) {
+        self.bottomSpaceConstraint.constant = 0
+    }
 
 }
-
 
 extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
     
