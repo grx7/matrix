@@ -33,6 +33,10 @@ class RoomViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
         
+        self.loadRoomEvents()
+    }
+    
+    func loadRoomEvents() {
         self.room.room.liveTimeline.listen { (matrixEvent, direction, state) in
             if matrixEvent != nil {
                 let event = MatrixEvent(event: matrixEvent!, room: self.room)
@@ -48,20 +52,15 @@ class RoomViewController: UIViewController {
             self.events = self.events.sorted(by: { (a, b) -> Bool in
                 return a.event.age > b.event.age
             })
-            
-            self.tableView.reloadData()
         }) { (error) in
             print("Could not load history: \(error)")
         }
-        // Do any additional setup after loading the view.
     }
 
     func addEvent(_ event: MatrixEvent) {
         self.events.append(event)
-        self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [IndexPath(row: self.events.count-1, section: 0)], with: .automatic)
-        self.tableView.endUpdates()
-        self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
+        
+        self.tableView.reloadData()
     }
     
     //MARK: - Keyboard Notifications
