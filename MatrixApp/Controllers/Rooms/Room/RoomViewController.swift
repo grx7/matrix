@@ -72,18 +72,14 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = self.events[indexPath.row]
         
-        if (indexPath.row - 1) >= 0 {
-            let previousEvent = self.events[indexPath.row - 1]
-            
-            if (event.event.sender == previousEvent.event.sender) && (event.event.eventType == MXEventTypeRoomMessage) {
-                let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
-                cell.messageLabel.text = event.asString
+        if (indexPath.row - 1) >= 0 && event.isPartOfChain(previousEvent: self.events[indexPath.row - 1]) {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
+            cell.messageLabel.text = event.asString
                 
-                return cell
-            }
+            return cell
         }
         
-        if event.event.eventType == MXEventTypeRoomMember {
+        if event.isNotice {
             let cell = tableView.dequeueReusableCell(withIdentifier: "noticeMessageTableViewCell", for: indexPath) as! NoticeMessageTableViewCell
                         
             cell.noticeLabel.text = event.asString
