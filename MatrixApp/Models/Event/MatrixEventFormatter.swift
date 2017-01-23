@@ -82,7 +82,7 @@ class MatrixEventFormatter {
             }
             
         } else {
-            if let membership = self.event.content["membership"] as? String {
+            if let membership = self.event.content["membership"] as? String, let displayName = self.event.content["displayname"] as? String {
                 return { () -> String in
                     switch membership {
                     case "join":
@@ -90,7 +90,7 @@ class MatrixEventFormatter {
                     case "leave":
                         return "events.user_left_room".localized(arguments: [senderName])
                     case "invite":
-                        return "events.user_invited_room".localized(arguments: [senderName])
+                        return "events.user_invited_room".localized(arguments: [senderName, displayName])
                     default:
                         return ""
                     }

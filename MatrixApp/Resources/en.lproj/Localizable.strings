@@ -9,7 +9,7 @@
 // Events
 "events.user_joined_room" = "%@ joined";
 "events.user_left_room" = "%@ left";
-"events.user_invited_room" = "Invited: %@";
+"events.user_invited_room" = "%@ invited %@";
 "events.user_changed_name" = "%@ became %@";
 "events.user_changed_avatar" = "%@ changed their avatar";
 
