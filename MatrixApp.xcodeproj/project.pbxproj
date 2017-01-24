@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1060BD23477186DDBAE213D4 /* Pods_MatrixApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */; };
 		11481FDEDFB6E828F6D1823E /* Pods_MatrixAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DC7CED376B6C6843F74AE8 /* Pods_MatrixAppUITests.framework */; };
+		8901DF291E377F240004AD44 /* FlippedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */; };
+		8901DF2B1E37800B0004AD44 /* FlippedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */; };
 		892423271E2CFFE200B20E64 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423261E2CFFE200B20E64 /* BorderedButton.swift */; };
 		892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423281E2E7D7800B20E64 /* LoginViewController.swift */; };
 		8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */; };
@@ -70,6 +72,8 @@
 		77A9064B793D83E1EF81963B /* Pods_MatrixAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.release.xcconfig"; sourceTree = "<group>"; };
 		85A9B0E7A935874E50473EB6 /* Pods-MatrixAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableViewCell.swift; sourceTree = "<group>"; };
+		8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableView.swift; sourceTree = "<group>"; };
 		892423261E2CFFE200B20E64 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		892423281E2E7D7800B20E64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8924232A1E2E7D7F00B20E64 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 				896EBF901E352D5400736117 /* MessageTableViewCell.swift */,
 				896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */,
 				896EBF941E356D3900736117 /* NoticeMessageTableViewCell.swift */,
+				8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				894C77921E27FB84008D5C86 /* GradientView.swift */,
 				89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */,
 				892423261E2CFFE200B20E64 /* BorderedButton.swift */,
+				8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */,
 				89EDB1C31E2A50FD00AB7516 /* App */,
 			);
 			path = Classes;
@@ -664,11 +670,13 @@
 				8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */,
 				896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */,
 				8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */,
+				8901DF291E377F240004AD44 /* FlippedTableViewCell.swift in Sources */,
 				892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */,
 				8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */,
 				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
 				896EBF931E35458200736117 /* FirstMessageTableViewCell.swift in Sources */,
 				896EBF911E352D5400736117 /* MessageTableViewCell.swift in Sources */,
+				8901DF2B1E37800B0004AD44 /* FlippedTableView.swift in Sources */,
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,
 				8924233B1E31143D00B20E64 /* RoomTableViewCell.swift in Sources */,
 				892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */,

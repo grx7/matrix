@@ -18,7 +18,7 @@ class RoomViewController: UIViewController {
     var room: MatrixRoom!
     
     var events: [MatrixEvent] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +50,7 @@ class RoomViewController: UIViewController {
         self.room.room.liveTimeline.resetPagination()
         self.room.room.liveTimeline.paginate(30, direction: MXTimelineDirectionBackwards, onlyFromStore: false, complete: {
             self.events = self.events.sorted(by: { (a, b) -> Bool in
-                return a.event.age > b.event.age
+                return a.event.age < b.event.age
             })
         }) { (error) in
             print("Could not load history: \(error)")
@@ -58,9 +58,10 @@ class RoomViewController: UIViewController {
     }
 
     func addEvent(_ event: MatrixEvent) {
-        self.events.append(event)
-        
+        self.events.insert(event, at: 0)
         self.tableView.reloadData()
+        
+        //self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: .bottom, animated: false)
     }
     
     //MARK: - Keyboard Notifications
@@ -77,7 +78,7 @@ class RoomViewController: UIViewController {
                 
                 
             }, completion: { (success) in
-                self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
+                //self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
             })
             
             

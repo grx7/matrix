@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NoticeMessageTableViewCell: UITableViewCell {
+class NoticeMessageTableViewCell: FlippedTableViewCell {
 
     @IBOutlet weak var noticeLabel: UILabel!
     @IBOutlet weak var noticeView: UIView!

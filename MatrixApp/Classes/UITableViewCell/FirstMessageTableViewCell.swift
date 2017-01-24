@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstMessageTableViewCell: UITableViewCell {
+class FirstMessageTableViewCell: FlippedTableViewCell {
 
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
