@@ -18,8 +18,7 @@ class FlippedTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI))
-        self.transform = transform;
+        self.transform = CGAffineTransform(scaleX: 1, y: -1)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

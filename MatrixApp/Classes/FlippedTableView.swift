@@ -13,10 +13,7 @@ class FlippedTableView: UITableView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let transform = CGAffineTransform(rotationAngle: CGFloat(-M_PI))
-        self.transform = transform
-        
-        self.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 0, self.bounds.size.width-10)
+        self.transform = CGAffineTransform(scaleX: 1, y: -1)
     }
 
 }
