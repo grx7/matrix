@@ -80,7 +80,14 @@ class RoomViewController: UIViewController {
     }
     
     func keyboardWillBeHidden(notification: NSNotification) {
-        self.bottomSpaceConstraint.constant = 0
+        if let animationDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]) as? Double,
+            let animationOptions = (notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey]) as? UInt {
+            
+            self.bottomSpaceConstraint.constant = 0
+            UIView.animate(withDuration: animationDuration, delay: 0, options: UIViewAnimationOptions(rawValue: animationOptions), animations: {
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+        }
     }
 
 }
