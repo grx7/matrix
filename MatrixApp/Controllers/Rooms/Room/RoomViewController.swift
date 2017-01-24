@@ -26,12 +26,16 @@ class RoomViewController: UIViewController {
         
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140
+        self.tableView.keyboardDismissMode = .interactive
         
         self.messageTextField.backgroundColor = AppColors.lightBlue
         self.messageTextField.textColor = UIColor.lightGray
         
+        self.messageTextField.inputAccessoryView = KeyboardTrackingView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidMove(notification:)), name: Notifications.keyboardTrackingViewCenterChanged, object: nil)
         
         self.loadRoomEvents()
     }
@@ -66,6 +70,12 @@ class RoomViewController: UIViewController {
     }
     
     //MARK: - Keyboard Notifications
+    
+    func keyboardDidMove(notification: NSNotification) {
+        if let frame = (notification.object as? CGRect) {
+            self.bottomSpaceConstraint.constant = (self.view.frame.height - frame.origin.y) + 65
+        }
+    }
     
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
@@ -131,8 +141,17 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
-        return false
+
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("hello")
+        self.messageTextField.resignFirstResponder()
     }
 
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print(self.tableView.contentInset)
+//        self.bottomSpaceConstraint.constant -= 1
+////        print("Scrolling")
+//    }
+    
 }

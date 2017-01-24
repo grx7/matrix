@@ -39,6 +39,7 @@
 		896EBF911E352D5400736117 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF901E352D5400736117 /* MessageTableViewCell.swift */; };
 		896EBF931E35458200736117 /* FirstMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */; };
 		896EBF951E356D3900736117 /* NoticeMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF941E356D3900736117 /* NoticeMessageTableViewCell.swift */; };
+		89A15A5E1E380DF10017EEB5 /* KeyboardTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A15A5D1E380DF10017EEB5 /* KeyboardTrackingView.swift */; };
 		89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */; };
 		89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */; };
 		89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */; };
@@ -111,6 +112,7 @@
 		896EBF901E352D5400736117 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstMessageTableViewCell.swift; sourceTree = "<group>"; };
 		896EBF941E356D3900736117 /* NoticeMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeMessageTableViewCell.swift; sourceTree = "<group>"; };
+		89A15A5D1E380DF10017EEB5 /* KeyboardTrackingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardTrackingView.swift; sourceTree = "<group>"; };
 		89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomBorderTextField.swift; sourceTree = "<group>"; };
 		89EDB1B81E2910A500AB7516 /* MatrixAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAccount.swift; sourceTree = "<group>"; };
 		89EDB1C11E2A50FA00AB7516 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
@@ -306,6 +308,7 @@
 				89EDB1B61E284B2500AB7516 /* BottomBorderTextField.swift */,
 				892423261E2CFFE200B20E64 /* BorderedButton.swift */,
 				8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */,
+				89A15A5D1E380DF10017EEB5 /* KeyboardTrackingView.swift */,
 				89EDB1C31E2A50FD00AB7516 /* App */,
 			);
 			path = Classes;
@@ -656,6 +659,7 @@
 			files = (
 				89EDB1CA1E2A645F00AB7516 /* MatrixAccountManager.swift in Sources */,
 				89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */,
+				89A15A5E1E380DF10017EEB5 /* KeyboardTrackingView.swift in Sources */,
 				892423271E2CFFE200B20E64 /* BorderedButton.swift in Sources */,
 				89EDB1C51E2A510D00AB7516 /* AppConstants.swift in Sources */,
 				89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */,

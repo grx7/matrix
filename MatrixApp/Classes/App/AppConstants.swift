@@ -23,6 +23,8 @@ struct Constants {
 struct Notifications {
     static let accountAdded = Notification.Name("matrixAccountWasAddedNotification")
     static let accountRemoved = Notification.Name("matrixAccountWasRemovedNotification")
+    
+    static let keyboardTrackingViewCenterChanged = Notification.Name("keyboardTrackingViewCenterChanged")
 }
 
 struct AppColors {
