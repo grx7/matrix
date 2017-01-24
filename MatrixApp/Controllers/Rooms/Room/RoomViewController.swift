@@ -59,9 +59,10 @@ class RoomViewController: UIViewController {
 
     func addEvent(_ event: MatrixEvent) {
         self.events.insert(event, at: 0)
-        self.tableView.reloadData()
         
-        //self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: .bottom, animated: false)
+        self.tableView.beginUpdates()
+        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+        self.tableView.endUpdates()
     }
     
     //MARK: - Keyboard Notifications
@@ -73,15 +74,8 @@ class RoomViewController: UIViewController {
             
             self.bottomSpaceConstraint.constant = keyboardSize.height
             UIView.animate(withDuration: animationDuration, delay: 0, options: UIViewAnimationOptions(rawValue: animationOptions), animations: {
-            
                 self.view.layoutIfNeeded()
-                
-                
-            }, completion: { (success) in
-                //self.tableView.scrollToRow(at: IndexPath(row: self.events.count-1, section: 0), at: UITableViewScrollPosition.top, animated: true)
-            })
-            
-            
+            }, completion: nil)
         }
     }
     
