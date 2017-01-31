@@ -69,6 +69,18 @@ class RoomViewController: UIViewController {
         self.tableView.endUpdates()
     }
     
+    func sendMessage(_ message: String) {
+        self.room.room.sendTextMessage(message, success: { (string) in
+            print(string)
+        }) { (error) in
+            print(error)
+        }
+        
+        // handle echos
+
+        //print("message: \(message)")
+    }
+    
     //MARK: - Keyboard Notifications
     
     func keyboardDidMove(notification: NSNotification) {
@@ -141,17 +153,20 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("hello")
         self.messageTextField.resignFirstResponder()
     }
+    
+}
 
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        print(self.tableView.contentInset)
-//        self.bottomSpaceConstraint.constant -= 1
-////        print("Scrolling")
-//    }
+extension RoomViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text != nil && (textField.text?.characters.count)! > 0 {
+            self.sendMessage(textField.text!)
+        }
+        return false
+    }
+    
     
 }
