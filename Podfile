@@ -7,6 +7,8 @@ target 'MatrixApp' do
 
   # Pods for MatrixApp
 
+  pod 'MatrixKit'
+
   pod 'MatrixSDK'
 
   pod 'KeychainAccess'

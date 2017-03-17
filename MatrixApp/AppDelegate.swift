@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 import MatrixSDK
+import MatrixKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
