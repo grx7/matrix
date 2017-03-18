@@ -21,7 +21,7 @@ class LoginViewController: AuthViewController {
 
         if self.validateParameters() {
             self.showButtonLoading(loading: true, button: self.loginButton)
-
+            
             MatrixAccount.saveAccount(
                 username: self.usernameField.text!,
                 password: self.passwordField.text!,

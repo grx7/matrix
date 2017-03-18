@@ -14,52 +14,19 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - cmark (0.24.1)
-  - DTCoreText (1.6.20):
-    - DTCoreText/Core (= 1.6.20)
-    - DTFoundation/Core (~> 1.7.5)
-    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
-    - DTFoundation/DTHTMLParser (~> 1.7.5)
-    - DTFoundation/UIKit (~> 1.7.5)
-  - DTCoreText/Core (1.6.20):
-    - DTFoundation/Core (~> 1.7.5)
-    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
-    - DTFoundation/DTHTMLParser (~> 1.7.5)
-    - DTFoundation/UIKit (~> 1.7.5)
-  - DTFoundation/Core (1.7.12)
-  - DTFoundation/DTAnimatedGIF (1.7.12)
-  - DTFoundation/DTHTMLParser (1.7.12):
-    - DTFoundation/Core
-  - DTFoundation/UIKit (1.7.12):
-    - DTFoundation/Core
-  - HPGrowingTextView (1.1)
   - KeychainAccess (3.0.1)
-  - libPhoneNumber-iOS (0.8.17)
-  - MatrixKit (0.4.9):
-    - cmark (~> 0.24.1)
-    - DTCoreText (~> 1.6.17)
-    - HPGrowingTextView (~> 1.1)
-    - libPhoneNumber-iOS (~> 0.8.14)
-    - MatrixSDK (= 0.7.9)
   - MatrixSDK (0.7.9):
     - AFNetworking (~> 3.1.0)
 
 DEPENDENCIES:
   - KeychainAccess
-  - MatrixKit
   - MatrixSDK
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  cmark: ec0275215b504780287b6fca360224e384368af8
-  DTCoreText: 51904f2374af443e0d270d6fdc76035ab6f9ef8a
-  DTFoundation: 26a164ef510877387906fb92bff524a792db4bf8
-  HPGrowingTextView: 88a716d97fb853bcb08a4a08e4727da17efc9b19
   KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
-  libPhoneNumber-iOS: 9f083847f8cb9b81064cff2ed2c98cbf18d9f9f2
-  MatrixKit: ae2a506fd2ce28ebcb2b059219e7a4a77a4f3b72
   MatrixSDK: 030c649f00d84084a4199a61631c8069c02aa729
 
-PODFILE CHECKSUM: a924fb2a1d2d2feda87ca5af2579453c9a3f0a30
+PODFILE CHECKSUM: 27bcfcaf3aa7da46f5d8c8710c8b7c8daac8bb3e
 
 COCOAPODS: 1.1.1

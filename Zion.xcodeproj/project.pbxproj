@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1060BD23477186DDBAE213D4 /* Pods_MatrixApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */; };
-		11481FDEDFB6E828F6D1823E /* Pods_MatrixAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DC7CED376B6C6843F74AE8 /* Pods_MatrixAppUITests.framework */; };
+		6C9397C06FE097A14FAC6BB9 /* Pods_Zion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC99B1381A7CE9D51D8E2F84 /* Pods_Zion.framework */; };
 		8901DF291E377F240004AD44 /* FlippedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */; };
 		8901DF2B1E37800B0004AD44 /* FlippedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */; };
 		892423271E2CFFE200B20E64 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423261E2CFFE200B20E64 /* BorderedButton.swift */; };
@@ -30,8 +30,6 @@
 		894C77671E27EE9D008D5C86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C77651E27EE9D008D5C86 /* Main.storyboard */; };
 		894C77691E27EE9D008D5C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 894C77681E27EE9D008D5C86 /* Assets.xcassets */; };
 		894C776C1E27EE9D008D5C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C776A1E27EE9D008D5C86 /* LaunchScreen.storyboard */; };
-		894C77771E27EE9D008D5C86 /* MatrixAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77761E27EE9D008D5C86 /* MatrixAppTests.swift */; };
-		894C77821E27EE9D008D5C86 /* MatrixAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77811E27EE9D008D5C86 /* MatrixAppUITests.swift */; };
 		894C77931E27FB84008D5C86 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77921E27FB84008D5C86 /* GradientView.swift */; };
 		894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77951E28021C008D5C86 /* AuthViewController.swift */; };
 		896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF8C1E34E4D500736117 /* RoomViewController.swift */; };
@@ -46,33 +44,13 @@
 		89EDB1C51E2A510D00AB7516 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1C41E2A510D00AB7516 /* AppConstants.swift */; };
 		89EDB1C81E2A514400AB7516 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 89EDB1C71E2A514400AB7516 /* Config.plist */; };
 		89EDB1CA1E2A645F00AB7516 /* MatrixAccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EDB1C91E2A645F00AB7516 /* MatrixAccountManager.swift */; };
-		9AFC8536C1EBF26EEE5F359C /* Pods_MatrixAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A9064B793D83E1EF81963B /* Pods_MatrixAppTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		894C77731E27EE9D008D5C86 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 894C77511E27EE9C008D5C86 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 894C77581E27EE9C008D5C86;
-			remoteInfo = MatrixApp;
-		};
-		894C777E1E27EE9D008D5C86 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 894C77511E27EE9C008D5C86 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 894C77581E27EE9C008D5C86;
-			remoteInfo = MatrixApp;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DC7CED376B6C6843F74AE8 /* Pods_MatrixAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		632BD6E8114E1DFFD3986BE7 /* Pods-MatrixAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppTests/Pods-MatrixAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		77A9064B793D83E1EF81963B /* Pods_MatrixAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.release.xcconfig"; sourceTree = "<group>"; };
-		85A9B0E7A935874E50473EB6 /* Pods-MatrixAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableViewCell.swift; sourceTree = "<group>"; };
 		8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableView.swift; sourceTree = "<group>"; };
 		892423261E2CFFE200B20E64 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
@@ -92,17 +70,15 @@
 		892423511E32C64B00B20E64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		892423521E32C64C00B20E64 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		892423531E32C77800B20E64 /* String+Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Matrix.swift"; sourceTree = "<group>"; };
-		894C77591E27EE9C008D5C86 /* MatrixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatrixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		894C77591E27EE9C008D5C86 /* Zion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C775C1E27EE9C008D5C86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		894C775F1E27EE9C008D5C86 /* MatrixApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MatrixApp.xcdatamodel; sourceTree = "<group>"; };
 		894C77661E27EE9D008D5C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		894C77681E27EE9D008D5C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		894C776B1E27EE9D008D5C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		894C776D1E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		894C77721E27EE9D008D5C86 /* MatrixAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatrixAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C77761E27EE9D008D5C86 /* MatrixAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAppTests.swift; sourceTree = "<group>"; };
 		894C77781E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		894C777D1E27EE9D008D5C86 /* MatrixAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatrixAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		894C77811E27EE9D008D5C86 /* MatrixAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAppUITests.swift; sourceTree = "<group>"; };
 		894C77831E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -119,9 +95,10 @@
 		89EDB1C41E2A510D00AB7516 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		89EDB1C71E2A514400AB7516 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		89EDB1C91E2A645F00AB7516 /* MatrixAccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAccountManager.swift; sourceTree = "<group>"; };
-		92D1576AC24087E90E59E9A3 /* Pods-MatrixAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		E73B5C11847D716AD6A3F788 /* Pods-MatrixAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixAppTests/Pods-MatrixAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E13EBFD8DC39A04C309864D6 /* Pods-Zion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zion/Pods-Zion.debug.xcconfig"; sourceTree = "<group>"; };
 		F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FB51E4A913B3A165A42C4B11 /* Pods-Zion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zion/Pods-Zion.release.xcconfig"; sourceTree = "<group>"; };
+		FC99B1381A7CE9D51D8E2F84 /* Pods_Zion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,22 +107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1060BD23477186DDBAE213D4 /* Pods_MatrixApp.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		894C776F1E27EE9D008D5C86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AFC8536C1EBF26EEE5F359C /* Pods_MatrixAppTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		894C777A1E27EE9D008D5C86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11481FDEDFB6E828F6D1823E /* Pods_MatrixAppUITests.framework in Frameworks */,
+				6C9397C06FE097A14FAC6BB9 /* Pods_Zion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,10 +119,8 @@
 			children = (
 				F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */,
 				7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */,
-				E73B5C11847D716AD6A3F788 /* Pods-MatrixAppTests.debug.xcconfig */,
-				632BD6E8114E1DFFD3986BE7 /* Pods-MatrixAppTests.release.xcconfig */,
-				85A9B0E7A935874E50473EB6 /* Pods-MatrixAppUITests.debug.xcconfig */,
-				92D1576AC24087E90E59E9A3 /* Pods-MatrixAppUITests.release.xcconfig */,
+				E13EBFD8DC39A04C309864D6 /* Pods-Zion.debug.xcconfig */,
+				FB51E4A913B3A165A42C4B11 /* Pods-Zion.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -171,6 +131,7 @@
 				372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */,
 				77A9064B793D83E1EF81963B /* Pods_MatrixAppTests.framework */,
 				54DC7CED376B6C6843F74AE8 /* Pods_MatrixAppUITests.framework */,
+				FC99B1381A7CE9D51D8E2F84 /* Pods_Zion.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -247,9 +208,7 @@
 		894C775A1E27EE9C008D5C86 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				894C77591E27EE9C008D5C86 /* MatrixApp.app */,
-				894C77721E27EE9D008D5C86 /* MatrixAppTests.xctest */,
-				894C777D1E27EE9D008D5C86 /* MatrixAppUITests.xctest */,
+				894C77591E27EE9C008D5C86 /* Zion.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,7 +228,8 @@
 				892423331E2FCAAE00B20E64 /* Extensions */,
 				89EDB1C61E2A512100AB7516 /* Resources */,
 			);
-			path = MatrixApp;
+			name = MatrixApp;
+			path = Zion;
 			sourceTree = "<group>";
 		};
 		894C77751E27EE9D008D5C86 /* MatrixAppTests */ = {
@@ -373,9 +333,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		894C77581E27EE9C008D5C86 /* MatrixApp */ = {
+		894C77581E27EE9C008D5C86 /* Zion */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 894C77861E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "MatrixApp" */;
+			buildConfigurationList = 894C77861E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "Zion" */;
 			buildPhases = (
 				78D329788DF5CBB4D7E6661C /* [CP] Check Pods Manifest.lock */,
 				894C77551E27EE9C008D5C86 /* Sources */,
@@ -388,52 +348,10 @@
 			);
 			dependencies = (
 			);
-			name = MatrixApp;
+			name = Zion;
 			productName = MatrixApp;
-			productReference = 894C77591E27EE9C008D5C86 /* MatrixApp.app */;
+			productReference = 894C77591E27EE9C008D5C86 /* Zion.app */;
 			productType = "com.apple.product-type.application";
-		};
-		894C77711E27EE9D008D5C86 /* MatrixAppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 894C77891E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "MatrixAppTests" */;
-			buildPhases = (
-				C4B1A341C13035E8C733F3AF /* [CP] Check Pods Manifest.lock */,
-				894C776E1E27EE9D008D5C86 /* Sources */,
-				894C776F1E27EE9D008D5C86 /* Frameworks */,
-				894C77701E27EE9D008D5C86 /* Resources */,
-				8EDC689EE31206B62E8153E0 /* [CP] Embed Pods Frameworks */,
-				632A372220E83CFA99B68051 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				894C77741E27EE9D008D5C86 /* PBXTargetDependency */,
-			);
-			name = MatrixAppTests;
-			productName = MatrixAppTests;
-			productReference = 894C77721E27EE9D008D5C86 /* MatrixAppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		894C777C1E27EE9D008D5C86 /* MatrixAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 894C778C1E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "MatrixAppUITests" */;
-			buildPhases = (
-				5E500BBB40B360DAC994AE28 /* [CP] Check Pods Manifest.lock */,
-				894C77791E27EE9D008D5C86 /* Sources */,
-				894C777A1E27EE9D008D5C86 /* Frameworks */,
-				894C777B1E27EE9D008D5C86 /* Resources */,
-				470692641BB1060633FD5B90 /* [CP] Embed Pods Frameworks */,
-				2686D6569AEA218130F1EFF7 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				894C777F1E27EE9D008D5C86 /* PBXTargetDependency */,
-			);
-			name = MatrixAppUITests;
-			productName = MatrixAppUITests;
-			productReference = 894C777D1E27EE9D008D5C86 /* MatrixAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -450,21 +368,9 @@
 						DevelopmentTeam = 852Z5XQF7Y;
 						ProvisioningStyle = Automatic;
 					};
-					894C77711E27EE9D008D5C86 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P783QGVTJP;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 894C77581E27EE9C008D5C86;
-					};
-					894C777C1E27EE9D008D5C86 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = P783QGVTJP;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 894C77581E27EE9C008D5C86;
-					};
 				};
 			};
-			buildConfigurationList = 894C77541E27EE9C008D5C86 /* Build configuration list for PBXProject "MatrixApp" */;
+			buildConfigurationList = 894C77541E27EE9C008D5C86 /* Build configuration list for PBXProject "Zion" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -478,9 +384,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				894C77581E27EE9C008D5C86 /* MatrixApp */,
-				894C77711E27EE9D008D5C86 /* MatrixAppTests */,
-				894C777C1E27EE9D008D5C86 /* MatrixAppUITests */,
+				894C77581E27EE9C008D5C86 /* Zion */,
 			);
 		};
 /* End PBXProject section */
@@ -498,83 +402,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		894C77701E27EE9D008D5C86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		894C777B1E27EE9D008D5C86 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2686D6569AEA218130F1EFF7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		470692641BB1060633FD5B90 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatrixAppUITests/Pods-MatrixAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5E500BBB40B360DAC994AE28 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		632A372220E83CFA99B68051 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatrixAppTests/Pods-MatrixAppTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		78D329788DF5CBB4D7E6661C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -590,21 +420,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		8EDC689EE31206B62E8153E0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatrixAppTests/Pods-MatrixAppTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A0C9428D9DAB24BD966AC506 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -617,22 +432,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C4B1A341C13035E8C733F3AF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zion/Pods-Zion-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E3D92565787A40E41520D8EC /* [CP] Copy Pods Resources */ = {
@@ -647,7 +447,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zion/Pods-Zion-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -690,36 +490,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		894C776E1E27EE9D008D5C86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				894C77771E27EE9D008D5C86 /* MatrixAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		894C77791E27EE9D008D5C86 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				894C77821E27EE9D008D5C86 /* MatrixAppUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		894C77741E27EE9D008D5C86 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 894C77581E27EE9C008D5C86 /* MatrixApp */;
-			targetProxy = 894C77731E27EE9D008D5C86 /* PBXContainerItemProxy */;
-		};
-		894C777F1E27EE9D008D5C86 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 894C77581E27EE9C008D5C86 /* MatrixApp */;
-			targetProxy = 894C777E1E27EE9D008D5C86 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8924234E1E32C5BC00B20E64 /* Localizable.strings */ = {
@@ -849,14 +620,15 @@
 		};
 		894C77871E27EE9D008D5C86 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */;
+			baseConfigurationReference = E13EBFD8DC39A04C309864D6 /* Pods-Zion.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 852Z5XQF7Y;
-				INFOPLIST_FILE = MatrixApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Zion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.buckle;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.zion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -864,81 +636,24 @@
 		};
 		894C77881E27EE9D008D5C86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */;
+			baseConfigurationReference = FB51E4A913B3A165A42C4B11 /* Pods-Zion.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 852Z5XQF7Y;
-				INFOPLIST_FILE = MatrixApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Zion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.buckle;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.zion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		894C778A1E27EE9D008D5C86 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E73B5C11847D716AD6A3F788 /* Pods-MatrixAppTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = P783QGVTJP;
-				INFOPLIST_FILE = MatrixAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.MatrixAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MatrixApp.app/MatrixApp";
-			};
-			name = Debug;
-		};
-		894C778B1E27EE9D008D5C86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 632BD6E8114E1DFFD3986BE7 /* Pods-MatrixAppTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = P783QGVTJP;
-				INFOPLIST_FILE = MatrixAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.MatrixAppTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MatrixApp.app/MatrixApp";
-			};
-			name = Release;
-		};
-		894C778D1E27EE9D008D5C86 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85A9B0E7A935874E50473EB6 /* Pods-MatrixAppUITests.debug.xcconfig */;
-			buildSettings = {
-				DEVELOPMENT_TEAM = P783QGVTJP;
-				INFOPLIST_FILE = MatrixAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.MatrixAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = MatrixApp;
-			};
-			name = Debug;
-		};
-		894C778E1E27EE9D008D5C86 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92D1576AC24087E90E59E9A3 /* Pods-MatrixAppUITests.release.xcconfig */;
-			buildSettings = {
-				DEVELOPMENT_TEAM = P783QGVTJP;
-				INFOPLIST_FILE = MatrixAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.MatrixAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = MatrixApp;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		894C77541E27EE9C008D5C86 /* Build configuration list for PBXProject "MatrixApp" */ = {
+		894C77541E27EE9C008D5C86 /* Build configuration list for PBXProject "Zion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				894C77841E27EE9D008D5C86 /* Debug */,
@@ -947,29 +662,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		894C77861E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "MatrixApp" */ = {
+		894C77861E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "Zion" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				894C77871E27EE9D008D5C86 /* Debug */,
 				894C77881E27EE9D008D5C86 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		894C77891E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "MatrixAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				894C778A1E27EE9D008D5C86 /* Debug */,
-				894C778B1E27EE9D008D5C86 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		894C778C1E27EE9D008D5C86 /* Build configuration list for PBXNativeTarget "MatrixAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				894C778D1E27EE9D008D5C86 /* Debug */,
-				894C778E1E27EE9D008D5C86 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
