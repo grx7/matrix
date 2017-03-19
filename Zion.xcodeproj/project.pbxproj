@@ -75,10 +75,6 @@
 		894C77681E27EE9D008D5C86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		894C776B1E27EE9D008D5C86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		894C776D1E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		894C77761E27EE9D008D5C86 /* MatrixAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAppTests.swift; sourceTree = "<group>"; };
-		894C77781E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		894C77811E27EE9D008D5C86 /* MatrixAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixAppUITests.swift; sourceTree = "<group>"; };
-		894C77831E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		896EBF8C1E34E4D500736117 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
@@ -191,8 +187,6 @@
 			isa = PBXGroup;
 			children = (
 				894C775B1E27EE9C008D5C86 /* MatrixApp */,
-				894C77751E27EE9D008D5C86 /* MatrixAppTests */,
-				894C77801E27EE9D008D5C86 /* MatrixAppUITests */,
 				894C775A1E27EE9C008D5C86 /* Products */,
 				10734A8BE88DB92310B08BCD /* Pods */,
 				851E447A605160A36D7F0970 /* Frameworks */,
@@ -224,24 +218,6 @@
 			);
 			name = MatrixApp;
 			path = Zion;
-			sourceTree = "<group>";
-		};
-		894C77751E27EE9D008D5C86 /* MatrixAppTests */ = {
-			isa = PBXGroup;
-			children = (
-				894C77761E27EE9D008D5C86 /* MatrixAppTests.swift */,
-				894C77781E27EE9D008D5C86 /* Info.plist */,
-			);
-			path = MatrixAppTests;
-			sourceTree = "<group>";
-		};
-		894C77801E27EE9D008D5C86 /* MatrixAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				894C77811E27EE9D008D5C86 /* MatrixAppUITests.swift */,
-				894C77831E27EE9D008D5C86 /* Info.plist */,
-			);
-			path = MatrixAppUITests;
 			sourceTree = "<group>";
 		};
 		894C77911E27EF48008D5C86 /* Controllers */ = {
