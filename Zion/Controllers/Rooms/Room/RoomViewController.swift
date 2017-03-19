@@ -41,7 +41,7 @@ class RoomViewController: UIViewController {
     }
     
     func loadRoomEvents() {
-        self.room.room.liveTimeline.listen { (matrixEvent, direction, state) in
+        self.room.room.liveTimeline.__listen { (matrixEvent, direction, state) in
             if matrixEvent != nil {
                 let event = MatrixEvent(event: matrixEvent!, room: self.room)
                 
@@ -52,7 +52,7 @@ class RoomViewController: UIViewController {
         }
         
         self.room.room.liveTimeline.resetPagination()
-        self.room.room.liveTimeline.paginate(30, direction: MXTimelineDirectionBackwards, onlyFromStore: false, complete: {
+        self.room.room.liveTimeline.__paginate(30, direction: __MXTimelineDirectionBackwards, onlyFromStore: false, complete: {
             self.events = self.events.sorted(by: { (a, b) -> Bool in
                 return a.event.age < b.event.age
             })
@@ -71,9 +71,9 @@ class RoomViewController: UIViewController {
     
     func sendMessage(_ message: String) {
         self.room.room.sendTextMessage(message, success: { (string) in
-            print(string)
+            print(string ?? "error")
         }) { (error) in
-            print(error)
+            print(error ?? "error")
         }
         
         // handle echos

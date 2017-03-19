@@ -64,8 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             let store = MXFileStore()
             
-            account.session.setStore(store, success: { 
-                account.session.start({
+            account.session.__setStore(store, success: { 
+                account.session.__start({
                     
                 }, failure: { (error) in
                     print("Could not start session: \(error)")

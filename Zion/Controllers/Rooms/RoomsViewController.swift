@@ -42,7 +42,7 @@ class RoomsViewController: UIViewController {
     }
     
     func loadRooms(session: MXSession) {
-        self.rooms = session.rooms().map({ (room) -> MatrixRoom in
+        self.rooms = session.rooms(withTag: kMXSessionNoRoomTag).map({ (room) -> MatrixRoom in
             return MatrixRoom(room: room)
         }).sorted(by: { (a, b) -> Bool in
             return a.lastEvent().event.age < b.lastEvent().event.age

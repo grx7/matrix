@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1060BD23477186DDBAE213D4 /* Pods_MatrixApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */; };
 		6C9397C06FE097A14FAC6BB9 /* Pods_Zion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC99B1381A7CE9D51D8E2F84 /* Pods_Zion.framework */; };
 		8901DF291E377F240004AD44 /* FlippedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */; };
 		8901DF2B1E37800B0004AD44 /* FlippedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */; };
@@ -50,7 +49,6 @@
 		372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DC7CED376B6C6843F74AE8 /* Pods_MatrixAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A9064B793D83E1EF81963B /* Pods_MatrixAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.release.xcconfig"; sourceTree = "<group>"; };
 		8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableViewCell.swift; sourceTree = "<group>"; };
 		8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableView.swift; sourceTree = "<group>"; };
 		892423261E2CFFE200B20E64 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 		89EDB1C71E2A514400AB7516 /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		89EDB1C91E2A645F00AB7516 /* MatrixAccountManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatrixAccountManager.swift; sourceTree = "<group>"; };
 		E13EBFD8DC39A04C309864D6 /* Pods-Zion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zion.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zion/Pods-Zion.debug.xcconfig"; sourceTree = "<group>"; };
-		F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MatrixApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MatrixApp/Pods-MatrixApp.debug.xcconfig"; sourceTree = "<group>"; };
 		FB51E4A913B3A165A42C4B11 /* Pods-Zion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zion.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zion/Pods-Zion.release.xcconfig"; sourceTree = "<group>"; };
 		FC99B1381A7CE9D51D8E2F84 /* Pods_Zion.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zion.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -106,7 +103,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1060BD23477186DDBAE213D4 /* Pods_MatrixApp.framework in Frameworks */,
 				6C9397C06FE097A14FAC6BB9 /* Pods_Zion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,8 +113,6 @@
 		10734A8BE88DB92310B08BCD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F432AA854CF1984E3FEB9B4E /* Pods-MatrixApp.debug.xcconfig */,
-				7D7CF1A1B51E0D5AE3904D18 /* Pods-MatrixApp.release.xcconfig */,
 				E13EBFD8DC39A04C309864D6 /* Pods-Zion.debug.xcconfig */,
 				FB51E4A913B3A165A42C4B11 /* Pods-Zion.release.xcconfig */,
 			);
@@ -628,7 +622,7 @@
 				DEVELOPMENT_TEAM = 852Z5XQF7Y;
 				INFOPLIST_FILE = "$(SRCROOT)/Zion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.zion;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.Zion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -644,7 +638,7 @@
 				DEVELOPMENT_TEAM = 852Z5XQF7Y;
 				INFOPLIST_FILE = "$(SRCROOT)/Zion/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.zion;
+				PRODUCT_BUNDLE_IDENTIFIER = me.lumby.Zion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

@@ -55,9 +55,9 @@ class MatrixEvent {
     
     var isNotice: Bool {
         switch self.event.eventType {
-        case MXEventTypeRoomMessage:
+        case __MXEventTypeRoomMessage:
             return false
-        case MXEventTypeRoomMember:
+        case __MXEventTypeRoomMember:
             return true
         default:
             return false
@@ -65,7 +65,7 @@ class MatrixEvent {
     }
     
     func isPartOfChain(previousEvent: MatrixEvent) -> Bool {
-        if (self.event.sender == previousEvent.event.sender) && (self.event.eventType == MXEventTypeRoomMessage) && !previousEvent.isNotice {
+        if (self.event.sender == previousEvent.event.sender) && (self.event.eventType == __MXEventTypeRoomMessage) && !previousEvent.isNotice {
             return true
         }
         
@@ -73,11 +73,11 @@ class MatrixEvent {
     }
     
     func shouldShowEventInChat() -> Bool {
-        if self.event.eventType == MXEventTypeRoomMessage {
+        if self.event.eventType == __MXEventTypeRoomMessage {
             return true
         }
         
-        if self.event.eventType == MXEventTypeRoomMember {
+        if self.event.eventType == __MXEventTypeRoomMember {
             if self.event.isUserProfileChange() {
                 if let displayName = self.event.content["displayname"] as? String,
                     let avatarUrl = self.event.content["avatar_url"] as? String,

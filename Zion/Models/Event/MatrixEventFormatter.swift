@@ -29,9 +29,9 @@ class MatrixEventFormatter {
      */
     func formattedEvent(isPreview: Bool = false) -> String {
         switch self.event.eventType {
-        case MXEventTypeRoomMessage:
+        case __MXEventTypeRoomMessage:
             return self.formatRoomMessageEvent(includeName: isPreview)
-        case MXEventTypeRoomMember:
+        case __MXEventTypeRoomMember:
             return self.formatRoomMemberEvent()
         default:
             break

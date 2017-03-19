@@ -47,7 +47,7 @@ class MatrixAccount: NSManagedObject {
         
         if self.homeServer != nil && self.userId != nil && self.token != nil {
             self.credentials = MXCredentials(homeServer: self.homeServer!, userId: self.userId!, accessToken: self.token!)
-            self.restClient = MXRestClient(credentials: self.credentials, andOnUnrecognizedCertificateBlock: nil)
+            self.restClient = MXRestClient(__credentials: self.credentials, andOnUnrecognizedCertificateBlock: nil)
             self.session = MXSession(matrixRestClient: restClient)
         }
     }
@@ -114,9 +114,9 @@ extension MatrixAccount {
             "password": password
         ]
         
-        let restClient = MXRestClient(homeServer: homeServer, andOnUnrecognizedCertificateBlock: nil)!
+        let restClient = MXRestClient(__homeServer: homeServer, andOnUnrecognizedCertificateBlock: nil)!
         
-        restClient.login(parameters, success: { (response) in
+        restClient.__login(parameters, success: { (response) in
             if let accessToken = response?["access_token"] as? String, let matrixId = response?["user_id"] as? String, let deviceId = response?["device_id"] as? String, let homeServer = response?["home_server"] as? String {
                 if let credentials = MXCredentials(homeServer: homeServer, userId: matrixId, accessToken: accessToken) {
                     credentials.deviceId = deviceId
