@@ -1,8 +1,8 @@
-# MatrixApp
+> # Zion
 
-MatrixApp is a Matrix client built for day to day instant messaging, it is a federated and open source alternative to closed source of single server services like [WhatsApp](https://whatsapp.com), [Wire](https://wire.com) or [Telegram](https://telegram.org).
+Zion (working title) is a Matrix client built for day to day instant messaging, it is a federated and open source alternative to closed source of single server services like [WhatsApp](https://whatsapp.com), [Wire](https://wire.com) or [Telegram](https://telegram.org).
 
-MatrixApp is built using the MatrixSDK (https://github.com/matrix-org/matrix-ios-sdk) and written in Swift.
+Zion is built using the MatrixSDK (https://github.com/matrix-org/matrix-ios-sdk) and written in Swift.
 
 ## Screenshots
 
@@ -13,11 +13,11 @@ MatrixApp is built using the MatrixSDK (https://github.com/matrix-org/matrix-ios
 Pull down or download the contents of the repository, then install the project dependencies.
 
 ```bash
-cd MatrixApp
+cd Zion
 pod install
 ```
 
-Now you can open `MatrixApp.xcworkspace` and build/run the project normally.
+Now you can open `Zion.xcworkspace` and build or run the project normally.
 
 ## Copyright & License
 
