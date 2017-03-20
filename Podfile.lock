@@ -17,16 +17,19 @@ PODS:
   - KeychainAccess (3.0.1)
   - MatrixSDK (0.7.9):
     - AFNetworking (~> 3.1.0)
+  - SlackTextViewController (1.9.5)
 
 DEPENDENCIES:
   - KeychainAccess
   - MatrixSDK
+  - SlackTextViewController
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   KeychainAccess: 017ea25e313a49eda10bb19b0bb0760fb1edfe1a
   MatrixSDK: 030c649f00d84084a4199a61631c8069c02aa729
+  SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
 
-PODFILE CHECKSUM: 27bcfcaf3aa7da46f5d8c8710c8b7c8daac8bb3e
+PODFILE CHECKSUM: 05b7c66f40bcdf63395ddb5c141488552af5d321
 
 COCOAPODS: 1.1.1

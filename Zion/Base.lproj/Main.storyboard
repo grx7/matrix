@@ -35,7 +35,7 @@
         <!--Rooms View Controller-->
         <scene sceneID="kTt-fJ-4rg">
             <objects>
-                <viewController title="Rooms View Controller" id="4kl-Vf-Z3x" customClass="RoomsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Rooms View Controller" id="4kl-Vf-Z3x" customClass="RoomsViewController" customModule="Zion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SWG-e4-ptP"/>
                         <viewControllerLayoutGuide type="bottom" id="XMW-85-Jbm"/>
@@ -49,7 +49,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomTableViewCell" rowHeight="78" id="4LF-Jh-6NS" customClass="RoomTableViewCell" customModule="MatrixApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="roomTableViewCell" rowHeight="78" id="4LF-Jh-6NS" customClass="RoomTableViewCell" customModule="Zion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="78"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4LF-Jh-6NS" id="7Mv-vh-obi">
@@ -174,7 +174,7 @@
         <!--Room View Controller-->
         <scene sceneID="dzj-8U-Pk0">
             <objects>
-                <viewController id="Tfw-sy-HLG" customClass="RoomViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Tfw-sy-HLG" customClass="RoomViewController" customModule="Zion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yh3-2Y-r4M"/>
                         <viewControllerLayoutGuide type="bottom" id="GUj-lb-kfL"/>
@@ -182,192 +182,17 @@
                     <view key="view" contentMode="scaleToFill" id="VXb-Gp-T0q">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dox-uF-pSe" customClass="FlippedTableView" customModule="MatrixApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="429"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="firstMessageTableViewCell" rowHeight="120" id="vci-6d-88L" customClass="FirstMessageTableViewCell" customModule="MatrixApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="120"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vci-6d-88L" id="DPH-8t-ZRG">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7SX-kX-368">
-                                                    <rect key="frame" x="14" y="8" width="30" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="wM6-3B-zVt"/>
-                                                        <constraint firstAttribute="width" constant="30" id="xiw-ke-48D"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nr0-Te-Oyu">
-                                                    <rect key="frame" x="58" y="13" width="248" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="Scz-jD-ZeZ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5O-lw-3eO">
-                                                    <rect key="frame" x="60" y="39" width="246" height="72.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="S5O-lw-3eO" firstAttribute="top" secondItem="Nr0-Te-Oyu" secondAttribute="bottom" constant="8" id="4sn-sv-Ntt"/>
-                                                <constraint firstItem="S5O-lw-3eO" firstAttribute="leading" secondItem="DPH-8t-ZRG" secondAttribute="leading" constant="60" id="7id-uH-WKK"/>
-                                                <constraint firstItem="7SX-kX-368" firstAttribute="top" secondItem="DPH-8t-ZRG" secondAttribute="top" constant="8" id="C6D-eO-OJ3"/>
-                                                <constraint firstAttribute="trailing" secondItem="Nr0-Te-Oyu" secondAttribute="trailing" constant="14" id="FbK-Ne-E3w"/>
-                                                <constraint firstItem="7SX-kX-368" firstAttribute="leading" secondItem="DPH-8t-ZRG" secondAttribute="leading" constant="14" id="RHO-Vx-zdN"/>
-                                                <constraint firstItem="Nr0-Te-Oyu" firstAttribute="top" secondItem="DPH-8t-ZRG" secondAttribute="top" constant="13" id="SFH-cz-ju5"/>
-                                                <constraint firstAttribute="trailing" secondItem="S5O-lw-3eO" secondAttribute="trailing" constant="14" id="uT0-Mr-m7k"/>
-                                                <constraint firstItem="Nr0-Te-Oyu" firstAttribute="leading" secondItem="7SX-kX-368" secondAttribute="trailing" constant="14" id="vQL-0d-zBz"/>
-                                                <constraint firstAttribute="bottom" secondItem="S5O-lw-3eO" secondAttribute="bottom" constant="8" id="zXI-Zx-aWZ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="authorLabel" destination="Nr0-Te-Oyu" id="FE1-gk-tfN"/>
-                                            <outlet property="avatarImageView" destination="7SX-kX-368" id="qbX-OH-UMh"/>
-                                            <outlet property="messageLabel" destination="S5O-lw-3eO" id="AUB-AY-baT"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageTableViewCell" rowHeight="120" id="98e-Vy-ef0" customClass="MessageTableViewCell" customModule="MatrixApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="148" width="320" height="120"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="98e-Vy-ef0" id="5SO-W0-tyx">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQZ-pE-R6J">
-                                                    <rect key="frame" x="60" y="8" width="246" height="103.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="XQZ-pE-R6J" firstAttribute="top" secondItem="5SO-W0-tyx" secondAttribute="top" constant="8" id="aEh-AU-DHT"/>
-                                                <constraint firstAttribute="bottom" secondItem="XQZ-pE-R6J" secondAttribute="bottom" constant="8" id="ac2-dj-D3P"/>
-                                                <constraint firstItem="XQZ-pE-R6J" firstAttribute="leading" secondItem="5SO-W0-tyx" secondAttribute="leading" constant="60" id="eZ4-jv-4pb"/>
-                                                <constraint firstAttribute="trailing" secondItem="XQZ-pE-R6J" secondAttribute="trailing" constant="14" id="hmj-K7-DaF"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="messageLabel" destination="XQZ-pE-R6J" id="RtP-8W-5NP"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noticeMessageTableViewCell" rowHeight="80" id="I9Q-rV-NWd" customClass="NoticeMessageTableViewCell" customModule="MatrixApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="268" width="320" height="80"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I9Q-rV-NWd" id="xS3-5W-doV">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00L-mi-Rzf">
-                                                    <rect key="frame" x="8" y="8" width="304" height="64"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkb-vQ-Kqx">
-                                                            <rect key="frame" x="8" y="8" width="288" height="48"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
-                                                    <constraints>
-                                                        <constraint firstItem="hkb-vQ-Kqx" firstAttribute="leading" secondItem="00L-mi-Rzf" secondAttribute="leading" constant="8" id="b5u-d6-1YH"/>
-                                                        <constraint firstAttribute="trailing" secondItem="hkb-vQ-Kqx" secondAttribute="trailing" constant="8" id="jYL-vG-yUW"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hkb-vQ-Kqx" secondAttribute="bottom" constant="8" id="myD-XK-TPm"/>
-                                                        <constraint firstItem="hkb-vQ-Kqx" firstAttribute="top" secondItem="00L-mi-Rzf" secondAttribute="top" constant="8" id="qSJ-pT-pOh"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="00L-mi-Rzf" firstAttribute="leading" secondItem="xS3-5W-doV" secondAttribute="leadingMargin" id="EJd-HQ-AYj"/>
-                                                <constraint firstItem="00L-mi-Rzf" firstAttribute="trailing" secondItem="xS3-5W-doV" secondAttribute="trailingMargin" id="MoW-8m-48m"/>
-                                                <constraint firstItem="00L-mi-Rzf" firstAttribute="bottom" secondItem="xS3-5W-doV" secondAttribute="bottomMargin" id="a82-It-Tro"/>
-                                                <constraint firstItem="00L-mi-Rzf" firstAttribute="top" secondItem="xS3-5W-doV" secondAttribute="topMargin" id="pgq-MC-75e"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <connections>
-                                            <outlet property="noticeLabel" destination="hkb-vQ-Kqx" id="GEI-HQ-Rvk"/>
-                                            <outlet property="noticeView" destination="00L-mi-Rzf" id="J2o-8d-q8o"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="Tfw-sy-HLG" id="4M2-xy-N6m"/>
-                                    <outlet property="delegate" destination="Tfw-sy-HLG" id="RF1-Ok-QJx"/>
-                                </connections>
-                            </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g2g-kK-1Ke">
-                                <rect key="frame" x="0.0" y="454" width="320" height="50"/>
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Type a message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="apm-ji-6tG">
-                                        <rect key="frame" x="12" y="9" width="296" height="32"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="32" id="HmH-kd-rgZ"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="send" enablesReturnKeyAutomatically="YES"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="Tfw-sy-HLG" id="w54-Ng-aln"/>
-                                        </connections>
-                                    </textField>
-                                </subviews>
-                                <color key="backgroundColor" red="0.10973913220000001" green="0.14894980190000001" blue="0.184238553" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="apm-ji-6tG" firstAttribute="leading" secondItem="g2g-kK-1Ke" secondAttribute="leading" constant="12" id="b9k-Qc-lob"/>
-                                    <constraint firstAttribute="height" constant="50" id="cg1-fV-ANI"/>
-                                    <constraint firstAttribute="trailing" secondItem="apm-ji-6tG" secondAttribute="trailing" constant="12" id="dxP-Lj-Pci"/>
-                                    <constraint firstItem="apm-ji-6tG" firstAttribute="centerY" secondItem="g2g-kK-1Ke" secondAttribute="centerY" id="zGQ-lE-Nih"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cl2-hj-9cA">
-                                <rect key="frame" x="0.0" y="429" width="320" height="25"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="GPf-N1-hlO"/>
-                                </constraints>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="0.13961857557296753" green="0.18357285857200623" blue="0.22935369610786438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="g2g-kK-1Ke" firstAttribute="leading" secondItem="VXb-Gp-T0q" secondAttribute="leading" id="6KQ-T3-Aej"/>
-                            <constraint firstAttribute="trailing" secondItem="g2g-kK-1Ke" secondAttribute="trailing" id="7x4-9P-NfS"/>
-                            <constraint firstItem="Cl2-hj-9cA" firstAttribute="leading" secondItem="VXb-Gp-T0q" secondAttribute="leading" id="DWr-Jq-SG9"/>
-                            <constraint firstItem="g2g-kK-1Ke" firstAttribute="top" secondItem="Cl2-hj-9cA" secondAttribute="bottom" id="EP9-qk-8J3"/>
-                            <constraint firstAttribute="trailing" secondItem="Cl2-hj-9cA" secondAttribute="trailing" id="FvD-2B-va6"/>
-                            <constraint firstItem="GUj-lb-kfL" firstAttribute="top" secondItem="g2g-kK-1Ke" secondAttribute="bottom" id="Oh9-mi-KHH"/>
-                            <constraint firstItem="Cl2-hj-9cA" firstAttribute="top" secondItem="Dox-uF-pSe" secondAttribute="bottom" id="Sbf-A8-DDb"/>
-                            <constraint firstItem="Dox-uF-pSe" firstAttribute="top" secondItem="Yh3-2Y-r4M" secondAttribute="bottom" id="ioF-1i-IvK"/>
-                            <constraint firstAttribute="trailing" secondItem="Dox-uF-pSe" secondAttribute="trailing" id="lnm-fD-kMt"/>
-                            <constraint firstItem="Dox-uF-pSe" firstAttribute="leading" secondItem="VXb-Gp-T0q" secondAttribute="leading" id="yJf-Qs-Vnd"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="bottomSpaceConstraint" destination="Oh9-mi-KHH" id="v5c-2L-O5M"/>
-                        <outlet property="messageTextField" destination="apm-ji-6tG" id="HVY-zu-9V3"/>
-                        <outlet property="tableView" destination="Dox-uF-pSe" id="dfr-hn-OtG"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ojd-D3-nvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-654.375" y="-488.02816901408454"/>
+            <point key="canvasLocation" x="-308" y="-488"/>
         </scene>
         <!--Tour View Controller-->
         <scene sceneID="wEX-dH-R7L">
             <objects>
-                <viewController id="hOd-lv-YHP" customClass="TourViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hOd-lv-YHP" customClass="TourViewController" customModule="Zion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lF2-lw-hYJ"/>
                         <viewControllerLayoutGuide type="bottom" id="pnf-Oc-81G"/>
@@ -404,12 +229,12 @@
         <!--Login View Controller-->
         <scene sceneID="9kZ-zo-ZPS">
             <objects>
-                <viewController storyboardIdentifier="authPageLogin" id="JDN-gR-vm0" customClass="LoginViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authPageLogin" id="JDN-gR-vm0" customClass="LoginViewController" customModule="Zion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xxw-Xl-WJj"/>
                         <viewControllerLayoutGuide type="bottom" id="ws5-JP-SRy"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="svX-tb-Dpk" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="svX-tb-Dpk" customClass="GradientView" customModule="Zion" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -419,7 +244,7 @@
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34r-nD-kcu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="386"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zT8-mO-jfY" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zT8-mO-jfY" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="12" width="280" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="cZw-8a-ztN"/>
@@ -431,7 +256,7 @@
                                                     <outlet property="delegate" destination="JDN-gR-vm0" id="t2f-cd-YQf"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-gU-nAJ" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-gU-nAJ" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="58" width="280" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="vS2-60-gfy"/>
@@ -446,7 +271,7 @@
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yx7-hc-G9p">
                                                 <rect key="frame" x="20" y="104" width="280" height="158"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esK-fP-AH1" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="esK-fP-AH1" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="JSh-SD-sSp"/>
@@ -458,7 +283,7 @@
                                                             <outlet property="delegate" destination="JDN-gR-vm0" id="lgm-fe-Asx"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Identity Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHo-GH-z0r" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Identity Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHo-GH-z0r" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="46" width="280" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="tmv-wP-TzF"/>
@@ -497,7 +322,7 @@
                                                     <constraint firstItem="esK-fP-AH1" firstAttribute="top" secondItem="Yx7-hc-G9p" secondAttribute="top" id="px2-av-r2V"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-yN-ow5" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZq-yN-ow5" customClass="BorderedButton" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="278" width="280" height="38"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.096060739436619719" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -514,7 +339,7 @@
                                                     <action selector="toggleAdvancedOptions:" destination="JDN-gR-vm0" eventType="touchUpInside" id="d49-tD-FW1"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4j-81-zJE" customClass="BorderedButton" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="324" width="280" height="38"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -637,7 +462,7 @@
                         <viewControllerLayoutGuide type="top" id="45m-tR-UAR"/>
                         <viewControllerLayoutGuide type="bottom" id="Qfl-sr-Rws"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WgL-sX-GMB" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="WgL-sX-GMB" customClass="GradientView" customModule="Zion" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -670,7 +495,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-xA-bS1" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0x-xA-bS1" customClass="BorderedButton" customModule="Zion" customModuleProvider="target">
                                 <rect key="frame" x="105" y="449" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="WKL-3n-HLm"/>
@@ -720,7 +545,7 @@
                         <viewControllerLayoutGuide type="top" id="7zu-Cy-Dk2"/>
                         <viewControllerLayoutGuide type="bottom" id="1VA-ox-ZGP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yvA-U7-c3y" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="yvA-U7-c3y" customClass="GradientView" customModule="Zion" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -753,7 +578,7 @@
                                     <constraint firstAttribute="height" constant="37" id="a7t-2z-xf2"/>
                                 </constraints>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnt-zE-rXY" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dnt-zE-rXY" customClass="BorderedButton" customModule="Zion" customModuleProvider="target">
                                 <rect key="frame" x="105" y="449" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="iOI-Vr-bi2"/>
@@ -803,7 +628,7 @@
                         <viewControllerLayoutGuide type="top" id="229-iI-auZ"/>
                         <viewControllerLayoutGuide type="bottom" id="C2v-rx-up0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="XG5-nK-4GZ" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="XG5-nK-4GZ" customClass="GradientView" customModule="Zion" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -837,7 +662,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-OD-daa" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy0-OD-daa" customClass="BorderedButton" customModule="Zion" customModuleProvider="target">
                                 <rect key="frame" x="105" y="449" width="110" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="P0P-EM-Bc5"/>
@@ -882,12 +707,12 @@
         <!--Register View Controller-->
         <scene sceneID="UaM-bD-liM">
             <objects>
-                <viewController storyboardIdentifier="authPageRegister" id="Rwg-uN-bN7" customClass="RegisterViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="authPageRegister" id="Rwg-uN-bN7" customClass="RegisterViewController" customModule="Zion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bsR-Ih-eSc"/>
                         <viewControllerLayoutGuide type="bottom" id="tmT-Xc-f7C"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Za5-z1-30I" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="Za5-z1-30I" customClass="GradientView" customModule="Zion" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -897,7 +722,7 @@
                                     <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZN-EZ-a9B">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="432"/>
                                         <subviews>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwW-m2-i7N" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwW-m2-i7N" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="12" width="280" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="XpW-w7-K3c"/>
@@ -909,7 +734,7 @@
                                                     <outlet property="delegate" destination="Rwg-uN-bN7" id="mmP-RL-ear"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Y-m7-VzT" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y1Y-m7-VzT" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="58" width="280" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="dD7-tF-0eF"/>
@@ -922,7 +747,7 @@
                                                     <outlet property="delegate" destination="Rwg-uN-bN7" id="1d8-iS-NMW"/>
                                                 </connections>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-Ie-iRI" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-Ie-iRI" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="104" width="280" height="38"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38" id="iFu-X8-cHx"/>
@@ -937,7 +762,7 @@
                                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v9A-pU-rFV">
                                                 <rect key="frame" x="20" y="150" width="280" height="158"/>
                                                 <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbd-1F-b0v" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Home Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tbd-1F-b0v" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="280" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="CGP-94-COs"/>
@@ -949,7 +774,7 @@
                                                             <outlet property="delegate" destination="Rwg-uN-bN7" id="DqN-jc-0q4"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Identity Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dj8-qp-RIC" customClass="BottomBorderTextField" customModule="MatrixApp" customModuleProvider="target">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Identity Server" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dj8-qp-RIC" customClass="BottomBorderTextField" customModule="Zion" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="46" width="280" height="38"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="iUB-Pl-dbX"/>
@@ -988,7 +813,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="Dj8-qp-RIC" secondAttribute="trailing" id="wYI-TE-392"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYE-KA-7Er" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xYE-KA-7Er" customClass="BorderedButton" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="370" width="280" height="38"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -1005,7 +830,7 @@
                                                     <action selector="performRegistration:" destination="Rwg-uN-bN7" eventType="touchUpInside" id="O3F-oL-afx"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-k7-BWu" customClass="BorderedButton" customModule="MatrixApp" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HHk-k7-BWu" customClass="BorderedButton" customModule="Zion" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="324" width="280" height="38"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.096060739440000001" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -1149,12 +974,12 @@
         <!--Settings View Controller-->
         <scene sceneID="44e-9C-4Ei">
             <objects>
-                <viewController title="Settings View Controller" id="VkP-kh-af1" customClass="SettingsViewController" customModule="MatrixApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings View Controller" id="VkP-kh-af1" customClass="SettingsViewController" customModule="Zion" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2os-A2-T4s"/>
                         <viewControllerLayoutGuide type="bottom" id="VG8-s4-jRg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n7s-0x-Qgb" customClass="GradientView" customModule="MatrixApp" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="n7s-0x-Qgb" customClass="GradientView" customModule="Zion" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

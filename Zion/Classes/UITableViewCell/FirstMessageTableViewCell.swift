@@ -8,9 +8,8 @@
 
 import UIKit
 
-class FirstMessageTableViewCell: FlippedTableViewCell {
+class FirstMessageTableViewCell: MessageTableViewCell {
 
-    @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var avatarImageView: UIImageView!
     

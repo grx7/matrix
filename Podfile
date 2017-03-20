@@ -8,7 +8,7 @@ target 'Zion' do
   # Pods for MatrixApp
 
   pod 'MatrixSDK'
-
+  pod "SlackTextViewController"
   pod 'KeychainAccess'
 
 end

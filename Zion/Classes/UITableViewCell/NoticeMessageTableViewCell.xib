@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="noticeMessageTableViewCell" rowHeight="80" id="T6s-YM-Lq1" customClass="NoticeMessageTableViewCell" customModule="Zion" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T6s-YM-Lq1" id="muU-pd-b1v">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="et0-T0-XDG">
+                        <rect key="frame" x="8" y="8" width="304" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6J-SX-WRU">
+                                <rect key="frame" x="8" y="8" width="288" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e6J-SX-WRU" firstAttribute="leading" secondItem="et0-T0-XDG" secondAttribute="leading" constant="8" id="6gf-wD-rzx"/>
+                            <constraint firstItem="e6J-SX-WRU" firstAttribute="top" secondItem="et0-T0-XDG" secondAttribute="top" constant="8" id="MTV-yP-ds2"/>
+                            <constraint firstAttribute="trailing" secondItem="e6J-SX-WRU" secondAttribute="trailing" constant="8" id="ewd-8T-iFU"/>
+                            <constraint firstAttribute="bottom" secondItem="e6J-SX-WRU" secondAttribute="bottom" constant="8" id="rf0-SV-vsf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="et0-T0-XDG" firstAttribute="trailing" secondItem="muU-pd-b1v" secondAttribute="trailingMargin" id="0Y7-G3-C3u"/>
+                    <constraint firstItem="et0-T0-XDG" firstAttribute="bottom" secondItem="muU-pd-b1v" secondAttribute="bottomMargin" id="N34-ql-Jwy"/>
+                    <constraint firstItem="et0-T0-XDG" firstAttribute="top" secondItem="muU-pd-b1v" secondAttribute="topMargin" id="N5e-NT-Olk"/>
+                    <constraint firstItem="et0-T0-XDG" firstAttribute="leading" secondItem="muU-pd-b1v" secondAttribute="leadingMargin" id="NBe-z0-GRP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="messageLabel" destination="e6J-SX-WRU" id="p3u-DB-1B6"/>
+                <outlet property="noticeView" destination="et0-T0-XDG" id="wDn-tB-EEW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

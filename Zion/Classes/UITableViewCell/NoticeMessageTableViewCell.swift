@@ -8,9 +8,8 @@
 
 import UIKit
 
-class NoticeMessageTableViewCell: FlippedTableViewCell {
+class NoticeMessageTableViewCell: MessageTableViewCell {
 
-    @IBOutlet weak var noticeLabel: UILabel!
     @IBOutlet weak var noticeView: UIView!
     
     override func awakeFromNib() {

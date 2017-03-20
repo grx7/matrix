@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C9397C06FE097A14FAC6BB9 /* Pods_Zion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC99B1381A7CE9D51D8E2F84 /* Pods_Zion.framework */; };
-		8901DF291E377F240004AD44 /* FlippedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */; };
 		8901DF2B1E37800B0004AD44 /* FlippedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */; };
 		892423271E2CFFE200B20E64 /* BorderedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423261E2CFFE200B20E64 /* BorderedButton.swift */; };
 		892423291E2E7D7800B20E64 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892423281E2E7D7800B20E64 /* LoginViewController.swift */; };
@@ -31,9 +30,12 @@
 		894C776C1E27EE9D008D5C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 894C776A1E27EE9D008D5C86 /* LaunchScreen.storyboard */; };
 		894C77931E27FB84008D5C86 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77921E27FB84008D5C86 /* GradientView.swift */; };
 		894C77961E28021C008D5C86 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C77951E28021C008D5C86 /* AuthViewController.swift */; };
+		896A7A161E7EF71500C84BD2 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896A7A141E7EF71500C84BD2 /* MessageTableViewCell.swift */; };
+		896A7A171E7EF71500C84BD2 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896A7A151E7EF71500C84BD2 /* MessageTableViewCell.xib */; };
+		896A7A191E7F5DBB00C84BD2 /* NoticeMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896A7A181E7F5DBB00C84BD2 /* NoticeMessageTableViewCell.xib */; };
+		896A7A1B1E7F5E4000C84BD2 /* FirstMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 896A7A1A1E7F5E4000C84BD2 /* FirstMessageTableViewCell.xib */; };
 		896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF8C1E34E4D500736117 /* RoomViewController.swift */; };
 		896EBF8F1E34E95C00736117 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF8E1E34E95C00736117 /* SettingsViewController.swift */; };
-		896EBF911E352D5400736117 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF901E352D5400736117 /* MessageTableViewCell.swift */; };
 		896EBF931E35458200736117 /* FirstMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */; };
 		896EBF951E356D3900736117 /* NoticeMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896EBF941E356D3900736117 /* NoticeMessageTableViewCell.swift */; };
 		89A15A5E1E380DF10017EEB5 /* KeyboardTrackingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A15A5D1E380DF10017EEB5 /* KeyboardTrackingView.swift */; };
@@ -49,7 +51,6 @@
 		372684EDE6891510EA848F7B /* Pods_MatrixApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54DC7CED376B6C6843F74AE8 /* Pods_MatrixAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A9064B793D83E1EF81963B /* Pods_MatrixAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MatrixAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableViewCell.swift; sourceTree = "<group>"; };
 		8901DF2A1E37800B0004AD44 /* FlippedTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlippedTableView.swift; sourceTree = "<group>"; };
 		892423261E2CFFE200B20E64 /* BorderedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BorderedButton.swift; sourceTree = "<group>"; };
 		892423281E2E7D7800B20E64 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -77,9 +78,12 @@
 		894C776D1E27EE9D008D5C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		894C77921E27FB84008D5C86 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		894C77951E28021C008D5C86 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		896A7A141E7EF71500C84BD2 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		896A7A151E7EF71500C84BD2 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		896A7A181E7F5DBB00C84BD2 /* NoticeMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoticeMessageTableViewCell.xib; sourceTree = "<group>"; };
+		896A7A1A1E7F5E4000C84BD2 /* FirstMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstMessageTableViewCell.xib; sourceTree = "<group>"; };
 		896EBF8C1E34E4D500736117 /* RoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
 		896EBF8E1E34E95C00736117 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		896EBF901E352D5400736117 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
 		896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstMessageTableViewCell.swift; sourceTree = "<group>"; };
 		896EBF941E356D3900736117 /* NoticeMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoticeMessageTableViewCell.swift; sourceTree = "<group>"; };
 		89A15A5D1E380DF10017EEB5 /* KeyboardTrackingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardTrackingView.swift; sourceTree = "<group>"; };
@@ -158,10 +162,12 @@
 			isa = PBXGroup;
 			children = (
 				8924233A1E31143D00B20E64 /* RoomTableViewCell.swift */,
-				896EBF901E352D5400736117 /* MessageTableViewCell.swift */,
 				896EBF921E35458200736117 /* FirstMessageTableViewCell.swift */,
+				896A7A1A1E7F5E4000C84BD2 /* FirstMessageTableViewCell.xib */,
 				896EBF941E356D3900736117 /* NoticeMessageTableViewCell.swift */,
-				8901DF281E377F240004AD44 /* FlippedTableViewCell.swift */,
+				896A7A181E7F5DBB00C84BD2 /* NoticeMessageTableViewCell.xib */,
+				896A7A141E7EF71500C84BD2 /* MessageTableViewCell.swift */,
+				896A7A151E7EF71500C84BD2 /* MessageTableViewCell.xib */,
 			);
 			path = UITableViewCell;
 			sourceTree = "<group>";
@@ -186,7 +192,7 @@
 		894C77501E27EE9C008D5C86 = {
 			isa = PBXGroup;
 			children = (
-				894C775B1E27EE9C008D5C86 /* MatrixApp */,
+				894C775B1E27EE9C008D5C86 /* Zion */,
 				894C775A1E27EE9C008D5C86 /* Products */,
 				10734A8BE88DB92310B08BCD /* Pods */,
 				851E447A605160A36D7F0970 /* Frameworks */,
@@ -201,7 +207,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		894C775B1E27EE9C008D5C86 /* MatrixApp */ = {
+		894C775B1E27EE9C008D5C86 /* Zion */ = {
 			isa = PBXGroup;
 			children = (
 				894C775C1E27EE9C008D5C86 /* AppDelegate.swift */,
@@ -216,7 +222,6 @@
 				892423331E2FCAAE00B20E64 /* Extensions */,
 				89EDB1C61E2A512100AB7516 /* Resources */,
 			);
-			name = MatrixApp;
 			path = Zion;
 			sourceTree = "<group>";
 		};
@@ -365,9 +370,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8924234C1E32C5BC00B20E64 /* Localizable.strings in Resources */,
+				896A7A191E7F5DBB00C84BD2 /* NoticeMessageTableViewCell.xib in Resources */,
+				896A7A171E7EF71500C84BD2 /* MessageTableViewCell.xib in Resources */,
 				89EDB1C81E2A514400AB7516 /* Config.plist in Resources */,
 				894C776C1E27EE9D008D5C86 /* LaunchScreen.storyboard in Resources */,
 				894C77691E27EE9D008D5C86 /* Assets.xcassets in Resources */,
+				896A7A1B1E7F5E4000C84BD2 /* FirstMessageTableViewCell.xib in Resources */,
 				894C77671E27EE9D008D5C86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +439,7 @@
 				89EDB1B71E284B2500AB7516 /* BottomBorderTextField.swift in Sources */,
 				89A15A5E1E380DF10017EEB5 /* KeyboardTrackingView.swift in Sources */,
 				892423271E2CFFE200B20E64 /* BorderedButton.swift in Sources */,
+				896A7A161E7EF71500C84BD2 /* MessageTableViewCell.swift in Sources */,
 				89EDB1C51E2A510D00AB7516 /* AppConstants.swift in Sources */,
 				89EDB1C21E2A50FA00AB7516 /* AppConfig.swift in Sources */,
 				892423421E317C2400B20E64 /* MatrixRoom.swift in Sources */,
@@ -444,12 +453,10 @@
 				8924232B1E2E7D7F00B20E64 /* RegisterViewController.swift in Sources */,
 				896EBF8D1E34E4D500736117 /* RoomViewController.swift in Sources */,
 				8924233F1E311A6400B20E64 /* UIImageView+Matrix.swift in Sources */,
-				8901DF291E377F240004AD44 /* FlippedTableViewCell.swift in Sources */,
 				892423351E2FCAD500B20E64 /* UINavigationBar+Matrix.swift in Sources */,
 				8924232D1E2E7D9D00B20E64 /* TourViewController.swift in Sources */,
 				89EDB1B91E2910A500AB7516 /* MatrixAccount.swift in Sources */,
 				896EBF931E35458200736117 /* FirstMessageTableViewCell.swift in Sources */,
-				896EBF911E352D5400736117 /* MessageTableViewCell.swift in Sources */,
 				8901DF2B1E37800B0004AD44 /* FlippedTableView.swift in Sources */,
 				894C77931E27FB84008D5C86 /* GradientView.swift in Sources */,
 				8924233B1E31143D00B20E64 /* RoomTableViewCell.swift in Sources */,
@@ -592,7 +599,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E13EBFD8DC39A04C309864D6 /* Pods-Zion.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 852Z5XQF7Y;
@@ -608,7 +614,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB51E4A913B3A165A42C4B11 /* Pods-Zion.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 852Z5XQF7Y;

@@ -8,34 +8,53 @@
 
 import UIKit
 import MatrixSDK
+import SlackTextViewController
 
-class RoomViewController: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var bottomSpaceConstraint: NSLayoutConstraint!
-    @IBOutlet weak var messageTextField: UITextField!
+class RoomViewController: SLKTextViewController {
     
     var room: MatrixRoom!
     
     var events: [MatrixEvent] = []
+    
+    override var tableView: UITableView {
+        get {
+            return super.tableView!
+        }
+    }
+    
+    override init(tableViewStyle style: UITableViewStyle) {
+        super.init(tableViewStyle: .plain)
+    }
+    
+    required init(coder decoder: NSCoder) {
+        super.init(coder: decoder)
+    }
+    
+    override class func tableViewStyle(for decoder: NSCoder) -> UITableViewStyle {
+        return .plain
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = self.room.displayName()
         
+        self.tableView.backgroundColor = UIColor.clear
+        
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 140
-        self.tableView.keyboardDismissMode = .interactive
+        self.tableView.separatorStyle = .none
+
+        self.textInputbar.backgroundColor = AppColors.lightBlue
+        self.textInputbar.textView.backgroundColor = AppColors.lightBlue
+        self.textInputbar.textView.textColor = UIColor.lightGray
         
-        self.messageTextField.backgroundColor = AppColors.lightBlue
-        self.messageTextField.textColor = UIColor.lightGray
-        
-        self.messageTextField.inputAccessoryView = KeyboardTrackingView(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillBeHidden(notification:)), name: .UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardDidMove(notification:)), name: Notifications.keyboardTrackingViewCenterChanged, object: nil)
+//        self.messageTextField.backgroundColor = AppColors.lightBlue
+//        self.messageTextField.textColor = UIColor.lightGray
+
+        self.tableView.register(UINib(nibName: "MessageTableViewCell", bundle: nil), forCellReuseIdentifier: "messageTableViewCell")
+        self.tableView.register(UINib(nibName: "NoticeMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "noticeMessageTableViewCell")
+        self.tableView.register(UINib(nibName: "FirstMessageTableViewCell", bundle: nil), forCellReuseIdentifier: "firstMessageTableViewCell")
         
         self.loadRoomEvents()
     }
@@ -64,9 +83,9 @@ class RoomViewController: UIViewController {
     func addEvent(_ event: MatrixEvent) {
         self.events.insert(event, at: 0)
         
-        self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
-        self.tableView.endUpdates()
+//        self.tableView.beginUpdates()
+//        self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: .automatic)
+//        self.tableView.endUpdates()
     }
     
     func sendMessage(_ message: String) {
@@ -81,63 +100,36 @@ class RoomViewController: UIViewController {
         //print("message: \(message)")
     }
     
-    //MARK: - Keyboard Notifications
-    
-    func keyboardDidMove(notification: NSNotification) {
-        if let frame = (notification.object as? CGRect) {
-            self.bottomSpaceConstraint.constant = (self.view.frame.height - frame.origin.y) + 65
-        }
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue,
-            let animationDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]) as? Double,
-            let animationOptions = (notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey]) as? UInt {
-            
-            self.bottomSpaceConstraint.constant = keyboardSize.height
-            UIView.animate(withDuration: animationDuration, delay: 0, options: UIViewAnimationOptions(rawValue: animationOptions), animations: {
-                self.view.layoutIfNeeded()
-            }, completion: nil)
-        }
-    }
-    
-    func keyboardWillBeHidden(notification: NSNotification) {
-        if let animationDuration = (notification.userInfo?[UIKeyboardAnimationDurationUserInfoKey]) as? Double,
-            let animationOptions = (notification.userInfo?[UIKeyboardAnimationCurveUserInfoKey]) as? UInt {
-            
-            self.bottomSpaceConstraint.constant = 0
-            UIView.animate(withDuration: animationDuration, delay: 0, options: UIViewAnimationOptions(rawValue: animationOptions), animations: {
-                self.view.layoutIfNeeded()
-            }, completion: nil)
-        }
-    }
 
 }
 
-extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
+extension RoomViewController {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.events.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = self.events[indexPath.row]
         
         if (indexPath.row - 1) >= 0 && event.isPartOfChain(previousEvent: self.events[indexPath.row - 1]) {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell", for: indexPath) as! MessageTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "messageTableViewCell") as! MessageTableViewCell
+            
             cell.messageLabel.text = event.asString
-                
+            cell.transform = self.tableView.transform;
+            
             return cell
         }
-        
+
         if event.isNotice {
             let cell = tableView.dequeueReusableCell(withIdentifier: "noticeMessageTableViewCell", for: indexPath) as! NoticeMessageTableViewCell
                         
-            cell.noticeLabel.text = event.asString
+            cell.messageLabel.text = event.asString
+            cell.transform = self.tableView.transform;
             
             return cell
         }
@@ -150,23 +142,25 @@ extension RoomViewController: UITableViewDelegate, UITableViewDataSource {
             cell.avatarImageView.downloadedFrom(link: event.senderAvatarLink!)
         }
         
+        cell.transform = self.tableView.transform;
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.messageTextField.resignFirstResponder()
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //self.messageTextField.resignFirstResponder()
     }
     
 }
 
-extension RoomViewController: UITextFieldDelegate {
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField.text != nil && (textField.text?.characters.count)! > 0 {
-            self.sendMessage(textField.text!)
-        }
-        return false
-    }
-    
-    
-}
+//extension RoomViewController: UITextFieldDelegate {
+//    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        if textField.text != nil && (textField.text?.characters.count)! > 0 {
+//            //self.sendMessage(textField.text!)
+//        }
+//        return false
+//    }
+//    
+//    
+//}
